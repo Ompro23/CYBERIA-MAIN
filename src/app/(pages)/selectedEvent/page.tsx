@@ -35,7 +35,7 @@ const selectedEvent = () => {
           
           className="h-full relative  justify-center items-center   w-full bg-transparent bg-blend-multiply inset-0 flex flex-col z-0 bg-fixed bg-cover bg-center"
           >
-          <DockDemo/>
+          {/* <DockDemo/> */}
           
           <div className="pb-32 h-full   flex justify-center items-center w-full ">
           <Tabs  defaultValue="info" className="w-[800px] z-0 justify-start h-[800px] bg-black p-5 flex-col text-white flex  items-center">
