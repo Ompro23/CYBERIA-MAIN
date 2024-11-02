@@ -10,7 +10,11 @@ import { Skeleton } from "./ui/skeleton";
 
 
 export function CardHoverEffectDemo() {
-  const { events,setEvents,setloading,loading } = useContext(eventContext)
+  const context = useContext(eventContext);
+  if (!context) {
+    return null; // or handle the null case appropriately
+  }
+  const { events, setEvents, setloading, loading } = context;
 
   
 
@@ -66,7 +70,11 @@ export function CardHoverEffectDemo() {
 
 export function CardHoverEffectDemo2() {
 
-  const { events,setEvents,setloading,loading } = useContext(eventContext)
+  const context = useContext(eventContext);
+  if (!context) {
+    return null; // or handle the null case appropriately
+  }
+  const { events, setEvents, setloading, loading } = context;
 
   const handleGetEvents = async () => {
     setloading(true);

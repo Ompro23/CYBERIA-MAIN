@@ -18,10 +18,14 @@ export const HoverEffect = ({
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const router = useRouter()
-    const { setUserSelectedEvent } = useContext(eventContext)
+    const context = useContext(eventContext);
+    if (!context) {
+        throw new Error("eventContext is null");
+    }
+    const { setUserSelectedEvent } = context;
 
   
-    const handleSetSelectedEvent = (item) =>{
+    const handleSetSelectedEvent = (item:any) =>{
         setUserSelectedEvent(item)
         localStorage.setItem("UserSelectedEvent",JSON.stringify(item))
         router.push("/selectedEvent")
