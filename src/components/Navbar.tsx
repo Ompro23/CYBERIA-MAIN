@@ -23,7 +23,11 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(true);
 
-  const {events,setEvents,setloading,setUserSelectedEvent} = useContext(eventContext)
+  const context = useContext(eventContext);
+  if (!context) {
+    throw new Error("eventContext must be used within a EventProvider");
+  }
+  const { events, setEvents, setloading, setUserSelectedEvent } = context;
 
   
   
