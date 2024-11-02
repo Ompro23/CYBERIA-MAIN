@@ -15,18 +15,26 @@ export function DockDemo() {
   return (
     <div className="fixed z-50 sm:bottom-10  bottom-5">
       <Dock magnification={60} distance={100}>
-        <DockIcon onClick={()=>router.push("/")} className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.Home  className="size-full" />
-        </DockIcon>
-        <DockIcon  onClick={()=>router.push("/about")} className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.About className="size-full" />
-        </DockIcon>
-        <DockIcon onClick={()=>router.push("/events")} className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.Events className="size-full" />
-        </DockIcon>
-        <DockIcon onClick={()=>router.push("/timeline")} className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.whatsapp className="size-full" />
-        </DockIcon>
+        <div onClick={()=>router.push("/")} className="bg-black/10 dark:bg-white/10 p-3 cursor-pointer">
+          <DockIcon>
+            <Icons.Home  className="size-full" />
+          </DockIcon>
+        </div>
+        <div onClick={()=>router.push("/about")} className="bg-black/10 dark:bg-white/10 p-3 cursor-pointer">
+          <DockIcon>
+            <Icons.About className="size-full" />
+          </DockIcon>
+        </div>
+        <div onClick={()=>router.push("/events")} className="bg-black/10 dark:bg-white/10 p-3 cursor-pointer">
+          <DockIcon>
+            <Icons.Events className="size-full" />
+          </DockIcon>
+        </div>
+        <div onClick={()=>router.push("/timeline")} className="bg-black/10 dark:bg-white/10 p-3 cursor-pointer">
+          <DockIcon>
+            <Icons.whatsapp className="size-full" />
+          </DockIcon>
+        </div>
       </Dock>
     </div>
   );
