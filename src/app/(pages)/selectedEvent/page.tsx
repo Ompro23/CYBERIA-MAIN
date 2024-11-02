@@ -13,16 +13,18 @@ import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import Footer from "@/components/Footer";
 
 const selectedEvent = () => {
-  const { UserSelectedEvent,loading,setloading } = useContext(eventContext);
+  const eventContextValue = useContext(eventContext);
+  const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
+  const loading = eventContextValue?.loading;
+  const setloading = eventContextValue?.setloading;
   // console.log(UserSelectedEvent)
 
   
   useEffect(()=>{
-    if(UserSelectedEvent){
-      setloading(false)
-    }
-    else{
-      setloading(true)
+    if (UserSelectedEvent) {
+      setloading && setloading(false);
+    } else {
+      setloading && setloading(true);
     }
   },[UserSelectedEvent])
   return (
