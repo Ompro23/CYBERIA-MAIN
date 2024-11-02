@@ -20,31 +20,31 @@ const testimonials = [
   {
     quote:
       <img src="/Logo/msu.png" alt="" className="h-[30vh]   object-contain sm:h-[30vh] sm:w-[40vw] w-[20vw]"/>,
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    name: "The Maharaja Sayajirao University of Baroda",
+    title: "MSU Baroda is accredited with an 'A+' grade by NAAC, ensuring high educational standards and quality.",
   },
   {
     quote:
     <img src="/Logo/75.png" alt="" className="h-[30vh]  object-contain  sm:object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
-    name: "William Shakespeare",
-    title: "Hamlet",
+    name: "University Ka Amrit Mahotsav",
+    title: "75 years of Independence, 75 years of Excellence, 75 years of Progress, 75 years of Unity.",
   },
   {
     quote: 
     <img src="/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    name: "Befriends",
+    title: "A community powered & AI backed emotional well-being platform. Lets dive in to express yourself, and embark on a soul-stirring adventure with BeFriends",
   },
   {
     quote:
     <img src="/microsoft/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    name: "Microsoft Learn Student Ambassador",
+    title: "Microsoft Learn Student Ambassadors are a global group of campus leaders who are eager to help fellow students, create robust tech communities, and develop technical and career skills for the future.",
   },
-  {
-    quote:
-    <img src="/Logo/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
+  // {
+  //   quote:
+  //   <img src="/Logo/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
+  //   name: "Herman Melville",
+  //   title: "Moby-Dick",
+  // },
 ];

@@ -31,16 +31,24 @@ const About = () => {
             <div className="pb-20">
             <AnimatedBeamDemo/>
             </div>
-            <p>
-                  Cyberia implies an arena which has the cyber-world at its core.
+            <p className="typing-animation">
+            <h2 className="font-semibold text-2xl bold md:text-xl mb-5">
+              About Cyberia :
+              
+            </h2>
                   Cyberia provides an arena for the youth of today and serve as a
+
+                platform to exhibit their technical acumen to the world and
+
+                 compete with like-minded peers.
+
                   platform to exhibit their technical acumen to the world and
                   compete with like-minded peers.
             </p>
           </div>
           <div className="leading-8">
-            <h2 className="font-semibold text-lg md:text-xl mb-5">
-              About the Department of Computer Applications
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              About the Department of Computer Applications : 
             </h2>
             <p>
               At The Maharaja Sayajirao University of Baroda, the Department
@@ -54,10 +62,67 @@ const About = () => {
               shape its future with innovation.
             </p>
           </div>
+
+          <div className="leading-8">
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              About Faculty of Science : 
+            </h2>
+            <p>
+              The Faculty of Science at The Maharaja Sayajirao University of
+              Baroda is a hub of innovation and research. With a focus on
+              interdisciplinary learning, the faculty offers a range of
+              undergraduate, postgraduate, and doctoral programs. The faculty
+              is committed to fostering a culture of curiosity and
+              collaboration, nurturing the next generation of scientists and
+              researchers.
+            </p>
+          </div>
+
+          <div className="leading-8">
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              About the Maharaja Sayajirao University of Baroda : 
+            </h2>
+            <p>
+              The Maharaja Sayajirao University of Baroda is a premier
+              institution of higher learning in Vadodara, Gujarat. Established
+              in 1949, the university has a rich history of academic
+              excellence and innovation. With a focus on holistic education,
+              the university offers a wide range of undergraduate,
+              postgraduate, and doctoral programs across various disciplines.
+              The university is committed to fostering a culture of
+              innovation, research, and social responsibility.
+            </p>
+          </div>
+
         </main>
       </div>
                           
         <footer className="flex justify-between w-full mt-10 flex-wrap lg:justify-center lg:gap-5">
+        <div className="bg-[#00000036]  backdrop-blur-lg border border-gray-400  bg-opacity-20 border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
+          
+          <h2 className="font-bold text-lg">Cyberia Organizing Committee</h2>
+          <div className="grid gap-2">
+            <a>Prof. Vijay Kumar Srivastava</a>
+            <p className="text-gray-400">Vice Chancellor</p>
+            <img
+              src={"/Pics/V_K_Shrivastava.png"}
+              className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
+            />
+    
+          </div>
+        </div>
+         
+          <div className="bg-[#00000036]  backdrop-blur-lg border border-gray-400  bg-opacity-20 border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
+            <h2 className="font-bold text-lg">Patron</h2>
+            <div className="grid gap-2">
+              <a>Prof. Haribhai Kataria</a>
+              <p className="text-gray-400">(Dean) Faculty Of Science</p>
+              <img
+                src={"/Pics/HariBhai.png"}
+                className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
+              />
+            </div>
+          </div>
           
           <div className="bg-[#00000036]   backdrop-blur-lg border border-gray-400  border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
             <h2 className="font-bold text-lg">Cyberia Head Personal</h2>
@@ -65,37 +130,12 @@ const About = () => {
               <a>Prof. Prashant K. Mehta</a>
               <p className="text-gray-400">(HOD) Dept. Computer Application</p>
               <img
-                // src={P_K_Mehta}
-                className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
-              />
-            </div>
-          </div>
-          <div className="bg-[#00000036]  backdrop-blur-lg border border-gray-400  bg-opacity-20 border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
-            <h2 className="font-bold text-lg">Patron</h2>
-            <div className="grid gap-2">
-              <a>Prof. Haribhai Kataria</a>
-              <p className="text-gray-400">(Dean) Faculty Of Science</p>
-              <img
-                // src={HariBhai}
-                className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
+                src={"/Pics/P_K_Mehta.jpeg"}
+                className=" w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
               />
             </div>
           </div>
           
-          
-          <div className="bg-[#00000036]  backdrop-blur-lg border border-gray-400  bg-opacity-20 border-opacity-30 shadow-lg rounded-xl p-6 mt-10 leading-8">
-          
-            <h2 className="font-bold text-lg">Cyberia Organizing Committee</h2>
-            <div className="grid gap-2">
-              <a>Prof. Vijay Kumar Srivastava</a>
-              <p className="text-gray-400">Vice Chancellor</p>
-              <img
-                // src={V_K_Srivastava}
-                className="w-[300px] h-[300px] shadow-sm rounded-xl mt-4"
-              />
-      
-            </div>
-          </div>
         </footer>        
       </section>
       

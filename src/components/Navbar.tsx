@@ -80,29 +80,29 @@ function Navbar({ className }: { className?: string }) {
       )}
     >
       <Menu  setActive={setActive}>
-        <Image className="sm:hidden" src="/Logo/msu.png" width={55} height={50} alt="" />
+        <a href="https://msubaroda.ac.in/" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/msu.png" width={55} height={50} alt="" /></a>
         <button onClick={()=>router.push("/")}>
         <MenuItem setActive={setActive} active={active} item="Home">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">Sponsors</HoveredLink>
-            <HoveredLink href="/">Date</HoveredLink>
+            {/* <HoveredLink href="/">Date</HoveredLink> */}
             <HoveredLink href="/seo">Powered By</HoveredLink>
-            <HoveredLink href="/branding">Address</HoveredLink>
+            {/* <HoveredLink href="/branding">Address</HoveredLink> */}
           </div>
         </MenuItem>
         </button>
         <button onClick={()=>router.push("/about")}>
         <MenuItem setActive={setActive} active={active} item="About">
-          <div className="flex flex-col space-y-4 text-sm">
+          {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">About Cyberia</HoveredLink>
             <HoveredLink href="/">Mentors</HoveredLink>
             <HoveredLink href="/">Team</HoveredLink>            
-          </div>
+          </div> */}
         </MenuItem>
         </button>
         <button onClick={()=>router.push("/events")}>
        <MenuItem setActive={setActive} active={active} item="Events">
-          <div className="text-sm  grid grid-cols-2 gap-10 sm:gap-2 p-4">
+          {/* <div className="text-sm  grid grid-cols-2 gap-10 sm:gap-2 p-4">
 
             {events.slice(0, 4).map((event)=>{
               return  <ProductItem
@@ -110,12 +110,12 @@ function Navbar({ className }: { className?: string }) {
                href={"/selectedEvent"}            
                src={event.image}
                description={event.description}
-             />
-            })}           
-          </div>
+             /> */}
+          {/* })} */}  
+          {/* </div> */}
         </MenuItem>      
         </button>
-        <Image className="sm:hidden" src="/Logo/75.png" width={55} height={50} alt="" />
+        <a href="https://www.msubaroda.ac.in/Accreditation" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/75.png" width={55} height={50} alt="" /></a>
       </Menu>
     </div>
   );

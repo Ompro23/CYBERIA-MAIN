@@ -10,7 +10,7 @@ export function TabsDemo() {
       title: "Technical",
       value: "services",
       content: (
-        <div className="w-full overflow-auto relative h-auto mb-28 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
+        <div className="w-full overflow-auto relative h-auto mb-23 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
           <p>Technical Events</p>
           <DummyContent />
         </div>

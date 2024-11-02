@@ -42,29 +42,31 @@ export function AnimatedBeamDemo() {
       <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
-            <Icons.googleDrive />
+          <img src="/Logo/naac2.png" alt="" />
           </Circle>
           <Circle ref={div5Ref}>
-            <Icons.googleDocs />
+          <img src="/microsoft/image.png" alt="" />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div2Ref}>
-            <Icons.notion />
+          <img src="/Logo/fiscalox2.png" alt="" />
           </Circle>
           <Circle ref={div4Ref} className="size-16">
+          <a href="/about">
             <img src="/Logo/CyberiaLogo.png" alt="" />
+          </a>
           </Circle>
           <Circle ref={div6Ref}>
-            <Icons.zapier />
+          <img src="/image.png" alt="" />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref}>
-            <Icons.whatsapp />
+          <img src="/Logo/msudark.png" alt="" />
           </Circle>
           <Circle ref={div7Ref}>
-            <Icons.messenger />
+          <img src="/Logo/CyberiaLogo.png" alt="" />
           </Circle>
         </div>
       </div>

@@ -10,20 +10,23 @@ const Events = () => {
         <NavbarDemo />
       </div>
       <div className="sm:block 2xl:hidden">
-        <MobileNav />
+        {/* <MobileNav /> */}
       </div>
 
-      <div className="h-full w-full ">
+      <div className="h-full w-full pb-10 flex flex-col">
         <div
           style={{ backgroundImage: "url('/eventsbg.jpg')" }}
-          className="absolute bg-[#0000008d] bg-blend-multiply inset-0 flex flex-col  h-[150vh] z-0 bg-fixed bg-cover bg-center"
+          className="absolute bg-[#0000008d] bg-blend-multiply inset-0 flex flex-col h-[200vh] bg-fixed bg-cover bg-center"
         >
-          
-         <TabsDemo/>
+          <div className="mb-10px flex-grow">
+            <TabsDemo />
+          </div>
+          <br />
+          <div className="mt-auto h-20">
+            <Footer />
+          </div>
         </div>
       </div>
-       
-       
     </>
   );
 };
