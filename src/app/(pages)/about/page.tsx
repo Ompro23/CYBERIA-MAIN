@@ -55,7 +55,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="">
+          {/* <div className="">
             <h2 className="font-semibold text-2xl md:text-xl mb-5">
               About Cyberia :
             </h2>
@@ -65,7 +65,7 @@ const About = () => {
                   compete with like-minded peers.platform to exhibit their technical acumen to the world and
                   compete with like-minded peers.
             </p>
-          </div>
+          </div> */}
 
 
 
