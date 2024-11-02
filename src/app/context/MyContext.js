@@ -17,10 +17,9 @@ useEffect(()=>{
     setUserSelectedEvent(storedEvent)
   }
 },[])
-
-    const [events, setEvents] = useState([]);
-    const [UserSelectedEvent, setUserSelectedEvent] = useState([]);
-    const [loading, setloading] = useState(true);
+const [events, setEvents] = useState([]);
+const [UserSelectedEvent, setUserSelectedEvent] = useState([]);
+const [loading, setloading] = useState(true);
    
     
    
