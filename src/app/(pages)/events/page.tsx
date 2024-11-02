@@ -22,7 +22,7 @@ const Events = () => {
             <TabsDemo />
           </div>
           <br />
-          <div className="mt-auto h-20">
+          <div className="mt-auto ">
             <Footer />
           </div>
         </div>

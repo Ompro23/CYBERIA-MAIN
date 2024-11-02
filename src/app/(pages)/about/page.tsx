@@ -31,21 +31,32 @@ const About = () => {
             <div className="pb-20">
             <AnimatedBeamDemo/>
             </div>
+            <div className="leading-8">
+
             <p className="typing-animation">
-            <h2 className="font-semibold text-2xl bold md:text-xl mb-5">
-              About Cyberia :
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              
               
             </h2>
-                  Cyberia provides an arena for the youth of today and serve as a
+                 Know more about Cyberia 20224, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda.
+            </p>
+            </div>
+          </div>
 
-                platform to exhibit their technical acumen to the world and
-
-                 compete with like-minded peers.
-
+          <div className="leading-8">
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              About Cyberia :
+            </h2>
+            <p>
+            Cyberia provides an arena for the youth of today and serve as a
                   platform to exhibit their technical acumen to the world and
+                  compete with like-minded peers.platform to exhibit their technical acumen to the world and
                   compete with like-minded peers.
             </p>
           </div>
+
+
+
           <div className="leading-8">
             <h2 className="font-semibold text-2xl md:text-xl mb-5">
               About the Department of Computer Applications : 
