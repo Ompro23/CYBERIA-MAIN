@@ -7,7 +7,11 @@ import { toast } from 'sonner';
 const Footer = () => {
 
   const handleClick = () => {
-    message.success('Thank you for subscribing')    
+    message.success('Thank you for Response')
+    const emailInput = document.getElementById('email') as HTMLInputElement;
+    if (emailInput) {
+      emailInput.value = '';
+    }
   }
   return (
     <>
@@ -21,7 +25,7 @@ const Footer = () => {
          <div className="flex  flex-col gap-0 mt-5 sm:gap-0 ">
           <p className='ms-3 text-white'>Need Help?</p>
          <div className='flex flex-row gap-3 mt-2 sm:gap-0 '>
-         <input type="text" placeholder='Your Email' className="flex-col border-2 text-white border-white placeholder:bg-transparent bg-black rounded-full py-2 sm:px-5 px-10 flex gap-3 "/>
+         <input type="text" placeholder='Your Email' id='email' className="flex-col border-2 text-white border-white placeholder:bg-transparent bg-black rounded-full py-2 sm:px-5 px-10 flex gap-3 "/>
           <button type='submit' onClick={handleClick} className='bg-black border-2 border-white px-10 sm:px-5 rounded-full  text-white py-0 font-semibold  text-md'>Submit</button>
          </div>
          </div>

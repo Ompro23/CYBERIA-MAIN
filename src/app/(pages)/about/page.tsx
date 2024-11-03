@@ -55,8 +55,8 @@ const About = () => {
             </p>
           </div> */}
 
-          <div className="">
-            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+          <div className="leading-5 ml-0" >
+            <h2 className="font-semibold text-2xl md:text-xl mb-5 ">
               About Cyberia :
             </h2>
             <p>
