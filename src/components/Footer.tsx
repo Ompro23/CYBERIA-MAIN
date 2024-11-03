@@ -81,8 +81,8 @@ const Footer = () => {
         <h1 className=' sm:ps-0 sm:text-sm text-nowrap text-white'>@2024 Cyberia</h1>
         </div>
         <div className="flex w-1/3 text-sm font-thin  sm:hidden text-nowrap gap-4">
-        <h1  className=' text-white'>Terms & Conditions</h1>
-        <h1 className=' text-white'>Privacy Policy</h1>
+        <h1 className='text-white cursor-pointer' onClick={() => window.open('/terms-condition', '_self')}>Terms & Condition</h1>
+        <h1 className='text-white cursor-pointer' onClick={() => window.open('/privacy-policy', '_self')}>Privacy Policy</h1>
         {/* <h1 className=' text-white'>Cookie Policy</h1> */}
         </div>
       </div>
