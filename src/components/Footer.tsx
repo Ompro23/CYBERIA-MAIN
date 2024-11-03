@@ -1,7 +1,14 @@
+"use client"
+import { message } from 'antd';
 import React from 'react'
+import { toast } from 'sonner';
 
 
 const Footer = () => {
+
+  const handleClick = () => {
+    message.success('Thank you for subscribing')    
+  }
   return (
     <>
     
@@ -15,7 +22,7 @@ const Footer = () => {
           <p className='ms-3 text-white'>Need Help?</p>
          <div className='flex flex-row gap-3 mt-2 sm:gap-0 '>
          <input type="text" placeholder='Your Email' className="flex-col border-2 text-white border-white placeholder:bg-transparent bg-black rounded-full py-2 sm:px-5 px-10 flex gap-3 "/>
-          <button type='submit' className='bg-black border-2 border-white px-10 sm:px-5 rounded-full  text-white py-0 font-semibold  text-md'>Submit</button>
+          <button type='submit' onClick={handleClick} className='bg-black border-2 border-white px-10 sm:px-5 rounded-full  text-white py-0 font-semibold  text-md'>Submit</button>
          </div>
          </div>
           </div>          
@@ -70,7 +77,7 @@ const Footer = () => {
         <h1 className=' sm:ps-0 sm:text-sm text-nowrap text-white'>@2024 Cyberia</h1>
         </div>
         <div className="flex w-1/3 text-sm font-thin  sm:hidden text-nowrap gap-4">
-        <h1 className=' text-white'>Terms & Conditions</h1>
+        <h1  className=' text-white'>Terms & Conditions</h1>
         <h1 className=' text-white'>Privacy Policy</h1>
         {/* <h1 className=' text-white'>Cookie Policy</h1> */}
         </div>

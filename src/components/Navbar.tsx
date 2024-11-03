@@ -83,7 +83,7 @@ function Navbar({ className }: { className?: string }) {
         <a href="https://msubaroda.ac.in/" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/msu.png" width={55} height={50} alt="" /></a>
         <button onClick={()=>router.push("/")}>
         <MenuItem setActive={setActive} active={active} item="Home">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex font-Poppins flex-col space-y-4 text-sm">
             <HoveredLink href="/">Sponsors</HoveredLink>
             {/* <HoveredLink href="/">Date</HoveredLink> */}
             <HoveredLink href="/seo">Powered By</HoveredLink>

@@ -43,19 +43,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="leading-8">
-            <h2 className="font-semibold text-2xl md:text-xl mb-5">
-              {/* About Cyberia : */}
-            </h2>
-            <p>
-            {/* Cyberia provides an arena for the youth of today and serve as a
-                  platform to exhibit their technical acumen to the world and
-                  compete with like-minded peers.platform to exhibit their technical acumen to the world and
-                  compete with like-minded peers. */}
-            </p>
-          </div>
-
-          {/* <div className="">
+          {/* <div className="leading-8">
             <h2 className="font-semibold text-2xl md:text-xl mb-5">
               About Cyberia :
             </h2>
@@ -66,6 +54,18 @@ const About = () => {
                   compete with like-minded peers.
             </p>
           </div> */}
+
+          <div className="">
+            <h2 className="font-semibold text-2xl md:text-xl mb-5">
+              About Cyberia :
+            </h2>
+            <p>
+            Cyberia provides an arena for the youth of today and serve as a
+                  platform to exhibit their technical acumen to the world and
+                  compete with like-minded peers.platform to exhibit their technical acumen to the world and
+                  compete with like-minded peers.
+            </p>
+          </div>
 
 
 

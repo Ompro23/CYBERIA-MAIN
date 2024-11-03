@@ -45,10 +45,9 @@ export default function Home() {
             {/* <ScrollBasedVelocityDemo/>  */}
             <TextRevealDemo />
           </div>
-          <div className="flex h-full sm:bg-grid-white/[0.1] w-full bg-transparent justify-center items-center flex-col ">
-            {/* <ScrollBasedVelocityDemo/>  */}
+          {/* <div className="flex h-full sm:bg-grid-white/[0.1] w-full bg-transparent justify-center items-center flex-col ">            
             <TextRevealDemo2 />
-          </div>
+          </div> */}
           <div className="flex py-10 sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
             <h1 className="text-4xl border-b-2 border-white py-1">Sponsors</h1>
             <OrbitingCirclesDemo />
