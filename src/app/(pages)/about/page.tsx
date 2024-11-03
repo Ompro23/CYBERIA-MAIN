@@ -39,6 +39,10 @@ const About = () => {
               
             </h2>
                  Know more about Cyberia 2024, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda.
+                 Cyberia provides an arena for the youth of today and serve as a
+              platform to exhibit their technical acumen to the world and
+              compete with like-minded peers.platform to exhibit their technical acumen to the world and
+              compete with like-minded peers. 
             </p>
             </div>
           </div>
@@ -102,7 +106,7 @@ const About = () => {
           </div>
           <div className="leading-8">
             <h2 className="font-semibold text-2xl md:text-xl mb-5">
-              About Cyberia : 
+              {/* About Cyberia :  */}
             </h2>
             <p>
               Cyberia provides an arena for the youth of today and serve as a
