@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 import { Dropdown, Image, message, Space } from 'antd';
 import logo from '../assets/MSULogo.png';
 import naac from "../assets/naac.png";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   label: string;
