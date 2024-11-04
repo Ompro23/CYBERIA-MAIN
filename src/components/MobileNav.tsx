@@ -13,19 +13,7 @@ interface MenuItem {
   key: string;
 }
 
-const router = useRouter();
-const onClick = ({ key }: { key: string }) => {
-  // if (key === "1") {
-  //   router.push("/")
-  // }
-  // else if (key === "2") {
-  //   router.push("/about")
-  // }
-  // else{
-  //   router.push("/events")
-  // }
-  message.info(`Redirecting to ${key} page`);
-};
+
 
 const MobileNav: React.FC = () => {
   
@@ -45,6 +33,19 @@ const MobileNav: React.FC = () => {
     },
   ];
 
+  const router = useRouter();
+const onClick = ({ key }: { key: string }) => {
+  if (key === "1") {
+    router.push("/")
+  }
+  else if (key === "2") {
+    router.push("/about")
+  }
+  else{
+    router.push("/events")
+  }
+  message.info(`Redirecting to ${key} page`);
+};
   return (
     <div>
       <div className="flex mb-10 justify-between px-10  absolute backdrop-blur-sm flex-row bg-[#00000054] w-full h-[10vh]">
