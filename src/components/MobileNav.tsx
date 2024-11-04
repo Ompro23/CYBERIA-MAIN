@@ -6,17 +6,25 @@ import { FaBars } from "react-icons/fa";
 import { Dropdown, Image, message, Space } from 'antd';
 import logo from '../assets/MSULogo.png';
 import naac from "../assets/naac.png";
+import { useRouter } from "next/router";
 
 interface MenuItem {
   label: string;
   key: string;
 }
 
+const router = useRouter();
 const onClick = ({ key }: { key: string }) => {
   if (key === "1") {
-    // Add your login logic here
+    router.push("/")
   }
-  message.info(`Click on item ${key}`);
+  else if (key === "2") {
+    router.push("/about")
+  }
+  else{
+    router.push("/events")
+  }
+  message.info(`Redirecting to ${key} page`);
 };
 
 const MobileNav: React.FC = () => {
@@ -24,15 +32,15 @@ const MobileNav: React.FC = () => {
   
   const items: MenuItem[] = [
     {
-      label: 'Login',
+      label: 'Home',
       key: '1',
     },
     {
-      label: '2nd menu item',
+      label: 'About',
       key: '2',
     },
     {
-      label: '3rd menu item',
+      label: 'Events',
       key: '3',
     },
   ];
@@ -42,10 +50,10 @@ const MobileNav: React.FC = () => {
       <div className="flex mb-10 justify-between px-10  absolute backdrop-blur-sm flex-row bg-[#00000054] w-full h-[10vh]">
         <div className="flex gap-0 w-1/3 justify-start items-center">
           <div className='flex gap-5'>
-            <a href="/">
+            <a href="/https://msubaroda.ac.in">
               <img src="/Logo/msu.png" className='h-[20vh]  border-white w-[16vw]  object-contain' alt="Logo" />
             </a>            
-            <a href="/">
+            <a href="/https://msubaroda.ac.in">
               <img src="/Logo/75.png" className='h-[20vh]  w-[16vw]   object-contain' alt="Logo" />
             </a>
           </div>
