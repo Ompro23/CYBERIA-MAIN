@@ -15,15 +15,15 @@ interface MenuItem {
 
 const router = useRouter();
 const onClick = ({ key }: { key: string }) => {
-  if (key === "1") {
-    router.push("/")
-  }
-  else if (key === "2") {
-    router.push("/about")
-  }
-  else{
-    router.push("/events")
-  }
+  // if (key === "1") {
+  //   router.push("/")
+  // }
+  // else if (key === "2") {
+  //   router.push("/about")
+  // }
+  // else{
+  //   router.push("/events")
+  // }
   message.info(`Redirecting to ${key} page`);
 };
 
