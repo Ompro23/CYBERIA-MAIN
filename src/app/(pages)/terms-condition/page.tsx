@@ -110,6 +110,10 @@ const About = () => {
                                         <strong>11. Agreement to Terms</strong><br />
                                         By registering for Cyberia Tech Fest, you confirm that you have read, understood, and agree to these Terms and Conditions.
                                     </p>
+                                    <p className="mb-4">
+                                        <strong>All right reserve @ computer application students association science faculty MSU</strong>
+                                        
+                                    </p>
                                 </div>
 
                                 {/* <div className="leading-8">
