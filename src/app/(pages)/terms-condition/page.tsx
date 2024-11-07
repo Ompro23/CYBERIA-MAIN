@@ -106,8 +106,14 @@ const About = () => {
                                         <strong>10. Changes to Terms and Conditions</strong><br />
                                         Cyberia reserves the right to modify or update these terms and conditions at any time. Changes will be posted on the official website. Participants are encouraged to review the terms periodically.
                                     </p>
+                                     <p className="mb-4">
+                                        <strong>11. Changes to Terms and Conditions</strong><br />
+                                        Eligibility for Refunds: Refunds are generally not provided for registration fees. However, exceptions may be made in cases of event cancellation by Cyberia or if the participant withdraws before the registration deadline.
+                                        Non-Refundable Fees: Once the registration deadline has passed, all registration fees are non-refundable, regardless of attendance.
+                                        Requesting a Refund: Participants who believe they are eligible for a refund must submit a request in writing to the Cyberia Tech Fest organizing team before the registration deadline.
+                                    </p>
                                     <p className="mb-4">
-                                        <strong>11. Agreement to Terms</strong><br />
+                                        <strong>12. Refund Policy</strong><br />
                                         By registering for Cyberia Tech Fest, you confirm that you have read, understood, and agree to these Terms and Conditions.
                                     </p>
                                     <p className="mb-4">
