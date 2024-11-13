@@ -23,7 +23,7 @@ const MobNav = () => {
         closeMenu()
     };
     return (
-        <div className={`border ${isOpen? "h-full " : "h-[7vh]"}  backdrop-blur-md bg-transparent z-50 border-white/[0.1] my-2 mx-2 rounded-xl  fixed  top-0 left-0 right-0  transition-all duration-400 ease-in-out overflow-hidden   block `}>
+        <div className={`border ${isOpen? "h-full " : "h-[8vh]"}  backdrop-blur-md bg-transparent z-50 border-white/[0.1] my-2 mx-2 rounded-xl  fixed  top-0 left-0 right-0  transition-all duration-400 ease-in-out overflow-hidden   block `}>
             <div className="flex  h-[7vh] w-full">
                 <div className="flex ms-3 h-full gap-5 p-2 w-3/4">
                     <img src="/Logo/msu.png" alt="" />
@@ -36,9 +36,9 @@ const MobNav = () => {
             </div>
 
             <div className="flex flex-col text-2xl font-Poppins justify-start p-10 gap-7 items-start   text-white w-full h-full">
-                <button   onClick={(e) => handleRedirect({ value: '/' })}>Home</button>
-                <button   onClick={(e) => handleRedirect({ value: '/about' })}>About</button>
-                <button   onClick={(e) => handleRedirect({ value: '/events' })}>Events</button>                
+                <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/' })}>Home</button>
+                <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/about' })}>About</button>
+                <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/events' })}>Events</button>                
             </div>
 
         </div>
