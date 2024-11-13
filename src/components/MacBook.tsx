@@ -7,8 +7,8 @@ export function MacbookScrollDemo() {
     <div className="overflow-hidden h-full dark:bg-transparent bg-white w-full">
       <MacbookScroll
         title={
-          <span>
-            Our Sponsors <br />
+          <span className="text-2xl">
+            Our Sponsors 
           </span>
         }
         badge={
