@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
     
-    <div className='bg-black bg-blend-multiply text-blue-300 flex w-full flex-col'>
+    <div className='bg-black  bg-blend-multiply text-blue-300 flex w-full flex-col'>
       <div className="h-[50vh] flex sm:flex-col md:flex-col sm:px-5  justify-around px-20 ">
         <div className="flex sm:w-full md:w-full w-1/2 sm:h-1/2 flex-col">
           <div className="flex-col h-full flex  gap-0 sm:gap-1 justify-center items-start ">
