@@ -35,7 +35,7 @@ const MobNav = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col text-2xl font-Poppins justify-center p-10 gap-7 items-center   text-white w-full h-full">
+            <div className="flex flex-col text-2xl font-Poppins justify-start p-10 gap-7 items-start   text-white w-full h-full">
                 <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/' })}>Home</button>
                 <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/about' })}>About</button>
                 <button className="font-Poppins"  onClick={(e) => handleRedirect({ value: '/events' })}>Events</button>                
