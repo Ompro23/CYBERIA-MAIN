@@ -182,7 +182,7 @@ const About = () => {
 
         </div>
 
-        <div style={{ backgroundImage: "url('/AboutPage.jpg')" }} className="sm:flex md:hidden lg:hidden 2xl:hidden xl:hidden bg-blend-multiply justify-start  flex-col  items-center h-full bg-[#131415fd] w-full">
+        <div  className="sm:flex md:hidden lg:hidden 2xl:hidden xl:hidden  justify-start  flex-col  items-center h-full bg-[#131415] w-full">
           <div className="m-[100px]">
             <h1 className="text-6xl font-SpaceAge">CYBERIA <p className="text-xs text-end font-Poppins">Unleash the geek within</p> </h1>
             <div className="pb-20">

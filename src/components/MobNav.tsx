@@ -23,7 +23,7 @@ const MobNav = () => {
         closeMenu()
     };
     return (
-        <div className={`border ${isOpen? "h-full " : "h-[7vh]"}  backdrop-blur-md bg-transparent border-white/[0.1] my-2 mx-2 rounded-xl  fixed  top-0 left-0 right-0  transition-all duration-400 ease-in-out overflow-hidden z-20  block `}>
+        <div className={`border ${isOpen? "h-full " : "h-[7vh]"}  backdrop-blur-md bg-transparent z-50 border-white/[0.1] my-2 mx-2 rounded-xl  fixed  top-0 left-0 right-0  transition-all duration-400 ease-in-out overflow-hidden   block `}>
             <div className="flex  h-[7vh] w-full">
                 <div className="flex ms-3 h-full gap-5 p-2 w-3/4">
                     <img src="/Logo/msu.png" alt="" />
