@@ -28,7 +28,7 @@ const About = () => {
       <div className="h-full  w-full">
         <div
           style={{ backgroundImage: "url('/AboutPage.jpg')" }}
-          className="z-1000 sm:hidden light bg-[#0000007d]  bg-blend-multiply bg-fixed bg-no-repeat bg-cover"
+          className="z-1000 sm:hidden light bg-[#0000007d]  bg-blend-multiply bg-fixed bg-no-repeat bg-contain"
         >
 
 
@@ -182,7 +182,7 @@ const About = () => {
 
         </div>
 
-        <div  className="sm:flex md:hidden lg:hidden 2xl:hidden xl:hidden  justify-start  flex-col  items-center h-full bg-[#131415] w-full">
+        <div  className="sm:flex pb-20 md:hidden lg:hidden 2xl:hidden xl:hidden  justify-start  flex-col  items-center h-full bg-[#0e0f0f] w-full">
           <div className="m-[100px]">
             <h1 className="text-6xl font-SpaceAge">CYBERIA <p className="text-xs text-end font-Poppins">Unleash the geek within</p> </h1>
             <div className="pb-20">
@@ -227,7 +227,7 @@ const About = () => {
             <div className=" grid grid-cols-1 gap-5 place-items-center grid-rows-3 h-full  w-full">
               <div className="flex flex-col  w-11/12 rounded-sm h-[50vh] border border-white/[0.2]">
                 <div className="h-3/4  p-5 w-full">
-                      <img src="/Pics/HariBhai.png" className="h-full rounded-md w-full object-cover" alt="" />
+                      <img src="/Pics/HariBhai.png" className="h-full rounded-md w-full object-contain" alt="" />
                 </div>
                 <div className="h-1/4 flex gap-1 flex-col items-center justify-center p-3 w-full">
                       <h1 className="text-xl font-Poppins">Patron</h1>
@@ -237,7 +237,7 @@ const About = () => {
               </div>              
               <div className="flex flex-col  w-11/12 rounded-sm h-[50vh] border border-white/[0.2]">
                 <div className="h-3/4  p-5 w-full">
-                      <img src="/Pics/P_K_Mehta.jpeg" className="h-full rounded-md w-full object-cover" alt="" />
+                      <img src="/Pics/P_K_Mehta.jpeg" className="h-full rounded-md w-full object-contain" alt="" />
                 </div>
                 <div className="h-1/4 flex gap-1 flex-col items-center justify-center p-3 w-full">
                       <h1 className="text-xl font-Poppins">Cyberia Head Personal</h1>
@@ -247,7 +247,7 @@ const About = () => {
               </div>              
               <div className="flex flex-col  w-11/12 rounded-sm h-[50vh] border border-white/[0.2]">
                 <div className="h-3/4  p-5 w-full">
-                      <img src="/Pics/V_K_Shrivastava.png" className="h-full rounded-md w-full object-cover" alt="" />
+                      <img src="/Pics/V_K_Shrivastava.png" className="h-full rounded-md w-full object-contain" alt="" />
                 </div>
                 <div className="h-1/4 flex gap-1 flex-col items-center justify-center p-3 w-full">
                       <h1 className="text-xl font-Poppins">Cyberia Organizing Committee</h1>

@@ -73,6 +73,22 @@
   font-style: normal;
 }
 
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.blur-in-text {  
+  animation: blurIn 1.5s ease-out forwards;
+}
+
+
 @font-face {
   font-family: 'poppins'; 
   src: url('../../public/Poppins-Black.ttf') format('truetype');  

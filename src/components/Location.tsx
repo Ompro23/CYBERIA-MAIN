@@ -4,7 +4,7 @@ import { PinContainer } from "./ui/3d-pin";
 
 export function AnimatedPinDemo() {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center ">
+    <div className="h-[40rem] sm:h-[25rem] w-full flex items-center justify-center ">
       <PinContainer
         title="Msu Baroda"
         href=""

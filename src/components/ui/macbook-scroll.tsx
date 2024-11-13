@@ -68,7 +68,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+      className=" h-[80vh]  flex flex-col items-center py-0 -mt-20 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
     >
       <motion.h2
         style={{
@@ -148,8 +148,8 @@ export const Lid = ({
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
-          <span className="text-white">
-            <AceternityLogo />
+          <span className="text-white text-4xl flex flex-col font-SpaceAge">
+            CYBERIA <span className="text-[10px] font-Poppins text-end ">Unleash the geek within</span>
           </span>
         </div>
       </div>
@@ -166,8 +166,8 @@ export const Lid = ({
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <Image
-          src={src as string}
-          alt="aceternity logo"
+          src="/sample.jpg"
+          alt="Sponsors"
           fill
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
