@@ -18,7 +18,7 @@ const config: Config = {
   theme: {
   	fontFamily: {
   		SpaceAge: ['SpaceAge'],
-		Poppins : ['poppins']
+  		Poppins: ['poppins']
   	},
   	screens: {
   		'2xl': {
@@ -38,9 +38,9 @@ const config: Config = {
   		}
   	},
   	extend: {
-		boxShadow: {
-			input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-		  },
+  		boxShadow: {
+  			input: '`0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`'
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -90,8 +90,9 @@ const config: Config = {
   		},
   		animation: {
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
-			  scroll:
-			  "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		keyframes: {
   			orbit: {
@@ -102,11 +103,27 @@ const config: Config = {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
   				}
   			},
-			  scroll: {
-				to: {
-				  transform: "translate(calc(-50% - 0.5rem))",
-				},
-			}
+  			scroll: {
+  				to: {
+  					transform: 'translate(calc(-50% - 0.5rem))'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
   		}
   	}
   },

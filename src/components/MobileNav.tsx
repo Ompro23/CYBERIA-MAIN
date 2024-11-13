@@ -48,8 +48,8 @@ const onClick = ({ key }: { key: string }) => {
 };
   return (
     <div>
-      <div className="flex mb-10 justify-between px-10  absolute backdrop-blur-sm flex-row bg-[#00000054] w-full h-[10vh]">
-        <div className="flex gap-0 w-1/3 justify-start items-center">
+      <div className="flex mb-10 justify-between p-5   absolute bg-black  flex-row bg-[#00000054] w-full h-[10vh]">
+        <div className="flex  gap-0 w-1/3 justify-start items-center">
           <div className='flex gap-5'>
             <a href="/https://msubaroda.ac.in">
               <img src="/Logo/msu.png" className='h-[20vh]  border-white w-[16vw]  object-contain' alt="Logo" />

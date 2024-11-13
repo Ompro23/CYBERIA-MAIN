@@ -11,6 +11,7 @@ import { InfiniteMovingCardsDemo } from "@/components/InfiniteCards";
 import { AnimatedPinDemo } from "@/components/Location";
 import MobileNav from "@/components/MobileNav";
 import Footer from "@/components/Footer";
+import MobNav from "@/components/MobNav";
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
         <NavbarDemo />
       </div>
       <div className="sm:block 2xl:hidden">
-        <MobileNav />
+        <MobNav />
       </div>
       <div className="h-full  w-full">
         <div

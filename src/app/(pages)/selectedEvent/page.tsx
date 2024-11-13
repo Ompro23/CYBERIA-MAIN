@@ -9,6 +9,7 @@ import { BackgroundBeams } from "@/components/ui/background-beams-with-collision
 import { NavbarDemo } from "@/components/Navbar";
 import {  SignupFormSolo } from "@/components/RegistrationForm";
 import MobileNav from "@/components/MobileNav";
+import MobNav from "@/components/MobNav";
 // ... other imports
 
 const selectedEvent = () => {
@@ -33,14 +34,14 @@ const selectedEvent = () => {
         <NavbarDemo />
       </div>
       <div className="sm:flex 2xl:hidden">
-        <MobileNav />
+        <MobNav />
       </div>
       <div className="h-full relative w-full mt-24">
         <div className="h-full relative justify-center items-center w-full bg-transparent bg-blend-multiply inset-0 flex flex-col z-0 bg-fixed bg-cover bg-center">
           {/* <DockDemo /> */}
 
           <div className="pb-0 h-full flex justify-center items-center w-full">
-        <Tabs defaultValue="register" className="w-[800px] z-0 justify-start h-[800px] bg-black p-5 flex-col text-white flex items-center">
+        <Tabs defaultValue="info" className="w-[800px] z-0 justify-start h-[800px] bg-black p-5 flex-col text-white flex items-center">
           <TabsList className="w-full">
             <TabsTrigger className="w-full" value="info">Info</TabsTrigger>
             <TabsTrigger className="w-full" value="register">Register</TabsTrigger>

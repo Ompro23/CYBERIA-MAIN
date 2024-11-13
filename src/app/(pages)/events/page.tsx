@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import MobileNav from "@/components/MobileNav";
+import MobNav from "@/components/MobNav";
 import { NavbarDemo } from "@/components/Navbar";
 import { TabsDemo } from "@/components/Tabs";
 
@@ -10,7 +10,7 @@ const Events = () => {
         <NavbarDemo />
       </div>
       <div className="sm:block 2xl:hidden">
-        {/* <MobileNav /> */}
+        <MobNav />
       </div>
 
       <div className="h-full w-full pb-10 flex flex-col">
