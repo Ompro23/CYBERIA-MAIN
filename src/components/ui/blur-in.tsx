@@ -32,8 +32,8 @@ const BlurIn = ({  word, className, variant, duration = 1 }: BlurIntProps) => {
         className,
       )}
     >
-      <p className="hover:scale-110 transition-all duration-300">{word}</p>
-      <div className=" transition-all text-end "><WordRotateDemo /></div>
+      <p  style={{ backgroundImage: "url('/metaverseBg.jpg')" }} className="hover:scale-110 bg-clip-text text-transparent bg-center bg-cover transition-all duration-300">{word}</p>
+      <p className=" font-Poppins text-[1rem] tracking-tight whitespace-normal text-end ">Unleash the geek within</p>
     </motion.h1>
   );
 };

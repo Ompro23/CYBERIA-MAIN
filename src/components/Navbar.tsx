@@ -22,38 +22,8 @@ export function NavbarDemo() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(true);
-
-  const context = useContext(eventContext);
-  if (!context) {
-    throw new Error("eventContext must be used within a EventProvider");
-  }
-  const { events, setEvents, setloading, setUserSelectedEvent } = context;
-
   
-  
-
-  const handleGetEvents = async () => {
-    setloading(true);
-    try {
-      const resp = await axios.get(`${HOST}/api/events`);
-      // console.log(resp)
-      if(resp){
-        setEvents(resp.data.Event)
-        setloading(false);
-        
-      }
-      
-    } catch (error) {
-      console.log(error)
-      setloading(false)
-    }
-  };
-
-  useEffect(() => {
-    handleGetEvents();
     
-  }, []);
-
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
