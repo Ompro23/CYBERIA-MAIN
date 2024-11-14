@@ -84,7 +84,7 @@ export default function Home() {
             </div>
 
             {/* Animation or Caraousal */}
-            <div className="w-full h-full  overflow-hidden ">
+            <div className="w-full h-full absolute overflow-hidden ">
             <Canvas className='w-full   h-full '>
                     <Suspense  fallback={<CanvasLoader/>}>                    
                     <PerspectiveCamera   makeDefault position={[0,0,20]}/>                    
