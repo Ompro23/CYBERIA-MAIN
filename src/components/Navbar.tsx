@@ -44,13 +44,13 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-10  inset-x-0 max-w-2xl mx-auto sm:top-0 z-50 transition-transform duration-300",
+        "fixed top-10  inset-x-0 max-w-xl mx-auto sm:top-0 z-50 transition-transform duration-300",
         isVisible ? "translate-y-0" : "-translate-y-full",
         className
       )}
     >
       <Menu  setActive={setActive}>
-        <a href="https://msubaroda.ac.in/" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/msu.png" width={55} height={50} alt="" /></a>
+        <a href="https://msubaroda.ac.in/" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/msu.png" width={35} height={30} alt="" /></a>
         <button onClick={()=>router.push("/")}>
         <MenuItem setActive={setActive} active={active} item="Home">
           {/* <div className="flex font-Poppins flex-col space-y-4 text-sm"> */}
@@ -85,7 +85,7 @@ function Navbar({ className }: { className?: string }) {
           {/* </div> */}
         </MenuItem>      
         </button>
-        <a href="https://www.msubaroda.ac.in/Accreditation" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/75.png" width={55} height={50} alt="" /></a>
+        <a href="https://www.msubaroda.ac.in/Accreditation" target="_blank" rel="noopener noreferrer"><Image className="sm:hidden" src="/Logo/75.png" width={35} height={30} alt="" /></a>
       </Menu>
     </div>
   );

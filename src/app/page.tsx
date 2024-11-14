@@ -2,7 +2,6 @@
 import { NavbarDemo } from "@/components/Navbar";
 import { OrbitingCirclesDemo } from "@/components/Orbiting";
 import { BlurInDemo } from "@/components/Blur-In";
-import { TextRevealDemo } from "@/components/TextReveal";
 import { InfiniteMovingCardsDemo } from "@/components/InfiniteCards";
 import { AnimatedPinDemo } from "@/components/Location";
 import MobNav from "@/components/MobNav";
@@ -22,6 +21,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import HeroCamera from "@/app/fiberComponents/HeroCamera";
 import {useMediaQuery} from 'react-responsive'
 import HeroElement from "@/app/fiberComponents/HeroElement";
+import TypingAnimation from "@/components/ui/typing-animation";
 
 export default function Home() {
   const router = useRouter()
@@ -31,7 +31,7 @@ export default function Home() {
   };
   const calculateSizes = (isSmall: boolean, isMobile: boolean, isTablet: boolean) => {
     return {
-      deskScale: isSmall ? 1.4 : isMobile ? 0.6 : 1,
+      deskScale: isSmall ? 1.4 : isMobile ? 0.6 : 0.7,
       deskPosition: isMobile ? [0.6, -1, 20] : [0.1, -7.8, 2.8],
       cubePosition: isSmall ? [5, 0, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [21, 7, 3],
       reactLogoPosition: isSmall ? [4, 12, -9] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [18, -7, 1],
@@ -97,8 +97,7 @@ export default function Home() {
                     //  position={isMobile?[0.3,-5,3]:[0,-7,4]} 
                     //  rotation={[0,-1.6,0]}
                      />
-                     </HeroCamera>
-                    
+                     </HeroCamera>                    
                     <ambientLight intensity={1} />
                     <directionalLight position={[15,10,10]} intensity={0.5}/>
                     </Suspense>
@@ -112,7 +111,10 @@ export default function Home() {
           </div>         
           <div className="flex py-10 sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">            
             <OrbitingCirclesDemo />
-            <p className="text-2xl font-normal text-center font-Poppins text-neutral-600 dark:text-neutral-300 max-w-xl">Sponsored by those who make it all happen—thank you to our sponsors!</p>
+             <TypingAnimation
+      className="text-2xl font-normal text-center font-Poppins text-neutral-600 dark:text-neutral-300 max-w-xl"
+      text="Sponsored by those who make it all happen-thank you to our sponsors!"
+    />
           </div>
           <div className="flex py-10 sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
             <h1 className="text-4xl border-b-2 border-white py-1">

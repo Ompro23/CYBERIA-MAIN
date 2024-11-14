@@ -27,36 +27,57 @@ const About = () => {
 
       <div className="h-full  w-full">
         <div
-          style={{ backgroundImage: "url('/AboutPage.jpg')" }}
-          className="z-1000 sm:hidden light bg-[#0000007d]  bg-blend-multiply bg-fixed bg-no-repeat bg-contain"
+          // style={{ backgroundImage: "url('/AboutPage.jpg')" }}
+          className=" sm:hidden light bg-[#0000007d]  bg-blend-multiply bg-fixed bg-no-repeat bg-contain"
         >
 
 
           <section className="text-white  md:py-[10rem] lg:py-[8rem] py-[5rem] flex flex-col items-center justify-center text-justify px-6 md:px-10 lg:px-20">
 
-            <div className="bg-[#00000036] my-10 backdrop-blur-lg border border-gray-400 border-opacity-30 shadow-lg rounded-3xl p-6 w-full">
+            <div className="bg-[#000] my-10 backdrop-blur-lg border border-gray-400 border-opacity-30 shadow-lg rounded-xl p-6 w-full">
               <main className="flex flex-col justify-center items-center gap-10 mb-20">
-                <div className="font-light mt-5 text-5xl  font-SpaceAge  md:text-xl text-end mb-5">CYBERIA  <p className="text-xs font-Poppins  ">Unleash the geek within</p> </div>
+                <div className="font-light mt-5 text-7xl  font-SpaceAge  md:text-xl text-end mb-5">CYBERIA  <p className="text-xs font-Poppins  ">Unleash the geek within</p> </div>
                 <div className="leading-8 ">
                   <div className="pb-20">
                     <AnimatedBeamDemo />
                   </div>
-                  <div className="leading-8">
+                  <div className="m-[100px]">            
+            <div className="flex flex-col gap-3">              
+              <Accordion type="single" defaultValue="item-1" >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-3xl font-Poppins">About Cyberia</AccordionTrigger>
+                  <AccordionContent className="text-[#b7b8b8] text-sm">
+                  Know more about Cyberia 2024, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda. Cyberia provides an arena for the youth of today and serve as a platform to exhibit their technical acumen to the world and compete with like-minded peers.platform to exhibit their technical acumen to the world and compete with like-minded peers.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-start no-underline  text-2xl">About the DCA</AccordionTrigger>
+                  <AccordionContent className="text-[#b7b8b8] text-sm">
+                  At The Maharaja Sayajirao University of Baroda, the Department of Computer Applications offers a transformative Bachelor of Computer Applications (BCA) & Master of Science (Information Technology) (MSc. IT) programs. Seamlessly integrating theory with hands-on experience, the department's expert faculty guides. By forging strong industry connections, including internships and guest lectures, the department ensures students are equipped not just to navigate the tech landscape, but to shape its future with innovation.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-start no-underline  text-2xl">Faculty of Science</AccordionTrigger>
+                  <AccordionContent className="text-[#b7b8b8] text-sm">
+                  The Faculty of Science at The Maharaja Sayajirao University of Baroda is a hub of innovation and research. With a focus on interdisciplinary learning, the faculty offers a range of undergraduate, postgraduate, and doctoral programs. The faculty is committed to fostering a culture of curiosity and collaboration, nurturing the next generation of scientists and researchers.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-start no-underline  text-xl">The Maharaja Sayajirao University of Baroda</AccordionTrigger>
+                  <AccordionContent className="text-[#b7b8b8] text-sm">
+                  The Maharaja Sayajirao University of Baroda is a premier institution of higher learning in Vadodara, Gujarat. Established in 1949, the university has a rich history of academic excellence and innovation. With a focus on holistic education, the university offers a wide range of undergraduate, postgraduate, and doctoral programs across various disciplines. The university is committed to fostering a culture of innovation, research, and social responsibility.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
 
-                    <div className="typing-animation">
-                      <div className="font-semibold text-2xl md:text-xl mb-5">
-
-                        <p className="font-semibold text-2xl md:text-xl mb-5">
-                          About Cyberia :
-                        </p>
-                      </div>
-                      Know more about Cyberia 2024, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda.
-                      Cyberia provides an arena for the youth of today and serve as a
-                      platform to exhibit their technical acumen to the world and
-                      compete with like-minded peers.platform to exhibit their technical acumen to the world and
-                      compete with like-minded peers.
-                    </div>
-                  </div>
+            </div>
+          </div>
                 </div>
 
                 {/* <div className="leading-8">
@@ -83,57 +104,7 @@ const About = () => {
                   compete with like-minded peers.platform to exhibit their technical acumen to the world and
                   compete with like-minded peers.
             </p>
-          </div> */}
-
-                <div className="leading-8">
-                  <p className="font-semibold text-2xl md:text-xl mb-5">
-                    About the Department of Computer Applications :
-                  </p>
-                  <p>
-                    At The Maharaja Sayajirao University of Baroda, the Department
-                    of Computer Applications offers a transformative Bachelor of
-                    Computer Applications (BCA) & Master of Science (Information
-                    Technology) (MSc. IT) programs. Seamlessly integrating theory
-                    with hands-on experience, the department's expert faculty
-                    guides. By forging strong industry connections, including
-                    internships and guest lectures, the department ensures students
-                    are equipped not just to navigate the tech landscape, but to
-                    shape its future with innovation.
-                  </p>
-                </div>
-
-                <div className="leading-8">
-                  <p className="font-semibold text-2xl md:text-xl mb-5">
-                    About Faculty of Science :
-                  </p>
-                  <p>
-                    The Faculty of Science at The Maharaja Sayajirao University of
-                    Baroda is a hub of innovation and research. With a focus on
-                    interdisciplinary learning, the faculty offers a range of
-                    undergraduate, postgraduate, and doctoral programs. The faculty
-                    is committed to fostering a culture of curiosity and
-                    collaboration, nurturing the next generation of scientists and
-                    researchers.
-                  </p>
-                </div>
-
-                <div className="leading-8">
-                  <h2 className="font-semibold text-2xl md:text-xl mb-5">
-                    About the Maharaja Sayajirao University of Baroda :
-                  </h2>
-                  <p>
-                    The Maharaja Sayajirao University of Baroda is a premier
-                    institution of higher learning in Vadodara, Gujarat. Established
-                    in 1949, the university has a rich history of academic
-                    excellence and innovation. With a focus on holistic education,
-                    the university offers a wide range of undergraduate,
-                    postgraduate, and doctoral programs across various disciplines.
-                    The university is committed to fostering a culture of
-                    innovation, research, and social responsibility.
-                  </p>
-                </div>
-
-
+          </div> */}               
 
               </main>
             </div>

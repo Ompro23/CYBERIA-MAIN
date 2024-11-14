@@ -8,8 +8,7 @@ export function OrbitingCirclesDemo() {
         CYBERIA
         <span className="text-xs text-white/[0.40] font-Poppins text-end ">Unleash the Geek Within</span>
       </span>
-
-      {/* Inner Circles */}
+      
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
         duration={20}
@@ -36,8 +35,7 @@ export function OrbitingCirclesDemo() {
         duration={20}
         reverse
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>
-        <Icons.googleDrive />
+        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>        
       </OrbitingCircles>
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
@@ -46,8 +44,7 @@ export function OrbitingCirclesDemo() {
         delay={20}
         reverse
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>
-        <Icons.gitHub />
+        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>        
       </OrbitingCircles>
     </div>
   );
