@@ -16,7 +16,7 @@ const Events = () => {
       <div className="h-full w-full pb-10 flex flex-col">
         <div
           // style={{ backgroundImage: "url('/eventsbg.jpg')" }}
-          className="absolute bg-[#0000008d] bg-blend-multiply inset-0 flex flex-col h-[200vh] bg-fixed bg-cover bg-center"
+          className="absolutebg-[#00000036] bg-blend-multiply inset-0 flex flex-col h-[200vh] bg-fixed bg-cover bg-center"
         >
           <div className="mb-10px flex-grow">
             <TabsDemo />

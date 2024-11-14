@@ -28,7 +28,7 @@ const About = () => {
       <div className="h-full  w-full">
         <div
           // style={{ backgroundImage: "url('/AboutPage.jpg')" }}
-          className=" sm:hidden light bg-[#0000007d]  bg-blend-multiply bg-fixed bg-no-repeat bg-contain"
+          className=" sm:hidden light bg-[#00000036]  bg-blend-multiply bg-fixed bg-no-repeat bg-contain"
         >
 
 
