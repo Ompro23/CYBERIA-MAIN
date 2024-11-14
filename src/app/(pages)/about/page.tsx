@@ -36,7 +36,7 @@ const About = () => {
 
             <div className="bg-[#00000036] my-10 backdrop-blur-lg border border-gray-400 border-opacity-30 shadow-lg rounded-3xl p-6 w-full">
               <main className="flex flex-col justify-center items-center gap-10 mb-20">
-                <div className="font-light mt-5 text-5xl  font-SpaceAge  md:text-xl text-end mb-5"><TextGenerateEffectDemo />  <p className="text-xs font-Poppins  ">Unleash the geek within</p> </div>
+                <div className="font-light mt-5 text-5xl  font-SpaceAge  md:text-xl text-end mb-5">CYBERIA  <p className="text-xs font-Poppins  ">Unleash the geek within</p> </div>
                 <div className="leading-8 ">
                   <div className="pb-20">
                     <AnimatedBeamDemo />
