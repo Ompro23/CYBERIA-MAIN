@@ -76,11 +76,11 @@ const Footer = () => {
 </table>
       </div>
       </div>
-      <div className="h-2/5  w-full  sm:text-lg sm:py-4 py-3  bg-black flex flex-row justify-around items-center">
+      <div className="h-2/5  w-full  sm:text-lg sm:py-4 py-3  bg-black flex flex-wrap sm:flex-col justify-around items-center">
         <div className="flex w-1/2 sm:justify-center text-sm sm:items-center">
         <h1 className=' sm:ps-0 sm:text-sm text-nowrap text-white'>@2024 Cyberia</h1>
         </div>
-        <div className="flex w-1/3 text-sm font-thin  sm:hidden text-nowrap gap-4">
+        <div className="flex w-1/3 sm:w-full text-center text-sm font-thin  flex-nowrap text-nowrap gap-4">
         <h1 className='text-white cursor-pointer' onClick={() => window.open('/terms-condition', '_self')}>Terms & Condition</h1>
         <h1 className='text-white cursor-pointer' onClick={() => window.open('/privacy-policy', '_self')}>Privacy Policy</h1>
         {/* <h1 className=' text-white'>Cookie Policy</h1> */}
