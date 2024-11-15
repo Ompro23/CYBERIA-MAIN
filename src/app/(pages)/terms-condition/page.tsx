@@ -79,7 +79,7 @@ const About = () => {
                                     <p className="mb-4">
                                         <strong>5. Registration</strong><br />
                                         Registration Process: All participants must complete the official registration form on the Cyberia website. Required details include name, contact information, team members (if applicable), and event selection.<br />
-                                        Fees: Registration fees may apply to specific events. Fee details, if any, will be available on the website.<br />
+                                        Fees: Registration fees may apply to specific events. Fee details, if any, will be available on the website. Payment can be made to the account holder Shridhar Vijay Popat as per the instructions provided during registration.<br />
                                         Deadline: Registration closes [Insert Registration Deadline Date]. Late registrations may not be accepted.
                                     </p>
                                     <p className="mb-4">
