@@ -4,11 +4,6 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
-import {
   Select,
   SelectContent,
   SelectGroup,
@@ -19,9 +14,16 @@ import {
 } from "@/components/ui/select"
 import axios from "axios";
 import { eventContext } from "@/app/context/MyContext";
+import { HOST } from "@/lib/utilities";
+import {load} from "@cashfreepayments/cashfree-js";
+import { message } from "antd";
+import { useRouter } from "next/navigation";
+
+
 
 export function SignupFormSolo() {
-
+ 
+const router = useRouter();
   const eventContextValue = useContext(eventContext);
   const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
   const loading = eventContextValue?.loading;
@@ -51,7 +53,7 @@ export function SignupFormSolo() {
     setData((prevState) => ({
       ...prevState,
       level: value,
-      
+
 
     }));
   };
@@ -59,7 +61,7 @@ export function SignupFormSolo() {
     setData((prevState) => ({
       ...prevState,
       year: value,
-      
+
 
     }));
   };
@@ -67,28 +69,61 @@ export function SignupFormSolo() {
     setData((prevState) => ({
       ...prevState,
       gender: value,
-      
+
 
     }));
   };
 
-  const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+
+  const [SessionId, setSessionId] = useState("");
+ 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+  
     try {
-      const { data } = await axios.post('/api/payments', {
-        amount: parseInt(UserSelectedEvent?.price),  // Ensure the amount is in the correct format
-        orderId: `order_${Date.now()}`, // Unique order ID
-        customerDetails: {
-          name : Data.fullName,
-          phone: Data.contactNo,
-          email: Data.email,
-        },
+      const cashfree = await load({
+        mode: "sandbox" //or production
       });
-      window.location.href = data.paymentUrl;
-    } catch (error) {
-      console.error('Payment initiation failed:', error);
-      alert('Payment initiation failed. Please try again.');
+
+      
+      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price});
+      // console.log(response.data.data.payment_session_id)
+      if(!response.data.data.payment_session_id){
+          message.info("Please try again")
+      }
+      else{
+        setSessionId(response.data.data.payment_session_id);
+        message.success("Please wait for Payment Window")
+      }
+
+      let checkoutOptions = {
+        paymentSessionId: SessionId,
+        redirectTarget: "_modal" //optional ( _self, _blank, or _top)
     }
+
+    const result = await cashfree.checkout(checkoutOptions)
+    if(result.error){    
+      message.error("User has closed the popup or there is some payment error");
+      // console.log(result.error);
+  }
+  if(result.redirect){
+      // This will be true when the payment redirection page couldnt be opened in the same window
+      // This is an exceptional case only when the page is opened inside an inAppBrowser
+      // In this case the customer will be redirected to return url once payment is completed
+      message.info("Payment will be redirected");
+  }
+  if(result.paymentDetails){
+      // This will be called whenever the payment is completed irrespective of transaction status
+      message.success("Payment has been completed");
+      // router.push("/events")
+      console.log(result.paymentDetails.paymentMessage);
+  }
+    } catch (error) {
+      console.log(error)
+      message.error("Technical Error try after Sometime")
+    }
+    
   };
   return (
     <div className="w-[55vw] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
@@ -107,17 +142,17 @@ export function SignupFormSolo() {
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" name="email" value={Data.email} onChange={handleChange}  placeholder="Please provide your mail" type="text" />
+            <Input id="email" name="email" value={Data.email} onChange={handleChange} placeholder="Please provide your mail" type="text" />
           </LabelInputContainer>
         </div>
         <div className="flex w-full gap-5">
           <LabelInputContainer className="mb-4 w-1/2">
             <Label htmlFor="contactNo1">Contact Info </Label>
-            <Input id="contactNo" name="contactNo" value={Data.contactNo} onChange={handleChange}  placeholder="Enter your phone number" type="digit" />
+            <Input id="contactNo" name="contactNo" value={Data.contactNo} onChange={handleChange} placeholder="Enter your phone number" type="digit" />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4 w-1/2">
-            <Label htmlFor="contactNo2">Contact Info (optional) </Label>
-            <Input id="contactNo2" name="contactNo2" value={Data.contactNo2} onChange={handleChange}  placeholder="Enter your phone number" type="digit" />
+            <Label htmlFor="contactNo2">Contact Info (Secondary) </Label>
+            <Input id="contactNo2" name="contactNo2" value={Data.contactNo2} onChange={handleChange} placeholder="Enter your phone number" type="digit" />
           </LabelInputContainer>
         </div>
         <div className="flex w-full gap-5">

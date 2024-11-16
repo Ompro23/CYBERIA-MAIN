@@ -1,51 +1,81 @@
-import axios from 'axios';
 import { NextResponse } from 'next/server';
+import { connectDb } from '@/helper/db';
+import { Events } from '@/models/Events';
+import dotenv from 'dotenv'
+import {Cashfree} from 'cashfree-pg'
+import crypto from 'crypto'
 
+dotenv.config()
+// Connect to the database
+
+
+// CORS headers
 const setCorsHeaders = (response) => {
-    response.headers.set('Access-Control-Allow-Origin', '*'); // Change '*' to your specific domain in production
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PATCH, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
-    return response;
+  // Allow any origin (be sure to restrict this to specific origins in production)
+  response.headers.set('Access-Control-Allow-Origin', '*'); 
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');  // Allow all necessary methods
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');  // Allow necessary headers
+  response.headers.set('Access-Control-Allow-Credentials', 'true'); // If you want to send credentials (cookies, HTTP authentication, etc.)
+   
+
+  return response;
 };
 
-const phonePeMerchantKey = '96434309-7796-489d-8924-ab56988a6076';
-const phonePeApiUrl = 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay';  // Adjust URL based on PhonePe's API documentation
 
-export async function POST(request) {    
-  if (request.method === 'POST') {
-    const { amount, orderId, customerDetails } = request.body;
+Cashfree.XClientId = process.env.CLIENT_ID;
+Cashfree.XClientSecret = process.env.CLIENT_SECRET;
+Cashfree.XEnvironment = Cashfree.Environment.SANDBOX; //Production for later use
 
-    try {
-      // Prepare the requestuest payload for PhonePe API
-      const paymentrequestuestPayload = {
-        merchantId: 'PGTESTPAYUAT86',
-        amount: amount, // Amount in smallest currency unit (e.g., paise for INR)
-        orderId: orderId, // Unique order ID
-        customerDetails: customerDetails, // Customer information (phone, email, etc.)
-        callbackUrl: 'https://yourdomain.com/api/payment/callback', // Callback URL to listen for payment response
-        // Any other requestuired fields from PhonePe API documentation
-      };
 
-      // Make the API requestuest to PhonePe for initiating the payment
-      const response = await axios.post(
-        `${phonePeApiUrl}/initiatePayment`, 
-        paymentrequestuestPayload, 
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${phonePeMerchantKey}`, // Use your PhonePe Merchant Key here
-          },
-        }
-      );
+function createOrderId() {
+  const uniqueId = crypto.randomBytes(16).toString("hex");
 
-      // Return the response from PhonePe (e.g., URL to redirect user to PhonePe payment page)
-      return NextResponse.status(200).json({ paymentUrl: response.data.paymentUrl });
+  const hash = crypto.createHash("sha256")
+  hash.update(uniqueId)
 
-    } catch (error) {
-      console.error('Error initiating payment', error);
-      return NextResponse.status(500).json({ error: 'Failed to initiate payment' });
-    }
-  } else {
-    return NextResponse.status(405).json({ message: 'Method Not Allowed' });
+  const orderId = hash.digest("hex")
+
+  return orderId.substr(0,12);
+}
+
+export async function POST(request) {
+  try {
+    const body = await request.json()
+    console.log(body)
+    const requestData = {
+      "order_amount": "1",
+      "order_currency": "INR",
+      "order_id": createOrderId(),
+      "customer_details": {
+        "customer_id": "node_sdk_test",
+        "customer_name": "",
+        "customer_email": "example@gmail.com",
+        "customer_phone": "9999999999"
+      },     
+      "order_meta": { 
+        "return_url": "https://mywebsite.com?order_id=sample_123"
+      }      
+    };
+
+    // Await the Cashfree.PGCreateOrder call
+    const response = await Cashfree.PGCreateOrder("2023-08-01", requestData).setMaxListeners(20);
+    
+    // Extract the data from the response
+    const a = response.data;
+
+    // Create and return the response with data
+    const apiResponse = NextResponse.json({
+      success: true,
+      data: a // Directly using the response data
+    }, { status: 200 });
+
+    return setCorsHeaders(apiResponse);
+  } catch (error) {
+    console.log(error.message);
+    return NextResponse.json({ error: error.message }, { status: 400 });
   }
 }
+
+
+
+

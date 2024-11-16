@@ -74,15 +74,16 @@ const selectedEvent = () => {
             ) : "Loading..."}
           </TabsContent>
           <TabsContent className="bg-transparent" value="register">
-            <div className="flex w-full h-screen bg-black justify-center flex-col items-center">
-          <div className="w-full h-3/4">
+            <div className="flex w-full  bg-black justify-center flex-col items-center">
+          {/* <div className="w-full h-3/4">
             <SparklesPreview />
             </div>
-          </div>
-            {/* <div className="h-full w-full p-10 bg-transparent text-start justify-center sm:items-center flex-col flex">
+           */}
+           </div>
+            <div className="h-full w-full p-10 bg-transparent text-start justify-center sm:items-center flex-col flex">
             {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <div>Hii</div> }
               
-            </div> */}
+            </div>
           </TabsContent>
         </Tabs>
           </div>
