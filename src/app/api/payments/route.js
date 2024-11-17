@@ -4,6 +4,8 @@ import { Events } from '@/models/Events';
 import dotenv from 'dotenv'
 import {Cashfree} from 'cashfree-pg'
 import crypto from 'crypto'
+import { EventEmitter } from 'stream';
+
 
 dotenv.config()
 // Connect to the database
@@ -38,44 +40,43 @@ function createOrderId() {
   return orderId.substr(0,12);
 }
 
+EventEmitter.setMaxListeners(50); 
 export async function POST(request) {
   try {
-    const body = await request.json()
-    console.log(body)
+    const body = await request.json()    
     const requestData = {
-      "order_amount": "1",
+      "order_amount": body.price,
       "order_currency": "INR",
       "order_id": createOrderId(),
       "customer_details": {
         "customer_id": "node_sdk_test",
-        "customer_name": "",
-        "customer_email": "example@gmail.com",
-        "customer_phone": "9999999999"
-      },     
-      "order_meta": { 
-        "return_url": "https://mywebsite.com?order_id=sample_123"
-      }      
+        "customer_name": body.fullName ,
+        "customer_email": body.email,
+        "customer_phone": body.contactNo,
+      },    
+      "order_meta": {
+        "return_url": `https://merchant.in/pg/process_return?cf_id=${createOrderId()}`
+      }
     };
-
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().split('T')[0];    
     // Await the Cashfree.PGCreateOrder call
-    const response = await Cashfree.PGCreateOrder("2023-08-01", requestData).setMaxListeners(20);
-    
+    const response = await Cashfree.PGCreateOrder(`2023-08-01`,requestData)    
     // Extract the data from the response
     const a = response.data;
-
-    // Create and return the response with data
+    // console.log(a);    
     const apiResponse = NextResponse.json({
       success: true,
       data: a // Directly using the response data
     }, { status: 200 });
-
+    
     return setCorsHeaders(apiResponse);
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return NextResponse.json({ error: error.message }, { status: 400 });
   }
 }
 
-
+process.removeListener('uncaughtException', POST);
 
 

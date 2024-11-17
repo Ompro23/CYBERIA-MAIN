@@ -26,6 +26,7 @@ export function SignupFormSolo() {
 const router = useRouter();
   const eventContextValue = useContext(eventContext);
   const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
+  const setTicketData = eventContextValue?.setTicketData;
   const loading = eventContextValue?.loading;
   const setloading = eventContextValue?.setloading;
 
@@ -36,9 +37,10 @@ const router = useRouter();
     contactNo2: "",
     institute: "",
     year: "",
-    level: "",
+    level: "",    
     age: "",
     gender: "",
+    stream : ""
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
@@ -65,6 +67,12 @@ const router = useRouter();
 
     }));
   };
+  const handleSelectUGPGChange = (value: string) => {
+    setData((prevState) => ({
+      ...prevState,
+      ug_pg: value,
+    }));
+  };
   const handleSelectGenderChange = (value: string) => {
     setData((prevState) => ({
       ...prevState,
@@ -87,41 +95,63 @@ const router = useRouter();
       });
 
       
-      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price});
+      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price},{
+        headers:{
+          'Content-Type': 'application/json',
+        }
+      });
       // console.log(response.data.data.payment_session_id)
-      if(!response.data.data.payment_session_id){
+      if(!response.data){
           message.info("Please try again")
-      }
-      else{
-        setSessionId(response.data.data.payment_session_id);
-        message.success("Please wait for Payment Window")
-      }
-
+          }
       let checkoutOptions = {
-        paymentSessionId: SessionId,
-        redirectTarget: "_modal" //optional ( _self, _blank, or _top)
-    }
-
-    const result = await cashfree.checkout(checkoutOptions)
-    if(result.error){    
-      message.error("User has closed the popup or there is some payment error");
-      // console.log(result.error);
-  }
+        paymentSessionId: response.data.data.payment_session_id,
+        redirectTarget: "_blank",
+        appearance: {
+          width: "700px",
+          height: "700px",
+        },
+      }
+      
+      
+      const result = await cashfree.checkout(checkoutOptions)
+      message.success("Please wait for Payment Window")
+    console.log(result)
   if(result.redirect){
       // This will be true when the payment redirection page couldnt be opened in the same window
       // This is an exceptional case only when the page is opened inside an inAppBrowser
       // In this case the customer will be redirected to return url once payment is completed
       message.info("Payment will be redirected");
   }
-  if(result.paymentDetails){
+  else if(result.error){    
+    message.error("try again");
+    // console.log(result.error);
+}
+  else if(result.paymentDetails){
       // This will be called whenever the payment is completed irrespective of transaction status
       message.success("Payment has been completed");
-      // router.push("/events")
+      // router.push("/events")      
+      message.info("Please wait for redirection")
+      setloading?.(true)
+      console.log(result)
       console.log(result.paymentDetails.paymentMessage);
-  }
+      const response = await axios.post(`https://cyberia2k24-w9pk.onrender.com/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
+        headers:{
+          'Content-Type': 'application/json',
+        }
+      });
+      console.log(response)
+      if(response.status === 201 && response.data.PDF){
+        router.push("/dowldTicket")
+        setTicketData?.(response.data)
+      }
+      else{
+        message.error("Some error occured contact Customer Support")
+      }
+  }   
     } catch (error) {
+      message.error("Technical Error or Check your Credentials again")    
       console.log(error)
-      message.error("Technical Error try after Sometime")
     }
     
   };
@@ -158,7 +188,7 @@ const router = useRouter();
         <div className="flex w-full gap-5">
           <LabelInputContainer className="mb-4 w-1/2">
             <Label htmlFor="contactNo1">Institute</Label>
-            <Select value={Data.level} name="level" onValueChange={handleSelectChange} defaultValue={"college"}>
+            <Select required value={Data.level}  name="level" onValueChange={handleSelectChange} defaultValue={"college"}>
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a Institute" />
               </SelectTrigger>
@@ -173,7 +203,7 @@ const router = useRouter();
           </LabelInputContainer>
           <LabelInputContainer className="mb-4 w-1/2">
             <Label htmlFor="contactNo2">Level</Label>
-            <Select value={Data.year} name="year" onValueChange={handleSelectYearChange} defaultValue={"1"}>
+            <Select value={Data.year} required name="year" onValueChange={handleSelectYearChange} defaultValue={"1"}>
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a Level" />
               </SelectTrigger>
@@ -197,12 +227,29 @@ const router = useRouter();
                       <SelectItem value="12">12th</SelectItem>
                     </div>}
 
+                 
                 </SelectGroup>
               </SelectContent>
             </Select>
+           
           </LabelInputContainer>
+          
         </div>
-        <LabelInputContainer className="mb-8">
+        
+
+
+        <LabelInputContainer className="mb-5">
+          <Label htmlFor="twitterpassword">Stream</Label>
+          <Input
+            id="stream"
+            placeholder="Your Stream (Science, Commerce or Arts)"
+            type="text"
+            name="stream" value={Data.stream} onChange={handleChange}
+          />
+        </LabelInputContainer>
+        
+
+        <LabelInputContainer className="mb-5">
           <Label htmlFor="twitterpassword">Institute Name</Label>
           <Input
             id="institueName"
@@ -214,7 +261,7 @@ const router = useRouter();
         <div className="flex w-full gap-5">
           <LabelInputContainer className="mb-8">
             <Label htmlFor="twitterpassword">Gender</Label>
-            <Select value={Data.gender} name="gender" onValueChange={handleSelectGenderChange} defaultValue={"male"}>
+            <Select  required value={Data.gender} name="gender" onValueChange={handleSelectGenderChange} defaultValue={"male"}>
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select a Gender" />
               </SelectTrigger>
