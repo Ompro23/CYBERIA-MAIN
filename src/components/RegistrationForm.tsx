@@ -95,7 +95,7 @@ const router = useRouter();
       });
 
       
-      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price},{
+      const response = await axios.post(`${HOST}/api/payments`,{...Data,price:UserSelectedEvent.price},{
         headers:{
           'Content-Type': 'application/json',
         }
@@ -106,7 +106,7 @@ const router = useRouter();
           }
       let checkoutOptions = {
         paymentSessionId: response.data.data.payment_session_id,
-        redirectTarget: "_blank",
+        redirectTarget: "_modal",
         appearance: {
           width: "700px",
           height: "700px",
@@ -116,38 +116,40 @@ const router = useRouter();
       
       const result = await cashfree.checkout(checkoutOptions)
       message.success("Please wait for Payment Window")
-    console.log(result)
+    // console.log(result)
   if(result.redirect){
       // This will be true when the payment redirection page couldnt be opened in the same window
       // This is an exceptional case only when the page is opened inside an inAppBrowser
       // In this case the customer will be redirected to return url once payment is completed
-      message.info("Payment will be redirected");
+      // message.success("Payment Completed");
+     
+
   }
-  else if(result.error){    
+  if(result.error){    
     message.error("try again");
     // console.log(result.error);
 }
-  else if(result.paymentDetails){
-      // This will be called whenever the payment is completed irrespective of transaction status
-      message.success("Payment has been completed");
-      // router.push("/events")      
-      message.info("Please wait for redirection")
-      setloading?.(true)
-      console.log(result)
-      console.log(result.paymentDetails.paymentMessage);
-      const response = await axios.post(`https://cyberia2k24-w9pk.onrender.com/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
-        headers:{
-          'Content-Type': 'application/json',
-        }
-      });
-      console.log(response)
-      if(response.status === 201 && response.data.PDF){
-        router.push("/dowldTicket")
-        setTicketData?.(response.data)
+   if(result.paymentDetails){
+    message.success("Payment has been completed");
+    // router.push("/events")      
+    message.info("Please wait for redirection")
+    setloading?.(true)
+    console.log(result)
+    console.log(result.paymentDetails.paymentMessage);
+    const response = await axios.post(`https://cyberia2k24-w9pk.onrender.com/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
+      headers:{
+        'Content-Type': 'application/json',
       }
-      else{
-        message.error("Some error occured contact Customer Support")
-      }
+    });
+    console.log(response)
+    if(response.status === 201 && response.data.PDF){
+      router.push("/dowldTicket")
+      setTicketData?.(response.data)
+    }
+    else{
+      message.error("Some error occured contact Customer Support")
+    }
+      // This will be called whenever the payment is completed irrespective of transaction status     
   }   
     } catch (error) {
       message.error("Technical Error or Check your Credentials again")    
