@@ -15,7 +15,7 @@ import {
 import axios from "axios";
 import { eventContext } from "@/app/context/MyContext";
 import { HOST } from "@/lib/utilities";
-import {load} from "@cashfreepayments/cashfree-js";
+const Cashfree = require('@cashfreepayments/cashfree-js');
 import { message } from "antd";
 import { useRouter } from "next/navigation";
 
@@ -90,7 +90,7 @@ const router = useRouter();
     
   
     try {
-      const cashfree = await load({
+      const cashfree = await Cashfree.load({
         mode: "sandbox" //or production
       });
 
