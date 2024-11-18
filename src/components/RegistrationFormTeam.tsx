@@ -123,7 +123,7 @@ export function SignupFormTeam() {
       });
 
       const response = await axios.post(
-        `http://localhost:3000/api/payments`,
+        `http://msudcacyberia.in/api/payments`,
         { ...Data, price: UserSelectedEvent.price },
         {
           headers: {
