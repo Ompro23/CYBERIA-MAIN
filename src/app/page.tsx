@@ -117,7 +117,7 @@ export default function Home() {
     />
           </div>
           <div className="flex py-10 bg-gradient-to-b from-black to-[#000] sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
-            <h1 className="text-4xl border-b-2 border-white py-1">
+            <h1 className="text-4xl font-light border-b-2 border-white py-1">
               Powered By
             </h1>
             <InfiniteMovingCardsDemo />
@@ -125,7 +125,7 @@ export default function Home() {
 
           <div className="flex overflow-hidden border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]  sm:bg-grid-white/[0.1]  h-full w-full justify-center items-center flex-col ">
             <div className="flex  flex-col sm:w-full  w-4/5 rounded-xl  justify-center items-center  h-screen">
-              <h1 className="text-4xl sm:text-2xl border-b-2 text-center border-white pt-32">
+              <h1 className="text-4xl font-extralight sm:text-2xl border-b-2 text-center border-white pt-32">
                 The Maharaja Sayajirao University of Baroda
               </h1>
               <div className="flex sm:flex-col sm:gap-0 gap-32 justify-center  w-full   items-center  flex-row">
@@ -143,7 +143,7 @@ export default function Home() {
         </div>
       </div>
       <div className="sm:flex h-full w-full md:hidden flex-col gap-10  py-32 flex justify-center  items-center lg:hidden 2xl:hidden xl:hidden">
-      <div className="w-full h-[300px]  overflow-hidden ">
+      <div className="w-full  h-[300px]  overflow-hidden ">
             <Canvas className='w-full h-[300px]'>
                     <Suspense  fallback={<CanvasLoader/>}>                    
                     <PerspectiveCamera   makeDefault position={[0,0,20]}/>                    
@@ -188,7 +188,7 @@ export default function Home() {
         <MacbookScrollDemo />
 
         <CardDemo />
-        <div className="h-full flex justify-center items-center flex-col mt-10">
+        <div className="h-full overflow-hidden border-b-[1px] border-white/[0.2]  sm:pb-10 2xl:bg-gradient-to-b from-black to-[#141516] flex justify-center items-center flex-col mt-10">
           <h1 className="text-2xl font-Poppins border-b-2 border-white text-center">Our Location</h1>
           <AnimatedPinDemo />
         </div>

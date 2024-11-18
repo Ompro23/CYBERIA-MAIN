@@ -91,7 +91,7 @@
 
 @font-face {
   font-family: 'poppins'; 
-  src: url('../../public/SFPRODISPLAYREGULAR.OTF') ;
+  src: url('../../public/Poppins-Black.ttf') format('truetype');  
   font-weight: normal;
   font-style: normal;
 }
