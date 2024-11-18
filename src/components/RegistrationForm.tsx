@@ -96,7 +96,7 @@ const router = useRouter();
       });
 
       
-      const response = await axios.post(`http://msudcacyberia.in/api/payments`,{...Data,price:1},{
+      const response = await axios.post(`${HOST}/api/payments`,{...Data,price:1},{
         headers:{
           'Content-Type': 'application/json',
         }
