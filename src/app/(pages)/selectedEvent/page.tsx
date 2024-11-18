@@ -17,7 +17,7 @@ const selectedEvent = () => {
   const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
   const loading = eventContextValue?.loading;
   const setloading = eventContextValue?.setloading;
-
+  
   useEffect(() => {
     if (UserSelectedEvent) {
       setloading && setloading(false);
@@ -36,17 +36,17 @@ const selectedEvent = () => {
       <div className="sm:flex 2xl:hidden">
         <MobNav />
       </div>
-      <div className="h-full relative w-full mt-24">
+      <div className="h-full  relative w-full mt-24">
         <div className="h-full relative justify-center items-center w-full bg-transparent bg-blend-multiply inset-0 flex flex-col z-0 bg-fixed bg-cover bg-center">
           {/* <DockDemo /> */}
 
           <div className="pb-0 h-full flex justify-center items-center w-full">
-        <Tabs defaultValue="info" className="w-[800px] z-0 justify-start h-[800px] bg-black p-5 flex-col text-white flex items-center">
+        <Tabs defaultValue="info" className="w-[800px] sm:mt-5 z-0 justify-start h-full bg-black p-5 flex-col text-white flex items-center">
           <TabsList className="w-full">
             <TabsTrigger className="w-full" value="info">Info</TabsTrigger>
             <TabsTrigger className="w-full" value="register">Register</TabsTrigger>
           </TabsList>
-          <TabsContent className="bg-transparent" value="info">
+          <TabsContent  value="info">
             {!loading ? (
           <div className="h-full w-full bg-transparent text-start justify-center sm:items-center flex-col flex">
             <DirectionAwareHover
@@ -73,7 +73,7 @@ const selectedEvent = () => {
           </div>
             ) : "Loading..."}
           </TabsContent>
-          <TabsContent className="bg-transparent" value="register">
+          <TabsContent  value="register">
             <div className="flex w-full  bg-black justify-center flex-col items-center">
           {/* <div className="w-full h-3/4">
             <SparklesPreview />
@@ -81,8 +81,7 @@ const selectedEvent = () => {
            */}
            </div>
             <div className="h-full w-full p-10 bg-transparent text-start justify-center sm:items-center flex-col flex">
-            {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <div>Hii</div> }
-              
+            {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <div>Hii</div> }              
             </div>
           </TabsContent>
         </Tabs>

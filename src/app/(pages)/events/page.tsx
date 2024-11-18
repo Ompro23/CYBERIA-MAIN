@@ -13,10 +13,10 @@ const Events = () => {
         <MobNav />
       </div>
 
-      <div className="h-full w-full pb-10 flex flex-col">
+      <div className="h-full w-full  flex flex-col">
         <div
           // style={{ backgroundImage: "url('/eventsbg.jpg')" }}
-          className="absolutebg-[#00000036] bg-blend-multiply inset-0 flex flex-col h-[200vh] bg-fixed bg-cover bg-center"
+          className="  border-b-[1px] border-white/[0.2] overflow-y-scroll  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]  inset-0 flex flex-col h-[200vh] sm:h-full  "
         >
           <div className="mb-10px flex-grow">
             <TabsDemo />

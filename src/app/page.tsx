@@ -123,8 +123,8 @@ export default function Home() {
             <InfiniteMovingCardsDemo />
           </div>
 
-          <div className="flex overflow-hidden border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]  sm:bg-grid-white/[0.1]  h-full w-full justify-center items-center flex-col ">
-            <div className="flex  flex-col sm:w-full  w-4/5 rounded-xl  justify-center items-center  h-screen">
+          <div className="flex overflow-hidden border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]   h-full w-full justify-center items-center flex-col ">
+            <div className="flex  flex-col sm:w-full  w-4/5 rounded-xl  justify-center items-center ">
               <h1 className="text-4xl font-extralight sm:text-2xl border-b-2 text-center border-white pt-32">
                 The Maharaja Sayajirao University of Baroda
               </h1>

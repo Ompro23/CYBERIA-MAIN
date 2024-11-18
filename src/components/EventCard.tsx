@@ -61,6 +61,12 @@ export function CardHoverEffectDemo() {
            <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />          
           <Skeleton className="h-[180px] bg-white/[0.2]  my-10 w-[250px] rounded-xl" />          
           <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                                               
                              
         </div>)  :  <HoverEffect items={technicalEvents } />                        
       }
@@ -116,9 +122,15 @@ export function CardHoverEffectDemo2() {
       <div className="flex flex-row  w-full h-full ">
         {
          loading ?  ( <div className="flex flex-row flex-wrap justify-around w-full ">
-          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />          
+         <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />          
           <Skeleton className="h-[180px] bg-white/[0.2]  my-10 w-[250px] rounded-xl" />          
-          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                   
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
+          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                                               
         </div>)  :  <HoverEffect items={nonTechnicalEvents } />                        
       }
     </div>
