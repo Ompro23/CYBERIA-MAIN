@@ -14,7 +14,7 @@ dotenv.config()
 // CORS headers
 const setCorsHeaders = (response) => {
   // Allow any origin (be sure to restrict this to specific origins in production)
-  response.headers.set('Access-Control-Allow-Origin', 'http://msudcacyberia.in'); 
+  response.headers.set('Access-Control-Allow-Origin', 'https://msudcacyberia.in'); 
   response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');  // Allow all necessary methods
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');  // Allow necessary headers
   response.headers.set('Access-Control-Allow-Credentials', 'true'); // If you want to send credentials (cookies, HTTP authentication, etc.)
