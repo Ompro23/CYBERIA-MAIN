@@ -61,10 +61,10 @@ export async function POST(request) {
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().split('T')[0];    
     // Await the Cashfree.PGCreateOrder call
-    const response = await Cashfree.PGCreateOrder("2023-08-01",requestData)    
+    const response = await Cashfree.PGCreateOrder(formattedDate,requestData)    
     // Extract the data from the response
     const a = response.data;
-    // console.log(a);    
+    console.log(a);    
     const apiResponse = NextResponse.json({
       success: true,
       data: a // Directly using the response data
