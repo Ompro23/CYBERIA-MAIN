@@ -135,7 +135,7 @@ const router = useRouter();
     setloading?.(true)
     console.log(result)
     console.log(result.paymentDetails.paymentMessage);
-    const response = await axios.post(`http://145.223.18.122:8000/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
+    const response = await axios.post(`https://145.223.18.122:8000/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
       headers:{
         'Content-Type': 'application/json',
       }
