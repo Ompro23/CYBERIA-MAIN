@@ -119,7 +119,7 @@ export function SignupFormTeam() {
 
     try {
       const cashfree = await Cashfree.load({
-        mode: "sandbox", //or production
+        mode: "production", //or production
       });
 
       const response = await axios.post(
