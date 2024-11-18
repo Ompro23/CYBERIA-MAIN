@@ -26,7 +26,7 @@ const setCorsHeaders = (response) => {
 
 Cashfree.XClientId = process.env.CLIENT_ID;
 Cashfree.XClientSecret = process.env.CLIENT_SECRET;
-Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION; //Production for later use
+Cashfree.XEnvironment = Cashfree.Environment.SANDBOX; //Production for later use
 
 
 function createOrderId() {
@@ -61,7 +61,7 @@ export async function POST(request) {
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().split('T')[0];    
     // Await the Cashfree.PGCreateOrder call
-    const response = await Cashfree.PGCreateOrder(formattedDate,requestData)    
+    const response = await Cashfree.PGCreateOrder("2023-08-01",requestData)    
     // Extract the data from the response
     const a = response.data;
     // console.log(a);    
