@@ -23,14 +23,14 @@ const About = () => {
           // style={{ backgroundImage: "url('/AboutPage.jpg')" }}
           className="border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]   h-full w-full justify-center items-center flex-col"
         >
-          <main className="flex flex-col justify-center items-center gap-10 mb-20">
-            <div className="font-light mt-5 text-7xl  font-SpaceAge blur-in-text  md:text-xl text-end mb-5">
+          <main className="flex flex-col h-full w-full justify-center items-center gap-10 mb-20">
+            <div className="font-light mt-5 text-7xl  h-full font-SpaceAge blur-in-text  md:text-5xl text-end mb-5">
               CYBERIA{" "}
               <p className="text-xs font-Poppins  ">Unleash the geek within</p>{" "}
             </div>
             <div className="leading-8 ">
-              <div className="m-[100px] flex flex-col justify-center items-center">
-                <h2 className="font-normal text-3xl text-center border-b-2 border-white w-fit md:text-xl mb-5 ">
+              <div className="m-[100px] sm:m-[50px] flex flex-col justify-center items-center">
+                <h2 className="font-normal  text-3xl text-center border-b-2 border-white w-fit md:text-xl sm:text-sm mb-5 ">
                   Privacy Policy for Cyberia Tech Fest
                 </h2>
                 <div className="mb-4 flex flex-row justify-center items-center font-extralight">
@@ -39,10 +39,10 @@ const About = () => {
                 <div className="flex mt-10 flex-col gap-3">
                   <Accordion type="single" defaultValue="item-1">
                     <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-3xl font-Poppins">
+                      <AccordionTrigger className="text-3xl sm:text-xl font-Poppins">
                         1. Introduction
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] sm:text-xs">
                         Welcome to Cyberia! We are committed to protecting your
                         privacy and ensuring the security of your personal
                         information. This Privacy Policy explains what data we
@@ -54,10 +54,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-start no-underline  text-2xl">
+                      <AccordionTrigger className="text-start no-underline  text-xl sm:text-sm">
                         2. Information We Collect
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8]  flex flex-col gap-2 text-sm">
+                      <AccordionContent className="text-[#b7b8b8]  flex flex-col gap-2 sm:text-xs ">
                         We may collect various types of information when you
                         interact with our website: 
                         <p><b>- Personal Information:</b> Name,
@@ -76,11 +76,11 @@ const About = () => {
                     </AccordionItem>
                   </Accordion>
                   <Accordion type="single" collapsible>
-                    <AccordionItem value="item-2">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                    <AccordionItem value="item-3">
+                      <AccordionTrigger className="text-start no-underline  text-xl sm:text-sm">
                         3. How We Use Your Information
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8]  sm:text-xs">
                         Cyberia uses the collected data for the following
                         purposes: Event Registration and Communication: To
                         manage registrations, send you event updates, and
@@ -95,10 +95,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-4">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline  text-xl sm:text-sm">
                         4. Sharing Your Information
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] sm:text-xs">
                         We do not sell or rent your personal information to
                         third parties. However, we may share data with trusted
                         service providers or partners who assist us with website
@@ -111,10 +111,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-5">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline  text-xl sm:text-sm">
                         5. Data Security
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] sm:text-xs">
                         We take appropriate technical and organizational
                         measures to protect your information from unauthorized
                         access, loss, or misuse. However, please note that no
@@ -125,10 +125,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-6">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline  text-xl sm:text-sm">
                         6. Your Rights
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] flex flex-col gap-2 text-sm">
+                      <AccordionContent className="text-[#b7b8b8] flex flex-col gap-2 text-sm sm:text-xs">
                         Depending on your location, you may have the following
                         rights regarding your personal information:
                         <p>-  Access and
@@ -145,10 +145,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-7">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline sm:text-md  text-xl sm:text-sm">
                       7. Changes to This Privacy Policy
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] sm:text-xs">
                       We may update this Privacy Policy periodically to reflect changes in our practices or applicable law. We encourage you to review this policy from time to time.
                       </AccordionContent>
                     </AccordionItem>
@@ -175,7 +175,7 @@ export default About;
 //   <section className="text-white  md:py-[10rem] lg:py-[8rem] py-[5rem] flex flex-col items-center justify-center text-justify px-6 md:px-10 lg:px-20">
 //     <div className="bg-[#00000036] my-10 backdrop-blur-lg border border-gray-400 border-opacity-30 shadow-lg rounded-3xl p-6 w-full">
 //       <main className="flex flex-col justify-center items-center gap-10 mb-20">
-//         <h2 className="font-light mt-5 text-5xl  font-SpaceAge  md:text-xl text-end mb-5">
+//         <h2 className="font-light mt-5 text-5xl  font-SpaceAge  md:text-xl sm:text-sm text-end mb-5">
 //           <TextGenerateEffectDemo />{" "}
 //           <p className="text-xs font-Poppins  ">
 //             Unleash the geek within
@@ -186,7 +186,7 @@ export default About;
 //         </div>
 
 //         <div className="leading-8">
-//           <h2 className="font-semibold text-2xl md:text-xl mb-5 ">
+//           <h2 className="font-semibold text-2xl md:text-xl sm:text-sm mb-5 ">
 //             Privacy Policy for Cyberia Tech Fest :
 //           </h2>
 //           <p className="mb-4">
@@ -302,7 +302,7 @@ export default About;
 //         </div>
 
 //         {/* <div className="leading-8">
-//     <h2 className="font-semibold text-2xl md:text-xl mb-5">
+//     <h2 className="font-semibold text-2xl md:text-xl sm:text-sm mb-5">
 //       About the Department of Computer Applications : 
 //     </h2>
 //     <p>
@@ -319,7 +319,7 @@ export default About;
 //   </div>
 
 //   <div className="leading-8">
-//     <h2 className="font-semibold text-2xl md:text-xl mb-5">
+//     <h2 className="font-semibold text-2xl md:text-xl sm:text-sm mb-5">
 //       About Faculty of Science : 
 //     </h2>
 //     <p>
@@ -334,7 +334,7 @@ export default About;
 //   </div>
 
 //   <div className="leading-8">
-//     <h2 className="font-semibold text-2xl md:text-xl mb-5">
+//     <h2 className="font-semibold text-2xl md:text-xl sm:text-sm mb-5">
 //       About the Maharaja Sayajirao University of Baroda : 
 //     </h2>
 //     <p>

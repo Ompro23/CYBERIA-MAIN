@@ -13,10 +13,10 @@ const Footer = () => {
     <>
     
     <div className='bg-[#08090a]  border-white  bg-blend-multiply  flex w-full flex-col'>
-      <div className="h-[50vh] flex sm:flex-col md:flex-col sm:px-5  justify-around px-20 ">
+      <div className="h-[50vh] sm:h-[60vh] flex sm:flex-col md:flex-col sm:px-5  justify-around px-20 ">
         <div className="flex sm:w-full md:w-full w-1/2 sm:h-1/2 flex-col">
           <div className="flex-col h-full flex  gap-0 sm:gap-1 justify-center sm:items-center items-start ">
-          <h1 className='text-5xl  py-2 font-thin font-SpaceAge text-white  sm:text-3xl'>CYBERIA</h1>
+          <h1 className='text-5xl  py-2 font-thin font-SpaceAge  text-white  sm:text-3xl'>CYBERIA</h1>
           <p className='text-wrap sm:w-2/3  text-gray-300  text-end w-1/2   sm:text-sm      text-sm     hover:text-white   cursor-pointer  font-thin'>Unleash the Geek Within</p>
          <div className="flex py-10 gap-5 w-full text-xl justify-start sm:justify-center items-center flex-row  mt-5 sm:gap-5 ">
           <a href="https://www.instagram.com/cyberia_msub/">

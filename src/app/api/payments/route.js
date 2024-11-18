@@ -26,7 +26,7 @@ const setCorsHeaders = (response) => {
 
 Cashfree.XClientId = process.env.CLIENT_ID;
 Cashfree.XClientSecret = process.env.CLIENT_SECRET;
-Cashfree.XEnvironment = Cashfree.Environment.SANDBOX; //Production for later use
+Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION; //Production for later use
 
 
 function createOrderId() {
@@ -72,7 +72,7 @@ export async function POST(request) {
     
     return setCorsHeaders(apiResponse);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
     return NextResponse.json({ error }, { status: 400 });
   }
 }

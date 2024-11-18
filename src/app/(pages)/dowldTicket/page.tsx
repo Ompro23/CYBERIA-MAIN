@@ -10,16 +10,16 @@ import { useContext, useEffect } from "react"
 const DownloadTicket = () => {
     
     const eventContextValue = useContext(eventContext);
-  const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
+  
   const ticketData = eventContextValue?.ticketData;
 const router = useRouter()
-  const handleDownload = () => {
+  const handleDownload = () => {    
     // Triggering the download using the `saveAs` function from `file-saver`
-    if(ticketData){
-        router.push(ticketData?ticketData.PDF:"")
-    }
-    else{        
-        message.info("Error fetching the ticket please check your mail")
+    if(!ticketData){
+      message.info("Error fetching the ticket please check your mail")        
+    }   
+    else{
+      router.push(ticketData?.ticketData.ticket)
     }
   };
   return (
@@ -31,8 +31,8 @@ const router = useRouter()
         <MobNav />
       </div>
     <div className=' h-screen w-full flex justify-center gap-5 flex-col items-center'>        
-     <h1 className="text-2xl font-Poppins">Download your ticket Here:</h1>    
-     <Link href={`${ticketData? ticketData.PDF : "" }`} onClick={handleDownload} className="py-1 px-3 text-white bg-black hover:scale-110 transition-all duration-300 hover:border-4 rounded-sm border ">Download</Link>
+     <h1 className="text-2xl font-Poppins">Hello {ticketData? ticketData.fullName || ticketData.teamName : ""} Download your ticket Here:</h1>    
+     <Link href={`${ticketData? ticketData.ticket : "/events" }`} onClick={handleDownload} className="py-1 px-3 text-white bg-black hover:scale-110 transition-all duration-300 hover:border-4 rounded-sm border ">Download</Link>
     </div>
     
     </>

@@ -1,9 +1,5 @@
-import { AnimatedBeamDemo } from "@/components/AnimatedBeam";
-import { FocusCardsDemo } from "@/components/FocusCards";
-import Footer from "@/components/Footer";
-import MobileNav from "@/components/MobileNav";
+import MobNav from "@/components/MobNav";
 import { NavbarDemo } from "@/components/Navbar";
-import { TextGenerateEffectDemo } from "@/components/TextGenerate";
 import {
   Accordion,
   AccordionContent,
@@ -19,7 +15,7 @@ const About = () => {
         <NavbarDemo />
       </div>
       <div className="sm:block 2xl:hidden">
-        <MobileNav />
+        <MobNav/>
       </div>
 
       <div className="flex mt-24 h-full w-full">
@@ -28,26 +24,26 @@ const About = () => {
           className="border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]   h-full w-full justify-center items-center flex-col"
         >
           <main className="flex flex-col justify-center items-center gap-10 ">
-            <div className="font-light mt-5 text-7xl  font-SpaceAge blur-in-text  md:text-xl text-end mb-5">
+            <div className="font-light mt-5 text-7xl  font-SpaceAge blur-in-text  md:text-5xl text-end mb-5">
               CYBERIA{" "}
               <p className="text-xs font-Poppins  ">Unleash the geek within</p>{" "}
             </div>
             <div className="leading-8 ">
-              <div className="m-[100px] flex flex-col justify-center items-center">
-                <h2 className="font-normal text-3xl text-center border-b-2 border-white w-fit md:text-xl mb-5 ">
+              <div className="m-[100px] md:m-[50px] flex flex-col justify-center items-center">
+                <h2 className="font-normal text-3xl  text-center sm:border-none border-b-2 border-white w-fit md:text-xl mb-5 ">
                   Terms and Conditions for Cyberia Tech Fest
                 </h2>
                 <div className="mb-4 flex flex-row justify-center items-center font-extralight">
-                  <span className="font-semibold">Evebnt Dates:</span>{" "}
+                  <span className="font-semibold">Event Dates:</span>{" "}
                   <WordRotateDemo /> December 2024
                 </div>
                 <div className="flex mt-10 flex-col gap-3">
                   <Accordion type="single" defaultValue="item-1">
                     <AccordionItem value="item-1">
-                      <AccordionTrigger className="text-3xl font-Poppins">
+                      <AccordionTrigger className="text-3xl sm:text-xl font-Poppins">
                         1. Introduction
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8]  md:text-xs text-sm">
                         Welcome to Cyberia Tech Fest! By participating in
                         Cyberia, you agree to the following terms and
                         conditions. These terms govern your participation in all
@@ -59,10 +55,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-2">
-                      <AccordionTrigger className="text-start no-underline  text-2xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm  text-xl">
                         2. Eligibility
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                         Open to All: Cyberia Tech Fest is open to all students
                         and professionals with an interest in technology and
                         related fields. Minimum Age Requirement: Participants
@@ -73,10 +69,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-3">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                         3. Event Categories
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                         Technical Events: These include coding competitions,
                         hackathons, robotics challenges, and other events
                         focused on technical skills and knowledge. Non-Technical
@@ -92,10 +88,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-4">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline  md:text-sm  text-xl">
                         4. Participation Format
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                         Solo Participation: Participants may enter as
                         individuals for events that allow solo entries. The
                         number of solo entries per participant may vary by
@@ -111,10 +107,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-5">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                         5. Registration
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                         Registration Process: All participants must complete the
                         official registration form on the Cyberia website.
                         Required details include name, contact information, team
@@ -131,10 +127,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-6">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                         6. Code of Conduct
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] flex flex-col gap-2 text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs flex flex-col gap-2 text-sm">
                         Respect and Fair Play: Cyberia promotes a positive and
                         inclusive environment. Participants are expected to
                         maintain respectful behavior towards others. Prohibited
@@ -150,10 +146,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-7">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline  md:text-sm  text-xl">
                         7. Judging and Prizes
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                         Judging Criteria: Each event has specific judging
                         criteria, which will be outlined on the event page.
                         Judges' decisions are final and binding. Prizes: Winners
@@ -165,10 +161,10 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-8">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                       8. Intellectual Property and Content Use
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                       Original Work: Participants must submit original work for events that require content or project submissions. Plagiarism will result in disqualification.
                       Usage Rights: By participating, you grant Cyberia the right to use, reproduce, and distribute any submissions (e.g., projects, designs) for promotional and educational purposes.
                       </AccordionContent>
@@ -176,30 +172,30 @@ const About = () => {
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-9">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                       9. Limitation of Liability
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                       Cyberia Tech Fest is not responsible for any injuries, losses, or damages that may occur during participation in the event, whether online or on-site. Participants join Cyberia at their own risk and are responsible for their personal belongings and equipment.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-10">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                       10. Changes to Terms and Conditions
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                       Cyberia reserves the right to modify or update these terms and conditions at any time. Changes will be posted on the official website. Participants are encouraged to review the terms periodically.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-11">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                       11. Refund Policy
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                       Eligibility for Refunds: Refunds are generally not provided for registration fees. However, exceptions may be made in cases of event cancellation by Cyberia or if the participant withdraws before the registration deadline.
 Non-Refundable Fees: Once the registration deadline has passed, all registration fees are non-refundable, regardless of attendance.
 Requesting a Refund: Participants who believe they are eligible for a refund must submit a request in writing to the Cyberia Tech Fest organizing team before the registration deadline.
@@ -209,16 +205,16 @@ If approved refund will be process with in 7-10 business days
                   </Accordion>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="item-12">
-                      <AccordionTrigger className="text-start no-underline  text-xl">
+                      <AccordionTrigger className="text-start no-underline md:text-sm   text-xl">
                       12. Agreement to Terms
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#b7b8b8] text-sm">
+                      <AccordionContent className="text-[#b7b8b8] md:text-xs text-sm">
                       By registering for Cyberia Tech Fest, you confirm that you have read, understood, and agree to these Terms and Conditions.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
 
-                  <h1 className="text-xl font-normal mt-10 text-center text-white text-wrap">All right reserve @computer application students association science faculty MSU</h1>
+                  <h1 className="text-xl font-normal md:text-sm mt-10 text-center text-white text-wrap">All right reserve @computer application students association science faculty MSU</h1>
                 </div>
               </div>
             </div>

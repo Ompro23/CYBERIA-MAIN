@@ -57,9 +57,18 @@ const teamUserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    ticket : {
+      type: String,      
+    },
     isUsed: {
       type: Boolean,
       default: false,
+    },
+    gender :{
+      type: String,  
+    },
+    age:{
+      type : Number,
     },
     createdAt: {
       type: Date,

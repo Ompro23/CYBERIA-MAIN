@@ -10,6 +10,7 @@ import { NavbarDemo } from "@/components/Navbar";
 import {  SignupFormSolo } from "@/components/RegistrationForm";
 import MobileNav from "@/components/MobileNav";
 import MobNav from "@/components/MobNav";
+import { SignupFormTeam } from "@/components/RegistrationFormTeam";
 // ... other imports
 
 const selectedEvent = () => {
@@ -80,8 +81,8 @@ const selectedEvent = () => {
             </div>
            */}
            </div>
-            <div className="h-full w-full p-10 bg-transparent text-start justify-center sm:items-center flex-col flex">
-            {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <div>Hii</div> }              
+            <div className="h-full w-full p-10 sm:p-0 bg-transparent text-start justify-center sm:items-center flex-col flex">
+            {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <SignupFormTeam/> }              
             </div>
           </TabsContent>
         </Tabs>

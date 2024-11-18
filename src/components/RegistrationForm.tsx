@@ -29,6 +29,7 @@ const router = useRouter();
   const setTicketData = eventContextValue?.setTicketData;
   const loading = eventContextValue?.loading;
   const setloading = eventContextValue?.setloading;
+  const ticketData = eventContextValue?.ticketData;
 
   const [Data, setData] = useState({
     fullName: "",
@@ -88,14 +89,14 @@ const router = useRouter();
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-  
+  message.info("Please wait")
     try {
       const cashfree = await Cashfree.load({
-        mode: "sandbox" //or production
+        mode: "production" //or production
       });
 
       
-      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price},{
+      const response = await axios.post(`http://localhost:3000/api/payments`,{...Data,price:1},{
         headers:{
           'Content-Type': 'application/json',
         }
@@ -114,8 +115,7 @@ const router = useRouter();
       }
       
       
-      const result = await cashfree.checkout(checkoutOptions)
-      message.success("Please wait for Payment Window")
+      const result = await cashfree.checkout(checkoutOptions)      
     // console.log(result)
   if(result.redirect){
       // This will be true when the payment redirection page couldnt be opened in the same window
@@ -130,25 +130,24 @@ const router = useRouter();
     // console.log(result.error);
 }
    if(result.paymentDetails){
-    message.success("Payment has been completed");
-    // router.push("/events")      
+    message.success("Payment has been completed");       
     message.info("Please wait for redirection")
     setloading?.(true)
     console.log(result)
     console.log(result.paymentDetails.paymentMessage);
-    const response = await axios.post(`http://localhost:8000/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
+    const response = await axios.post(`http://145.223.18.122:8000/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
       headers:{
         'Content-Type': 'application/json',
       }
     });
     console.log(response)
-    if(response.status === 201 && response.data.PDF){
+    if(response.status === 201 && response.data.SoloData){
       router.push("/dowldTicket")
-      setTicketData?.(response.data)
+      setTicketData?.(response.data.SoloData)
     }
     else{
       message.error("Some error occured contact Customer Support")
-    }
+    }    
       // This will be called whenever the payment is completed irrespective of transaction status     
   }   
     } catch (error) {
@@ -293,42 +292,7 @@ const router = useRouter();
         >
           Sign up &rarr;
           <BottomGradient />
-        </button>
-
-        {/* <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
-        <div className="flex flex-col space-y-4">
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              GitHub
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              Google
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandOnlyfans className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              OnlyFans
-            </span>
-            <BottomGradient />
-          </button>
-        </div> */}
+        </button>        
       </form>
     </div>
   );
