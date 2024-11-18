@@ -24,8 +24,8 @@ const setCorsHeaders = (response) => {
 };
 
 
-Cashfree.XClientId = process.env.CLIENT_ID;
-Cashfree.XClientSecret = process.env.CLIENT_SECRET;
+Cashfree.XClientId = process.env.CLIENT_ID_TEST;
+Cashfree.XClientSecret = process.env.CLIENT_SECRET_TEST;
 Cashfree.XEnvironment = Cashfree.Environment.SANDBOX; //Production for later use
 
 
