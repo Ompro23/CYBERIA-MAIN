@@ -116,7 +116,7 @@ export function SignupFormTeam() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     message.info("Please wait")
-    
+
 
     try {
       const cashfree = await Cashfree.load({

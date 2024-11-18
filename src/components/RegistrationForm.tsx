@@ -92,7 +92,7 @@ const router = useRouter();
   message.info("Please wait")
     try {
       const cashfree = await Cashfree.load({
-        mode: "sandbox" //or production
+        mode: "production" //or production
       });
 
       
