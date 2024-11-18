@@ -3,7 +3,6 @@ import { message } from 'antd';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa6';
-import { toast } from 'sonner';
 
 
 const Footer = () => {
