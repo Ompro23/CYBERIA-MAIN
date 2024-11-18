@@ -40,7 +40,7 @@ function createOrderId() {
   return orderId.substr(0,12);
 }
 
-EventEmitter.setMaxListeners(50); 
+
 export async function POST(request) {
   try {
     const body = await request.json()    
@@ -49,7 +49,7 @@ export async function POST(request) {
       "order_currency": "INR",
       "order_id": createOrderId(),
       "customer_details": {
-        "customer_id": "node_sdk_test",
+        "customer_id": "node_sdk_prod",
         "customer_name": body.fullName ,
         "customer_email": body.email,
         "customer_phone": body.contactNo,
@@ -61,7 +61,7 @@ export async function POST(request) {
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().split('T')[0];    
     // Await the Cashfree.PGCreateOrder call
-    const response = await Cashfree.PGCreateOrder(formattedDate,requestData)    
+    const response = await Cashfree.PGCreateOrder("2023-08-01",requestData)    
     // Extract the data from the response
     const a = response.data;
     console.log(a);    
@@ -77,6 +77,5 @@ export async function POST(request) {
   }
 }
 
-process.removeListener('uncaughtException', POST);
 
 
