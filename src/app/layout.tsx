@@ -37,10 +37,8 @@ export default function RootLayout({
        <EventsContextProvider>
       
         {children}        
-        <Toaster/>
-        <div className="mt-32">
-        <Footer/>
-        </div>
+        <Toaster/>        
+        <Footer/>        
         </EventsContextProvider>
       </body>
     </html>

@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
     
-    <div className='bg-black  bg-blend-multiply text-blue-300 flex w-full flex-col'>
+    <div className='bg-[#08090a]  border-white  bg-blend-multiply  flex w-full flex-col'>
       <div className="h-[50vh] flex sm:flex-col md:flex-col sm:px-5  justify-around px-20 ">
         <div className="flex sm:w-full md:w-full w-1/2 sm:h-1/2 flex-col">
           <div className="flex-col h-full flex  gap-0 sm:gap-1 justify-center items-start ">
@@ -36,12 +36,12 @@ const Footer = () => {
       <table className="table text-white bg-dark my-cushrefm-table w-full table-borderless">
   <thead>
     <tr>
-      <th scope="col" className='text-lg font-normal text-blue-200'>Quick as</th>
-      <th scope="col" className='text-lg font-normal text-blue-200'>Supporters</th>
-      <th scope="col" className='text-lg font-normal text-blue-200'>Contact Us</th>      
+      <th scope="col" className='text-sm font-thin text-[#d0d6e0]'>Quick as</th>
+      <th scope="col" className='text-sm font-thin text-[#d0d6e0]'>Supporters</th>
+      <th scope="col" className='text-sm font-thin text-[#d0d6e0]'>Contact Us</th>      
     </tr>
   </thead>
-  <tbody className='font-normal cursor-pointer'>
+  <tbody className='font-thin cursor-pointer'>
     <tr >
       <th className="font-light"><a href="/">Home</a></th>
       <th className="font-light"><a href="https://befriendsapp.in/" target='_blank'>Befriends</a></th >
@@ -76,7 +76,7 @@ const Footer = () => {
 </table>
       </div>
       </div>
-      <div className="h-2/5  w-full  sm:text-lg sm:py-4 py-3  bg-black flex flex-wrap sm:flex-col justify-around items-center">
+      <div className="h-2/5  w-full  sm:text-sm sm:py-4 py-3  bg-[#08090a] flex flex-wrap sm:flex-col justify-around items-center">
         <div className="flex w-1/2 sm:justify-center text-sm sm:items-center">
         <h1 className=' sm:ps-0 sm:text-sm text-nowrap text-white'>@2024 Cyberia</h1>
         </div>

@@ -25,6 +25,7 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import Image from "next/image";
 
+
 export const MacbookScroll = ({
   src,
   showGradient,
@@ -89,7 +90,7 @@ export const MacbookScroll = ({
         scaleX={scaleX}
         scaleY={scaleY}
         rotate={rotate}
-        translate={translate}
+        translate={translate}              
       />
       {/* Base area */}
       <div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
@@ -109,7 +110,7 @@ export const MacbookScroll = ({
           </div>
         </div>
         <Trackpad />
-        <div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
+        <div className="h-2 w-[70px] mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
         {showGradient && (
           <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t dark:from-black from-white via-white dark:via-black to-transparent z-50"></div>
         )}
@@ -124,13 +125,13 @@ export const Lid = ({
   scaleY,
   rotate,
   translate,
-  src,
+  src,  
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
   rotate: MotionValue<number>;
   translate: MotionValue<number>;
-  src?: string;
+  src?: string;  
 }) => {
   return (
     <div className="relative [perspective:800px]">
@@ -164,13 +165,16 @@ export const Lid = ({
         }}
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
-          src="/sample.jpg"
-          alt="Sponsors"
-          fill
-          className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
-        />
+        <div style={{ backgroundImage: "url('/sample.jpg')" }}  className="absolute   bg-[#00000013] bg-blend-multiply bg-cover  inset-0  rounded-lg" >
+        <div
+            className="absolute flex justify-center items-center rounded-lg inset-0 p-4 overflow-auto"            
+          >                  
+          <img src="/image.png" className="h-[70px] grayscale object-contain transition-all  duration-300 sm:grayscale-0 hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />
+          <img src="/microsoft/image.png" className="h-[70px] object-contain transition-all  duration-300 sm:grayscale-0 grayscale hover:grayscale-0 cursor-pointer  hover:scale-125   w-[100px]" alt="" />
+          <img src="/Logo/fiscalox.png" className="h-[70px]  object-contain  transition-all  duration-300 sm:grayscale-0 grayscale hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />         
+          <img src="/Logo/naac2.png" className="h-[70px] grayscale object-contain transition-all sm:grayscale-0 duration-300 hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />
+          </div>
+        </div>
       </motion.div>
     </div>
   );

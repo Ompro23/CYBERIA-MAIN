@@ -95,7 +95,7 @@ const router = useRouter();
       });
 
       
-      const response = await axios.post(`${HOST}/api/payments`,{...Data,price:UserSelectedEvent.price},{
+      const response = await axios.post(`http://127.0.0.1:3000/api/payments`,{...Data,price:UserSelectedEvent.price},{
         headers:{
           'Content-Type': 'application/json',
         }
@@ -136,7 +136,7 @@ const router = useRouter();
     setloading?.(true)
     console.log(result)
     console.log(result.paymentDetails.paymentMessage);
-    const response = await axios.post(`https://cyberia2k24-w9pk.onrender.com/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
+    const response = await axios.post(`http://localhost:8000/api/user/registerSoloUser`,{...Data,events:UserSelectedEvent.title},{
       headers:{
         'Content-Type': 'application/json',
       }

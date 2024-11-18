@@ -31,8 +31,8 @@ export default function Home() {
   };
   const calculateSizes = (isSmall: boolean, isMobile: boolean, isTablet: boolean) => {
     return {
-      deskScale: isSmall ? 1.4 : isMobile ? 0.6 : 0.7,
-      deskPosition: isMobile ? [0.6, -1, 20] : [0.1, -7.8, 2.8],
+      deskScale: isSmall ? 0.8 : isMobile ? 0.6 : 0.7,
+      deskPosition: isMobile ? [10, -1, 20] : [13,0,-30],
       cubePosition: isSmall ? [5, 0, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [21, 7, 3],
       reactLogoPosition: isSmall ? [4, 12, -9] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [18, -7, 1],
       ringPosition: isSmall ? [-9, 4, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-43, 10, 10],
@@ -41,7 +41,7 @@ export default function Home() {
   };
   
 
-  const isMobile = useMediaQuery({maxWidth: 768})
+  const isMobile = useMediaQuery({maxWidth: 440})
     const isSmall = useMediaQuery({maxWidth: 440})
     const isTablet = useMediaQuery({minWidth: 768,maxWidth:1024})
     const sizes = calculateSizes(isSmall,isMobile,isTablet)
@@ -53,10 +53,10 @@ export default function Home() {
       <div className="sm:block 2xl:hidden">
         <MobNav />
       </div>
-      <div className="h-full sm:hidden   w-full">
+      <div className="h-full sm:hidden bg-[#08090a] overflow-hidden w-full">
         <div
           // style={{ backgroundImage: "url('/metaverseBg.jpg')" }}
-          className="bg-blend-multiply bg-clip-text  w-full sm:bg-black sm:bg-contain  bg-[#00000036] overflow-x-hidden bg-fixed  bg-no-repeat h-full bg-cover"
+          className="bg-clip-text   w-full sm:bg-[#141516] sm:bg-contain  bg-gradient-to-b from-[#141516] to-black overflow-x-hidden bg-fixed  bg-no-repeat h-full bg-cover"
         >
           <div className="flex   mt-10 h-screen  w-full  justify-center items-start flex-row ">
             <div className="flex overflow-hidden px-10 gap-10   h-full w-full  justify-center items-start flex-col ">
@@ -93,7 +93,7 @@ export default function Home() {
                      
                     scale={sizes.deskScale}
                     rotation={[0,6,0]}
-                    position={[13,0,-30]} 
+                    position={isMobile?[20,0,-30]:[13,0,-30]} 
                     //  position={isMobile?[0.3,-5,3]:[0,-7,4]} 
                     //  rotation={[0,-1.6,0]}
                      />
@@ -109,23 +109,23 @@ export default function Home() {
           <div className="flex h-full w-full  justify-center items-center flex-col ">
           <MacbookScrollDemo />
           </div>         
-          <div className="flex py-10 sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">            
+          <div className="flex bg-gradient-to-b from-[#141516] to-black py-10 sm:bg-grid-white/[0.1] overflow-hidden  h-screen w-full justify-center items-center flex-col ">            
             <OrbitingCirclesDemo />
              <TypingAnimation
       className="text-2xl font-normal text-center font-Poppins text-neutral-600 dark:text-neutral-300 max-w-xl"
       text="Sponsored by those who make it all happen-thank you to our sponsors!"
     />
           </div>
-          <div className="flex py-10 sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
+          <div className="flex py-10 bg-gradient-to-b from-black to-[#000] sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
             <h1 className="text-4xl border-b-2 border-white py-1">
               Powered By
             </h1>
             <InfiniteMovingCardsDemo />
           </div>
 
-          <div className="flex  py-24 sm:p-0 2xl:bg-[#0000005f] sm:bg-grid-white/[0.1]  h-screen w-full justify-center items-center flex-col ">
+          <div className="flex overflow-hidden border-b-[1px] border-white/[0.2]  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]  sm:bg-grid-white/[0.1]  h-full w-full justify-center items-center flex-col ">
             <div className="flex  flex-col sm:w-full  w-4/5 rounded-xl  justify-center items-center  h-screen">
-              <h1 className="text-4xl sm:text-2xl border-b-2 text-center border-white pt-24">
+              <h1 className="text-4xl sm:text-2xl border-b-2 text-center border-white pt-32">
                 The Maharaja Sayajirao University of Baroda
               </h1>
               <div className="flex sm:flex-col sm:gap-0 gap-32 justify-center  w-full   items-center  flex-row">
@@ -142,9 +142,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="sm:flex md:hidden flex-col gap-10  py-32 flex justify-center  items-center lg:hidden 2xl:hidden xl:hidden">
-      <div className="w-full h-full  overflow-hidden ">
-            <Canvas className='w-full   h-full '>
+      <div className="sm:flex h-full w-full md:hidden flex-col gap-10  py-32 flex justify-center  items-center lg:hidden 2xl:hidden xl:hidden">
+      <div className="w-full h-[300px]  overflow-hidden ">
+            <Canvas className='w-full h-[300px]'>
                     <Suspense  fallback={<CanvasLoader/>}>                    
                     <PerspectiveCamera   makeDefault position={[0,0,20]}/>                    
                      <HeroCamera  isMobile={isMobile}>
@@ -152,7 +152,7 @@ export default function Home() {
                      
                     scale={sizes.deskScale}
                     rotation={[0,6.2,0]}
-                    position={[-10,0,-30]} 
+                    position={[-12,0,-30]} 
                     //  position={isMobile?[0.3,-5,3]:[0,-7,4]} 
                     //  rotation={[0,-1.6,0]}
                      />

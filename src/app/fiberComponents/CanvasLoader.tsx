@@ -10,7 +10,8 @@ const CanvasLoader: React.FC = () => {
       center
       style={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'end',
+        zIndex:10,
         alignItems: 'center',
         flexDirection: 'column',
       }}
@@ -22,6 +23,8 @@ const CanvasLoader: React.FC = () => {
           color: 'white',
           fontWeight: 800,
           marginTop: 40,
+          marginLeft:100,
+          zIndex:10,
         }}
       >
         {progress !== 0 ? `${progress.toFixed(2)}%` : 'Loading...'}
