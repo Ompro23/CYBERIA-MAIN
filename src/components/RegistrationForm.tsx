@@ -96,7 +96,7 @@ const router = useRouter();
       });
 
       
-      const response = await axios.post(`${HOST}/api/payments`,{...Data,price:1},{
+      const response = await axios.post(`${HOST}/api/payments`,{...Data,price:UserSelectedEvent?.price},{
         headers:{
           'Content-Type': 'application/json',
         }
