@@ -56,7 +56,7 @@ export default function Home() {
       <div className="h-full sm:hidden bg-[#08090a] overflow-hidden w-full">
         <div
           // style={{ backgroundImage: "url('/metaverseBg.jpg')" }}
-          className="bg-clip-text   w-full sm:bg-[#141516] sm:bg-contain  bg-gradient-to-b from-[#141516] to-black overflow-x-hidden bg-fixed  bg-no-repeat h-full bg-cover"
+          className="bg-clip-text w-full sm:bg-[#141516] sm:bg-contain  bg-gradient-to-b from-[#141516] to-black overflow-x-hidden bg-fixed  bg-no-repeat h-full bg-cover"
         >
           <div className="flex   mt-10 h-screen  w-full  justify-center items-start flex-row ">
             <div className="flex overflow-hidden px-10 gap-10   h-full w-full  justify-center items-start flex-col ">

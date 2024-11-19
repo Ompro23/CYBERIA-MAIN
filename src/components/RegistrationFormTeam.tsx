@@ -165,7 +165,7 @@ export function SignupFormTeam() {
         console.log(result);
         console.log(result.paymentDetails.paymentMessage);
         const response = await axios.post(
-          `http://145.223.18.122:8000/api/user/registerTeamUser`,
+          `https://cyberia-node-server.vercel.app/api/user/registerTeamUser`,
           { ...Data, events: UserSelectedEvent.title },
           {
             headers: {
