@@ -23,7 +23,7 @@ const EventsContextProvider = (props: Props) => {
   const [events, setEvents] = useState<any[]>([]);
   const [UserSelectedEvent, setUserSelectedEvent] = useState<any>(null); // Changed to any instead of any[]
   const [ticketData,setTicketData] = useState<any>(null); // Changed to any instead of any[]
-  const [loading, setloading] = useState(true);
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

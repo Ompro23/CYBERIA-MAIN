@@ -18,6 +18,7 @@ import { HOST } from "@/lib/utilities";
 const Cashfree = require("@cashfreepayments/cashfree-js");
 import { message } from "antd";
 import { useRouter } from "next/navigation";
+import Loader from "./Loader";
 
 interface UserSelectedEvent {
   title: string;
@@ -188,6 +189,7 @@ export function SignupFormTeam() {
     }
   };
   return (
+    <>
     <div className="w-[55vw] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Register for a Team Event
@@ -433,6 +435,10 @@ export function SignupFormTeam() {
         </button>
       </form>
     </div>
+      <div className={` ${loading? "flex" : "hidden" } h-full w-full top-0 left-0 justify-center backdrop-blur-md items-center absolute `}>
+      <Loader/>
+  </div>
+  </>
   );
 }
 
