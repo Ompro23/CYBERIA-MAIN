@@ -20,7 +20,7 @@ export function TabsDemo() {
       title: "Non Technical",
       value: "playground",
       content: (
-        <div className="w-full overflow-hidden mb-28 relative h-auto rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
+        <div className="w-full overflow-hidden mb-28 relative h-full pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
           <p>Non Technical  Events</p>
           <DummyContent2 />
         </div>

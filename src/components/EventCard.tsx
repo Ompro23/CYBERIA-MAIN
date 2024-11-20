@@ -117,8 +117,7 @@ export function CardHoverEffectDemo2() {
 
 
   return (
-    <div className="flex flex-row  w-full h-full ">
-      
+    <div className="flex flex-row  mb-10 w-full h-full ">      
       <div className="flex flex-row  w-full h-full ">
         {
          loading ?  ( <div className="flex flex-row flex-wrap justify-around w-full ">
