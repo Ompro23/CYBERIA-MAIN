@@ -82,7 +82,7 @@ const selectedEvent = () => {
            */}
            </div>
             <div className="h-full w-full p-10 sm:p-0 bg-transparent text-start justify-center sm:items-center flex-col flex">
-            {UserSelectedEvent?.size === "individual" ? <SignupFormSolo/> : <SignupFormTeam/> }              
+            {UserSelectedEvent?.category === "solo" ? <SignupFormSolo/> : <SignupFormTeam/> }              
             </div>
           </TabsContent>
         </Tabs>
