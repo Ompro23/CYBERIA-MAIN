@@ -24,7 +24,7 @@ export function OrbitingCirclesDemo() {
         radius={80}
 
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>
+        <Image src="/image.png" className="p-2 rounded-full" width={50} height={10} alt=""/>
         <Icons.notion />
       </OrbitingCircles>
 
@@ -35,7 +35,7 @@ export function OrbitingCirclesDemo() {
         duration={20}
         reverse
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>        
+        <Image src="/Logo/fiscalox.png" width={50} height={10} alt=""/>        
       </OrbitingCircles>
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
@@ -44,7 +44,7 @@ export function OrbitingCirclesDemo() {
         delay={20}
         reverse
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>        
+        <Image src="/microsoft/image.png" className="p-1" width={50} height={10} alt=""/>        
       </OrbitingCircles>
     </div>
   );

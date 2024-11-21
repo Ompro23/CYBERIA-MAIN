@@ -167,7 +167,7 @@ export default function Home() {
         <h1 className="font-SpaceAge bg-cover  blur-in-text bg-center  text-center text-white  text-6xl font-semibold ">CYBERIA <p className="text-xs text-end text-white font-Poppins">Unleash the geek within</p> </h1>
         <p className="text-sm mx-8 text-gray-300 text-center font-Poppins">Unleash innovation and defy digital boundaries at Cyberia Tech Fest: where mavericks of technology shape the future.</p>
         <GradualSpacing
-          className="font-display text-center font-Poppins text-xl font-bold -tracking-widest  text-black dark:text-white md:text-2xl md:leading-[5rem]"
+          className="text-center font-Poppins text-xl font-bold -tracking-widest  text-black dark:text-white md:text-2xl md:leading-[5rem]"
           text="On December 22 23 & 24"
         />
         <div className="z-10 flex min-h-10 items-center justify-center">

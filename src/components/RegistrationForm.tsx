@@ -184,7 +184,7 @@ const router = useRouter();
             <Input id="contactNo" name="contactNo" value={Data.contactNo} onChange={handleChange} placeholder="Enter your phone number" type="digit" />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4 w-1/2">
-            <Label htmlFor="contactNo2">Contact Info (Secondary) </Label>
+            <Label htmlFor="contactNo2">Contact Info </Label>
             <Input id="contactNo2" name="contactNo2" value={Data.contactNo2} onChange={handleChange} placeholder="Enter your phone number" type="digit" />
           </LabelInputContainer>
         </div>

@@ -41,6 +41,12 @@ const testimonials = [
     name: "Microsoft Learn Student Ambassador",
     title: "Microsoft Learn Student Ambassadors are a global group of campus leaders who are eager to help fellow students, create robust tech communities, and develop technical and career skills for the future.",
   },
+  {
+    quote:
+    <img src="/Logo/fiscalox.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
+    name: "Fiscal Ox",
+    title: "Fiscal Ox is a secured Cloud ERP system with a built-in Accounting core, providing workflows for end-to-end Business Processes for Testing Laboratories and Manufacturers to run their business efficiently.",
+  },
   // {
   //   quote:
   //   <img src="/Logo/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
