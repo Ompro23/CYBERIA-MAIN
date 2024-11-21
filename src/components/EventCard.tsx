@@ -118,7 +118,7 @@ export function CardHoverEffectDemo2() {
 
   return (
     <div className="flex flex-row  mb-10 w-full h-full ">      
-      <div className="flex flex-row  w-full h-full ">
+      
         {
          loading ?  ( <div className="flex flex-row flex-wrap justify-around w-full ">
          <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />          
@@ -130,11 +130,11 @@ export function CardHoverEffectDemo2() {
           <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
           <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                    
           <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />                                               
-        </div>)  :  <HoverEffect items={nonTechnicalEvents } />                        
+        </div>)  :  <HoverEffect items={nonTechnicalEvents} />                        
       }
     </div>
       
-    </div>
+    
   );
 }
 export const projects = [
