@@ -45,7 +45,7 @@ export function CardHoverEffectDemo() {
 
   
 
-  const technicalEvents = events.filter(event => event.field === "technical");
+  const technicalEvents = events.filter(event => event.field === "Technical Event");
 
   // Filter by non-technical field
   
@@ -109,7 +109,7 @@ export function CardHoverEffectDemo2() {
   
 
   // Filter by non-technical field
-  const nonTechnicalEvents = events.filter(event => event.field === "non-technical");
+  const nonTechnicalEvents = events.filter(event => event.field === "Non-Technical Event");
   
   // Example output
   
