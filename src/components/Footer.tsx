@@ -40,7 +40,7 @@ const Footer = () => {
           </div>          
         </div>
       
-      <div className="w-1/2 justify-center sm:ms-5 sm:w-full md:w-full  flex items-center mb-0 sm:mb-10">
+      <div className="w-2/3 justify-center sm:ms-5 sm:w-full md:w-full  flex items-center mb-0 sm:mb-10">
       <table className="table text-white  bg-dark my-cushrefm-table w-full ">
   <thead>
     <tr>
@@ -53,31 +53,31 @@ const Footer = () => {
     <tr className='py-5 ' >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"><a href="/">Home</a></th>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"><a href="https://befriendsapp.in/" target='_blank'>Befriends</a></th >
-      <th  className=" hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"><a href="https://www.instagram.com/cyberia_msub/" target="_blank" rel="noopener noreferrer">Instagram</a></th >
+      <th  className=" hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin">8238445979</th >
       
     </tr>
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"  onClick={()=>router.push("/about")}>About Us</th >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://www.linkedin.com/company/mlsa-msu/" target="_blank" rel="noopener noreferrer">Microsoft Learn</a></th >
-      <th  className=' hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin'><a href="https://www.facebook.com/people/Cyberia-Msu/pfbid02f9Pp4cdkMzUH9BFduRcAeEDvg6YHu4Uad9F5vtmMGvL3RZVAZR9WAAJsvLHwZP2Ll/" target="_blank" rel="noopener noreferrer">Facebook</a></th >
+      <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://www.linkedin.com/company/mlsa-msu/" target="_blank" rel="noopener noreferrer">cyberia-compapp@msubaroda.ac.in</a></th >
+      
       
     </tr>
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" onClick={()=>router.push("/events")} >Events</th >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://fiscalox.com/">Fiscal Ox</a></th >
-      <th  className=' hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin'><a href="https://x.com/Cyberia_2023" target="_blank" rel="noopener noreferrer">Twitter</a></th >
+      
       
     </tr>
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" onClick={()=>router.push("/privacy-policy")}>Privacy & Policy</th >
       <th ><a href="/latest"></a></th >
-      <th  className=' hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin'><a href="https://www.youtube.com/@Cyberia_msu" target="_blank" rel="noopener noreferrer">Youtube</a></th >
+      
       
     </tr>
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" onClick={()=>router.push("/terms-condition")} >Terms & Conditions</th >
-      <th><a href="/latest"></a></th >
-      <th  className=' hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin'><a href="https://www.linkedin.com/in/cyberiamsu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">Linkedin</a></th >      
+      <th><a href="/latest"></a></th >      
     </tr>
   </tbody>
 </table>
