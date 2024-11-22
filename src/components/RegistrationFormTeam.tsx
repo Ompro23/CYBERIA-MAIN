@@ -173,8 +173,7 @@ export function SignupFormTeam() {
               "Content-Type": "application/json",
             },
           }
-        );
-        console.log(response);
+        );        
         if (response.status === 201 && response.data.TeamData) {
           router.push("/dowldTicket");
           setTicketData?.(response.data.TeamData);
@@ -247,13 +246,14 @@ export function SignupFormTeam() {
               id="email"
               name="members"
               value={Data.members}
+              maxLength={5}
               onChange={handleChange}
-              placeholder="Please provide your mail"
+              placeholder="Please provide no of Members"
               type="text"
             />
           </LabelInputContainer>
 
-        {Array.from({ length: Data?.members - 1 }).map((_, index) => {
+        {Array.from({ length: Math.min(Data?.members , 5)}).map((_, index) => {
           return (
             <LabelInputContainer className="mt-2 ">
               <Label htmlFor="email">{`Member ${index + 1}`}</Label>
@@ -265,6 +265,7 @@ export function SignupFormTeam() {
                 onChange={(e) => handleChangeMember(index, e)}
                 placeholder={`Please provide Name of member`}
                 type="text"
+                maxLength={5}
               />
             </LabelInputContainer>
           );

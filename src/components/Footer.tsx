@@ -59,7 +59,7 @@ const Footer = () => {
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"  onClick={()=>router.push("/about")}>About Us</th >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://www.linkedin.com/company/mlsa-msu/" target="_blank" rel="noopener noreferrer">Microsoft Learn</a></th >
-      <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://www.linkedin.com/company/mlsa-msu/" target="_blank" rel="noopener noreferrer">cyberia-compapp@msubaroda.ac.in</a></th >
+      <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="mailto:cyberia-compapp@msubaroda.ac.in">cyberia-compapp@msubaroda.ac.in</a></th >
       
       
     </tr>
