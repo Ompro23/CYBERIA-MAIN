@@ -30,8 +30,8 @@ const router = useRouter()
       <div className="sm:flex 2xl:hidden">
         <MobNav />
       </div>
-    <div className=' h-screen w-full flex justify-center gap-5 flex-col items-center'>        
-     <h1 className="text-2xl font-Poppins">Hello {ticketData? ticketData.fullName || ticketData.teamName : ""} Download your ticket Here:</h1>    
+    <div className=' h-screen w-full flex text-center justify-center gap-5 flex-col items-center'>        
+     <h1 className="text-2xl text-center px-5 font-Poppins">Hello {ticketData? ticketData.fullName || ticketData.teamName : ""} Download your ticket Here:</h1>    
      <Link href={`${ticketData? ticketData.ticket : "/events" }`} onClick={handleDownload} className="py-1 px-3 text-white bg-black hover:scale-110 transition-all duration-300 hover:border-4 rounded-sm border ">Download</Link>
     </div>
     
