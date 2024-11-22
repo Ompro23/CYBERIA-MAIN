@@ -53,7 +53,7 @@ export default function Home() {
       <div className="sm:block 2xl:hidden">
         <MobNav />
       </div>
-      <div className="h-full sm:hidden bg-[#08090a] overflow-hidden w-full">
+      <div className="h-full sm:hidden overflow-x-hidden bg-[#08090a] overflow-hidden w-full">
         <div
           // style={{ backgroundImage: "url('/metaverseBg.jpg')" }}
           className="bg-clip-text w-full sm:bg-[#141516] sm:bg-contain  bg-gradient-to-b from-[#141516] to-black overflow-x-hidden bg-fixed  bg-no-repeat h-full bg-cover"

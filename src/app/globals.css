@@ -99,6 +99,7 @@
 body {
   font-family: poppins;
  background-color: black;
+ overflow-x: hidden;
   
 }
 
