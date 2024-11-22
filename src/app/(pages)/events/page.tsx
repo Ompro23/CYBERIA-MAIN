@@ -18,7 +18,7 @@ const Events = () => {
           // style={{ backgroundImage: "url('/eventsbg.jpg')" }}
           className="  border-b-[1px] border-white/[0.2] overflow-y-scroll  sm:p-0 2xl:bg-gradient-to-b from-black to-[#141516]  inset-0 flex flex-col h-full sm:h-full  "
         >
-          <div className="mb-10 h-full">
+          <div className="mb-10 flex flex-col  h-full">
             <TabsDemo />
           </div>
           <br />         

@@ -137,6 +137,79 @@ export function CardHoverEffectDemo2() {
     
   );
 }
+
+export function CardHoverEffectDemo3() {
+
+  const context = useContext(eventContext);
+  if (!context) {
+    return null; // or handle the null case appropriately
+  }
+  const { events, setEvents, setloading, loading } = context;
+
+  const handleGetEvents = async () => {
+    setloading(true);
+    try {
+      const resp = await axios.get(`${HOST}/api/events`);
+      // console.log(resp)
+      if(resp){
+        setEvents(resp.data.Event)
+        setloading(false);        
+      }
+      
+    } catch (error) {
+      console.log(error)
+      setloading(false)
+    }
+  };
+
+  useEffect(() => {
+    handleGetEvents();
+    
+  }, []);
+
+  
+  
+  
+
+  // Filter by non-technical field
+  const workshops = events.filter(event => event.field === "Workshops");
+  
+  // Example output
+  
+  
+
+
+  return (
+    <div className="flex flex-row  mb-10 w-full h-full ">      
+      
+      {
+  loading ? (
+    <div className="flex flex-row flex-wrap justify-around w-full">
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+      <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />
+    </div>
+  ) : workshops.length === 0 ? (
+    <div className="text-center text-xl text-gray-500 my-10">
+      No workshops available.
+    </div>
+  ) : (
+    <HoverEffect items={workshops} />
+  )
+}
+
+      
+    </div>
+      
+    
+  );
+}
 export const projects = [
   
   {
