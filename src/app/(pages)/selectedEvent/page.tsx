@@ -51,15 +51,15 @@ const selectedEvent = () => {
             {!loading ? (
           <div className="h-full w-full bg-transparent text-start justify-center sm:items-center flex-col flex">
             <DirectionAwareHover
-                      className="w-full bg-transparent sm:w-2/3 sm:h-2/3 sm:object-contain h-full my-2 rounded-md z-0"
+                      className="w-full  bg-transparent sm:w-2/3  sm:h-2/3 sm:object-contain h-full my-2 rounded-md z-0"
                       imageUrl={UserSelectedEvent?.image || "default-image-url"} >
                         
             <p className="font-bold sm:w-5/6 text-wrap text-xl">{UserSelectedEvent?.description || "No description available"}</p>
             <p className="font-normal text-sm">INR {UserSelectedEvent?.price || "N/A"}</p>
             </DirectionAwareHover>
             
-            <div className="flex gap-2 flex-col">
-              <div className="flex flex-col gap-1">
+            <div className="flex w-full gap-2 flex-col">
+              <div className="flex  w-full flex-col gap-1">
             <h1 className="text-xl sm:text-start font-normal border-b-2 border-white w-fit my-2 font-Poppins">{UserSelectedEvent?.title || "Event Title"}</h1>
             <p className="font-Poppins sm:text-xs">{UserSelectedEvent?.briefDescription || "No brief description available"}</p>
 

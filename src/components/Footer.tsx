@@ -46,20 +46,20 @@ const Footer = () => {
     <tr>
       <th scope="col" className='text-sm  text-wrap  w-[3vw]  text-start font-thin text-[#d0d6e0]'>Quick as</th>
       <th scope="col" className='text-sm  text-wrap w-[3vw]  text-start font-thin text-[#d0d6e0]'>Supporters</th>
-      <th scope="col" className='text-sm  text-wrap  w-[3vw]  text-start font-thin text-[#d0d6e0]'>Contact Us</th>      
+      <th scope="col" className='text-sm  text-wrap  w-[40px]  text-start font-thin  text-[#d0d6e0]'>Contact Us</th>      
     </tr>
   </thead>
   <tbody className='font-thin'>
     <tr className='py-5 ' >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"><a href="/">Home</a></th>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"><a href="https://befriendsapp.in/" target='_blank'>Befriends</a></th >
-      <th  className=" hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin">8238445979</th >
+      <th  className=" hover:font-semibold text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[40px]  text-start cursor-pointer py-2 font-thin">9408802605</th >
       
     </tr>
     <tr className='py-5'>
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin"  onClick={()=>router.push("/about")}>About Us</th >
       <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="https://www.linkedin.com/company/mlsa-msu/" target="_blank" rel="noopener noreferrer">Microsoft Learn</a></th >
-      <th className="text-sm  text-wrap  text-[#9c9da1] hover:text-white w-[3vw]  text-start cursor-pointer py-2 font-thin" ><a href="mailto:cyberia-compapp@msubaroda.ac.in">cyberia-compapp@msubaroda.ac.in</a></th >
+      <th className="text-sm  text-wrap  text-[#9c9da1]  hover:text-white   text-start cursor-pointer py-2 font-thin" ><a  href="mailto:cyberia-compapp@msubaroda.ac.in">cyberia-compapp@<br />msubaroda.ac.in</a></th >
       
       
     </tr>

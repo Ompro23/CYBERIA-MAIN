@@ -5,37 +5,37 @@ const reviews = [
   {
     name: "Jack",
     username: "@jack",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/jack",
   },
   {
     name: "Jill",
     username: "@jill",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/jill",
   },
   {
     name: "John",
     username: "@john",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/john",
   },
   {
     name: "Jane",
     username: "@jane",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/jane",
   },
   {
     name: "Jenny",
     username: "@jenny",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
     name: "James",
     username: "@james",
-    body: "REGISTRATIONS ARE OPENING SOON",
+    body: "REGISTRATIONS ARE OPENED",
     img: "https://avatar.vercel.sh/james",
   },
 ];

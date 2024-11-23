@@ -172,7 +172,7 @@ export function CardHoverEffectDemo3() {
   
 
   // Filter by non-technical field
-  const workshops = events.filter(event => event.field === "Workshops");
+  const workshops = events.filter(event => event.field === "Workshop");
   
   // Example output
   
