@@ -117,8 +117,7 @@ const About = () => {
                         members (if applicable), and event selection. Fees:
                         Registration fees may apply to specific events. Fee
                         details, if any, will be available on the website.
-                        Payment can be made to the account holder Shridhar Vijay
-                        Popat as per the instructions provided during
+                        Payment can be made to the account holder Harshul Rathod as per the instructions provided during
                         registration. Deadline: Registration closes [Insert
                         Registration Deadline Date]. Late registrations may not
                         be accepted.
