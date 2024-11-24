@@ -184,7 +184,7 @@ export default function Home() {
                 <HeroElement
                   scale={sizes.deskScale}
                   rotation={[0, 6.2, 0]}
-                  position={[-12, 0, -30]}
+                  position={[-8, 0, -30]}
                   //  position={isMobile?[0.3,-5,3]:[0,-7,4]}
                   //  rotation={[0,-1.6,0]}
                 />
