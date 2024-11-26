@@ -256,16 +256,15 @@ export function SignupFormTeam() {
         {Array.from({ length: Math.min(Data?.members , 5)}).map((_, index) => {
           return (
             <LabelInputContainer className="mt-2 ">
-              <Label htmlFor="email">{`Member ${index + 1}`}</Label>
+              <Label htmlFor="email">{`UID of Member ${index + 1}`}</Label>
               <Input
                 id="email"
                 name={`member${index}`}
                 key={index}
                 value={Data.member[index] || ""}
                 onChange={(e) => handleChangeMember(index, e)}
-                placeholder={`Please provide Name of member`}
-                type="text"
-                maxLength={5}
+                placeholder={`Please provide Game Id of member`}
+                type="text"                
               />
             </LabelInputContainer>
           );
