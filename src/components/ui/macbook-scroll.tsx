@@ -171,8 +171,7 @@ export const Lid = ({
           >                  
           <img src="/image.png" className="h-[70px] grayscale object-contain transition-all  duration-300 sm:grayscale-0 hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />
           <img src="/microsoft/image.png" className="h-[70px] object-contain transition-all  duration-300 sm:grayscale-0 grayscale hover:grayscale-0 cursor-pointer  hover:scale-125   w-[100px]" alt="" />
-          <img src="/Logo/fiscalox.png" className="h-[70px]  object-contain  transition-all  duration-300 sm:grayscale-0 grayscale hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />                   
-          <img src="/GamingLogo.png" className="h-[70px] grayscale object-contain transition-all sm:grayscale-0 duration-300 hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />         
+          <img src="/Logo/fiscalox.png" className="h-[70px]  object-contain  transition-all  duration-300 sm:grayscale-0 grayscale hover:grayscale-0 cursor-pointer hover:scale-125   w-[100px]" alt="" />                                     
           </div>
         </div>
       </motion.div>

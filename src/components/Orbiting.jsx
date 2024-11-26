@@ -15,7 +15,7 @@ export function OrbitingCirclesDemo() {
         delay={20}
         radius={80}
       >
-        <Image src="/GamingLogo.png" width={50} height={10} alt=""/>
+        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>
       </OrbitingCircles>
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
