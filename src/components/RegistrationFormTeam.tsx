@@ -198,7 +198,7 @@ export function SignupFormTeam() {
         events cannot be collapse on same time
       </p>
 
-     {["BGMI", "Valorant", "CS2"].includes(UserSelectedEvent?.title) ?  <form className="my-8 h-full z-0 overflow-auto" onSubmit={handleSubmit}>
+     {["BGMI", "Valorant", "CS2","Free Fire"].includes(UserSelectedEvent?.title) ?  <form className="my-8 h-full z-0 overflow-auto" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:w-full md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">Team name</Label>
