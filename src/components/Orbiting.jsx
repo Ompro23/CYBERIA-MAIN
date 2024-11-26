@@ -10,12 +10,12 @@ export function OrbitingCirclesDemo() {
       </span>
       
       <OrbitingCircles
-        className="size-[30px] border-none bg-transparent"
+        className="size-[45px] border-none bg-transparent"
         duration={20}
         delay={20}
         radius={80}
       >
-        <Image src="/Logo/CyberiaLogo.png" width={50} height={10} alt=""/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vflydkO3_JlyNhGuullXUNeUe4JccQoV3A&s" className="rounded-full" width={30} height={30} alt=""/>
       </OrbitingCircles>
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"

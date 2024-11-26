@@ -47,6 +47,12 @@ const testimonials = [
     name: "Fiscal Ox",
     title: "Fiscal Ox is a secured Cloud ERP system with a built-in Accounting core, providing workflows for end-to-end Business Processes for Testing Laboratories and Manufacturers to run their business efficiently.",
   },
+  {
+    quote:
+    <img src="/bob_logo.jpg" alt="" className="h-[30vh] mix-blend-color-burn object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
+    name: "Bank of Baroda",
+    title: "Bank of Baroda, founded in 1908, is a major Indian public sector bank known for its international presence and comprehensive banking services. It offers retail, corporate, and SME banking, with a strong focus on digital solutions, making it a key player in India’s financial sector.",
+  },
   // {
   //   quote:
   //   <img src="/Logo/image.png" alt="" className="h-[30vh] object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
