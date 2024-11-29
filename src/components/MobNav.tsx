@@ -24,10 +24,10 @@ const MobNav = () => {
     };
     return (
         <div className={`border ${isOpen? "h-full " : "h-[8vh]"}  backdrop-blur-lg bg-transparent z-50 border-white/[0.1] my-2 mx-2 rounded-xl  fixed  top-0 left-0 right-0  transition-all duration-400 ease-in-out  block `}>
-            <div className="flex  h-[8vh] w-full">
+            <div className="flex  h-[86px] w-full">
                 <div className="flex ms-3 h-full gap-5 p-2 w-3/4">
-                    <img src="/Logo/msu.png" alt="" />
-                    <img src="/Logo/75.png" alt="" />
+                    <img src="/Logo/msu.png" className="object-contain" alt="" />
+                    <img src="/Logo/75.png" className="object-contain" alt="" />
                     
                 </div>
                 <div className="flex h-full  justify-center items-center  p-1 w-1/4">
