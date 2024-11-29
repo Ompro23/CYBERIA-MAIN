@@ -6,6 +6,7 @@ import { eventContext } from "@/app/context/MyContext";
 import {HOST} from '@/lib/utilities'
 import { toast } from "sonner";
 import { Skeleton } from "./ui/skeleton";
+import { useRouter } from "next/navigation";
 
 
 
@@ -49,13 +50,51 @@ export function CardHoverEffectDemo() {
 
   // Filter by non-technical field
   
+  const router = useRouter()
   
   // Example output
+  const eventCtx = useContext(eventContext);
+  const setUserSelectedEvent = eventCtx?.setUserSelectedEvent;
   
+const Hackathon = {
+  "_id": {
+    "$oid": "670eb790b13a65159310b68c"
+  },
+  "image": "https://firebasestorage.googleapis.com/v0/b/e-commerce-backend-bfa60.appspot.com/o/cyberia%20website%20images%2FScreenshot%202024-11-21%20140150.png?alt=media&token=baa0b5c0-2f28-4023-81b9-d8aa3acdeba7",
+  "modalDescription": "The 48-Hour Hackathon is an intense, fast-paced coding competition where teams of developers, designers, and innovators come together to build innovative solutions from scratch in just two days. Participants will have 48 hours to brainstorm, design, develop, and present a working prototype that addresses a specific problem or theme announced at the start of the event. This hackathon challenges creativity, collaboration, and technical skills under tight deadlines, pushing teams to think outside the box and create impactful, real-world solutions. At the end of the event, teams will pitch their projects to a panel of judges, with prizes awarded based on innovation, functionality, design, and potential impact. It’s a thrilling race against the clock where ideas become reality",
+  "title": "Hackathon",
+  "description": "Difficulty Level - Beginner to Expert",
+  "tag": "1-4 Members",
+  "createdAt": {
+    "$date": "2024-10-15T18:42:24.300Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-15T18:42:24.300Z"
+  },
+  "__v": 0,
+  "price": 400,
+  "category": "team",
+  "field": "Technical Event"
+}
 
+
+const handleRedirect = () =>{
+  if (setUserSelectedEvent) {
+    setUserSelectedEvent(Hackathon);
+  }
+  localStorage.setItem("UserSelectedEvent", JSON.stringify(Hackathon));
+    router.push("/selectedEvent");
+}
   
   return (
-    <div className="flex flex-row  w-full h-full ">
+    <div className="flex flex-col  w-full h-full ">
+      <div onClick={handleRedirect}  style={{
+        backgroundImage : "url('/Hackathon.jpg')"
+    }} className="flex group flex-col hover:rounded-xl border-white/[0.5] text-center  hover:border-[8px]  justify-center items-center h-[400px] bg-cover bg-center bg-black/[0.2] hover:bg-black/[0.6] bg-blend-multiply cursor-pointer transition-all duration-300 bg-no-repeat rounded-xl   w-full my-5">
+
+        <h1  className="p-4 text-white underline  text-5xl">Hackathon</h1>
+        <h1  className="2xl:hidden sm:block transition-transform  duration-700  group-hover:inline-block p-4 text-white text-xl">Difficulty Level - Beginner to Expert</h1>
+    </div>
         {
          loading  ?  ( <div className="flex flex-row flex-wrap justify-around w-full">
            <Skeleton className="h-[180px] bg-white/[0.2] my-10 w-[250px] rounded-xl" />          

@@ -124,9 +124,19 @@ export function SignupFormTeam() {
         mode: "production", //or production
       });
 
+      let price = 0;
+      if(UserSelectedEvent?.title === "Valorant"){
+        price = UserSelectedEvent?.price
+      }
+      else if (UserSelectedEvent?.title === "CS2"){
+        price = UserSelectedEvent?.price
+      }
+      else{
+        price = Data.member.length * 100
+      }
       const response = await axios.post(
         `${HOST}/api/payments`,
-        { ...Data, price: UserSelectedEvent.price },
+        { ...Data, price: price },
         {
           headers: {
             "Content-Type": "application/json",
@@ -253,7 +263,7 @@ export function SignupFormTeam() {
             />
           </LabelInputContainer>
 
-        {Array.from({ length: Math.min(Data?.members , 5)}).map((_, index) => {
+        {["Valorant","CS2"].includes(UserSelectedEvent?.title)? Array.from({ length: Math.min(Data?.members , 5)}).map((_, index) => {
           return (
             <LabelInputContainer className="mt-2 ">
               <Label htmlFor="email">{`UID of Member ${index + 1}`}</Label>
@@ -267,22 +277,22 @@ export function SignupFormTeam() {
                 type="text"                
               />
             </LabelInputContainer>
-          );
-          // <Form.Item
-          //     label={`Member ${index + 1}`}
-          //     key={index}
-          //     type="text"
-
-          //     rules={[
-          //         {
-          //             required: true,
-          //             message: 'Please enter Team Members Name!',
-          //         },
-          //     ]}
-          // >
-          //     <Input placeholder="Name of Member" name={`member${index}`} onChange={(e) => handleChange(index, e)}
-          //         value={Data.member[index] || ""} className='bg-transparent placeholder:text-gray-300 hover:bg-transparent active:bg-transparent focus:bg-transparent text-white' />
-          // </Form.Item>
+          );          
+        }) : Array.from({ length: Math.min(Data?.members , 4)}).map((_, index) => {
+          return (
+            <LabelInputContainer className="mt-2 ">
+              <Label htmlFor="email">{`UID of Member ${index + 1}`}</Label>
+              <Input
+                id="email"
+                name={`member${index}`}
+                key={index}
+                value={Data.member[index] || ""}
+                onChange={(e) => handleChangeMember(index, e)}
+                placeholder={`Please provide Game Id of member`}
+                type="text"                
+              />
+            </LabelInputContainer>
+          );          
         })}
         <div className="flex w-full mt-4 gap-5">
           <LabelInputContainer className="mb-4 w-1/2">

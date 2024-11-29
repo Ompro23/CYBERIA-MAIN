@@ -90,9 +90,9 @@ const selectedEvent = () => {
                       </p>
                       <p className="font-Poppins sm:text-xs">
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
-                          Tag
+                          Size
                         </span>{" "}
-                        : {UserSelectedEvent?.tag} - {UserSelectedEvent?.size}
+                        : {UserSelectedEvent?.tag} 
                       </p>
                       <p className="font-Poppins sm:text-xs">
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
