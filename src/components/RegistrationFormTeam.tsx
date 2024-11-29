@@ -134,6 +134,7 @@ export function SignupFormTeam() {
       else{
         price = Data.member.length * 100
       }
+      console.log(price)
       const response = await axios.post(
         `${HOST}/api/payments`,
         { ...Data, price: price },
