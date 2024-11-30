@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-    <img src="/bob_logo.jpg" alt="" className="h-[30vh] mix-blend-color-burn object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
+    <img src="/bob_logo.png" alt="" className="h-[30vh] mix-blend-color-burn object-contain sm:h-[30vh]  sm:w-[40vw] w-[20vw]"/>,
     name: "Bank of Baroda",
     title: "Bank of Baroda, founded in 1908, is a major Indian public sector bank known for its international presence and comprehensive banking services. It offers retail, corporate, and SME banking, with a strong focus on digital solutions, making it a key player in India’s financial sector.",
   },
