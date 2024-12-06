@@ -47,7 +47,11 @@ const About = () => {
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-3xl font-Poppins">About Cyberia</AccordionTrigger>
                   <AccordionContent className="text-[#b7b8b8] text-sm">
-                  Know more about Cyberia 2024, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda. Cyberia provides an arena for the youth of today and serve as a platform to exhibit their technical acumen to the world and compete with like-minded peers.platform to exhibit their technical acumen to the world and compete with like-minded peers.
+                  Welcome to Cyberia 2024, the premier tech fest organized by the Department of Computer Applications (DCA), where technology meets creativity and innovation ignites possibilities. Cyberia is more than just an event; it's a celebration of ideas, knowledge, and the limitless potential of technology.
+
+Dive into a world of opportunities with thrilling coding marathons, competitive hackathons, and captivating tech challenges designed to push the boundaries of innovation. Engage with industry experts through insightful tech talks and hands-on workshops that explore the latest trends and breakthroughs in the ever-evolving tech landscape.
+
+Cyberia is the perfect platform for students, tech enthusiasts, and innovators to showcase their talents, collaborate with peers, and experience the excitement of cutting-edge advancements. Whether you're a tech wizard, a budding entrepreneur, or simply curious about the digital frontier, Cyberia has something to offer for everyone.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -55,7 +59,11 @@ const About = () => {
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-start no-underline  text-2xl">About the DCA</AccordionTrigger>
                   <AccordionContent className="text-[#b7b8b8] text-sm">
-                  At The Maharaja Sayajirao University of Baroda, the Department of Computer Applications offers a transformative Bachelor of Computer Applications (BCA) & Master of Science (Information Technology) (MSc. IT) programs. Seamlessly integrating theory with hands-on experience, the department's expert faculty guides. By forging strong industry connections, including internships and guest lectures, the department ensures students are equipped not just to navigate the tech landscape, but to shape its future with innovation.
+                  The Department of Computer Applications (DCA) at The Maharaja Sayajirao University of Baroda stands at the forefront of academic excellence, innovation, and technological advancement. Established with the vision of nurturing skilled professionals and leaders in the realm of computing, the department offers a dynamic blend of theoretical foundations and practical expertise, empowering students to excel in the ever-evolving tech industry.
+
+DCA provides a robust academic environment with cutting-edge curricula, state-of-the-art infrastructure, and a faculty team comprising experienced educators and industry experts. The department focuses on fostering analytical thinking, creative problem-solving, and innovation through a wide array of programs, including undergraduate, postgraduate, and research opportunities in computer applications and technology.
+
+Beyond academics, the department encourages students to engage in interdisciplinary projects, participate in tech-driven events like Cyberia, and develop a holistic perspective on technology's role in society. With a strong emphasis on research and collaboration, DCA consistently contributes to advancements in areas like artificial intelligence, data science, software engineering, and cybersecurity
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

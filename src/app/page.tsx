@@ -23,6 +23,7 @@ import { useMediaQuery } from "react-responsive";
 import HeroElement from "@/app/fiberComponents/HeroElement";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { ThreeDCardDemo } from "@/components/3Dcard";
+import { ThreeDCardDemo2 } from "@/components/3Dcard2";
 
 export default function Home() {
   const router = useRouter();
@@ -132,11 +133,26 @@ export default function Home() {
           <MarqueeDemo />
 
           <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
-            <h1 className="text-4xl w-fit border-b-2 border-white text-white">Our Highlights</h1>
+            <h1 className="text-4xl w-fit border-b-2 border-white text-white">
+              Our Highlights
+            </h1>
 
-            <div className="flex h-full w-full justify-center items-center sm:flex-col gap-20 2xl:flex-row">
-              <ThreeDCardDemo title="Flutter" description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more." image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"/>              
-              <ThreeDCardDemo image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s" title="Artificial Inteligence / Machine Learning" description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions." />
+            <div className="flex h-full flex-wrap w-full justify-center items-center sm:flex-col gap-20 2xl:flex-row">
+              <ThreeDCardDemo
+                title="Flutter"
+                description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
+                image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
+              />
+              <ThreeDCardDemo
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
+                title="Artificial Inteligence / Machine Learning"
+                description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
+              />
+              <ThreeDCardDemo2
+                image="/cancer.png"
+                title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
+                description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
+              />
             </div>
           </div>
           <div className="flex h-full w-full  justify-center items-center flex-col ">
@@ -224,13 +240,23 @@ export default function Home() {
         <MarqueeDemo />
 
         <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
-            <h1 className="text-4xl w-fit border-b-2 border-white text-white">Our Highlights</h1>
+          <h1 className="text-4xl w-fit border-b-2 border-white text-white">
+            Our Highlights
+          </h1>
 
-            <div className="flex h-full w-full justify-center items-center sm:flex-col  2xl:flex-row">
-              <ThreeDCardDemo title="Flutter" description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more." image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"/>              
-              <ThreeDCardDemo image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s" title="Artificial Inteligence / Machine Learning" description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions." />
-            </div>
+          <div className="flex h-full w-full justify-center items-center sm:flex-col  2xl:flex-row">
+            <ThreeDCardDemo
+              title="Flutter"
+              description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
+              image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
+            />
+            <ThreeDCardDemo
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
+              title="Artificial Inteligence / Machine Learning"
+              description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
+            />
           </div>
+        </div>
         <MacbookScrollDemo />
 
         <CardDemo />

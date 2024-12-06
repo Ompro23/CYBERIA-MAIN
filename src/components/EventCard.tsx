@@ -87,7 +87,7 @@ const handleRedirect = () =>{
 }
   
   return (
-    <div className="flex flex-col  w-full h-full ">
+    <div className="flex flex-col overflow-hidden  w-full h-full ">
       <div onClick={handleRedirect}  style={{
         backgroundImage : "url('/Hackathon.jpg')"
     }} className="flex group flex-col hover:rounded-xl border-white/[0.5] text-center  hover:border-[8px]  justify-center items-center h-[400px] bg-cover bg-center bg-black/[0.2] hover:bg-black/[0.6] bg-blend-multiply cursor-pointer transition-all duration-300 bg-no-repeat rounded-xl   w-full my-5">

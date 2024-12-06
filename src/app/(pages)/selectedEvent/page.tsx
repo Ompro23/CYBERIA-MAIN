@@ -13,9 +13,13 @@ import MobNav from "@/components/MobNav";
 import { SignupFormTeam } from "@/components/RegistrationFormTeam";
 import { ShimmerButtonDemo } from "@/components/ShrimmerButton";
 import { AnimatedGradientTextDemo } from "@/components/RegisterButton";
+import { useRouter } from "next/navigation";
+import { IoClose } from "react-icons/io5";
 // ... other imports
 
 const selectedEvent = () => {
+
+  const router = useRouter()
   const eventContextValue = useContext(eventContext);
   const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
   const loading = eventContextValue?.loading;
@@ -41,11 +45,12 @@ const selectedEvent = () => {
         <div className="h-full relative justify-center items-center w-full bg-transparent bg-blend-multiply inset-0 flex flex-col z-0 bg-fixed bg-cover bg-center">
           {/* <DockDemo /> */}
 
-          <div className="pb-0 h-full flex justify-center items-center w-full">
+          <div className="pb-0 h-full  overflow-hidden  flex justify-center items-center w-full">
             <Tabs
               defaultValue="info"
-              className="w-[800px] sm:mt-5 z-0 justify-start h-full bg-black p-5 flex-col text-white flex items-center"
+              className="w-[800px] h-full overflow-hidden sm:mt-5 z-0 justify-start  bg-black p-5 flex-col text-white flex items-start"
             >
+              <button onClick={()=>router.push("/events")} className=" px-3 py-3 mb-3">&larr; Back</button>
               <TabsList className="w-full  ">
                 <TabsTrigger className="w-full" value="info">
                   Info
@@ -83,12 +88,13 @@ const selectedEvent = () => {
                         {/* <p className="font-bold text-start sm:block border-b-2 border-white w-fit 2xl:hidden sm:w-5/6 text-wrap text-xl">{UserSelectedEvent?.description || "No description available"}</p>
             <p className="font-normal text-start sm:block border-b-2 border-white w-fit 2xl:hidden text-sm">INR {UserSelectedEvent?.price || "N/A"}</p> */}
                       </div>
-                      <p className="font-Poppins sm:text-xs">
-                        <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
-                          Price
-                        </span>{" "}
-                        : {UserSelectedEvent?.price}
-                      </p>
+                      <h1 className="font-Poppins flex flex-row sm:text-xs">
+                        <span className="text-lg flex flex-row  sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
+                          Entry Fee
+                        </span>
+                         <p className="flex flex-row  items-center"> : 100 
+                        <IoClose /> Team Member </p>
+                      </h1>
                       <p className="font-Poppins sm:text-xs">
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           Size
@@ -107,11 +113,11 @@ const selectedEvent = () => {
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           RuleBook
                         </span>{" "}
-                        : {UserSelectedEvent?.ruleBook || "Updating Soon"}{" "}
+                        : { UserSelectedEvent?.ruleBook ?  <a target="_blank" href={UserSelectedEvent?.ruleBook}>Click to See</a> : "Updating Soon" }
                       </p>
                     </div>
 
-                    <div className="flex my-5 justify-center items-center w-full ">
+                    <div className="flex my-5  justify-center items-center w-full ">
                       <TabsList className="bg-transparent ">
                       <TabsTrigger value="register">
                       <AnimatedGradientTextDemo/>

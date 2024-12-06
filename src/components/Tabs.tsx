@@ -9,7 +9,7 @@ export function TabsDemo() {
       title: "Technical",
       value: "services",
       content: (
-        <div className="w-full overflow-auto relative h-auto  rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
+        <div className="w-full z-50 sm:h-[300vh] absolute overflow-x-hidden mb-28 h-[200vh]  pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
           <p>Technical Events</p>
           <DummyContent />
         </div>
@@ -19,7 +19,7 @@ export function TabsDemo() {
       title: "Non Technical",
       value: "playground",
       content: (
-        <div className="w-full overflow-hidden mb-28 sm:min-h-[250vh] 2xl:min-h-[150vh] relative pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
+        <div className="w-full z-50 absolute overflow-x-hidden mb-28 h-[200vh]  pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
           <p>Non Technical  Events</p>
           <DummyContent2 />
         </div>
@@ -29,7 +29,7 @@ export function TabsDemo() {
       title: "Work Shops",
       value: "workshops",
       content: (
-        <div className="w-full overflow-hidden 2xl:min-h-[150vh] sm:min-h-[270vh]  mb-28 relative pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
+        <div className="w-full z-50 absolute overflow-x-hidden mb-28 h-[200vh]  pb-10 rounded-2xl p-10 text-xl md:text-4xl font-bold backdrop-blur-2xl border border-white/10 shadow-2xl text-white bg-[#0000003f]">
           <p>Work Shops</p>
           <DummyContent3 />
         </div>
@@ -38,7 +38,7 @@ export function TabsDemo() {
   ];
 
   return (
-    <div className="h-[20rem]  my-40 md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-42">
+    <div className="h-[200vh] z-50 overflow-y-scroll  overflow-x-hidden  md:h-full    flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mt-42">
       <Tabs tabs={tabs} />
     </div>
   );
@@ -46,7 +46,7 @@ export function TabsDemo() {
 
 const DummyContent = () => {
   return (
-    <div>
+    <div className="h-full">
         <CardHoverEffectDemo/>
     </div>
   );
@@ -54,7 +54,7 @@ const DummyContent = () => {
 
 const DummyContent2 = () => {
   return (
-    <div>
+    <div className="h-full">
         <CardHoverEffectDemo2/>
     </div>
   );
@@ -62,7 +62,7 @@ const DummyContent2 = () => {
 
 const DummyContent3 = () => {
   return (
-    <div>
+    <div className="h-full">
         <CardHoverEffectDemo3/>
     </div>
   );

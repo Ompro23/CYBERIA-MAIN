@@ -37,10 +37,10 @@ export const Tabs = ({
   const [hovering, setHovering] = useState(false);
 
   return (
-    <>
+    <div className=" w-full">
       <div
         className={cn(
-          "flex flex-row ms-5 h-[10vh] items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row ms-5 h-1/2 items-start mt-44 justify-start  overflow-y-scroll   overflow-x-hidden sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
       >
@@ -68,7 +68,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative 2xl:text-xl md:text-sm text-nowrap block text-black dark:text-white">
+            <span className="relative 2xl:text-xl md:text-sm text-nowrap block text-red-500 dark:text-white">
               {tab.title}
             </span>
           </button>
@@ -79,9 +79,9 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-24", contentClassName)}
+        className={cn("mt-0", contentClassName)}
       />
-    </>
+    </div>
   );
 };
 
@@ -100,7 +100,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full flex items-start h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -114,7 +114,7 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("w-full h-full absolute mt-44    top-0 left-0", className)}
         >
           {tab.content}
         </motion.div>
