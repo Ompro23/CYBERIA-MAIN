@@ -71,7 +71,7 @@ const selectedEvent = () => {
                           "No description available"}
                       </p>
                       <p className="font-normal text-sm">
-                        INR {UserSelectedEvent?.price || "N/A"}
+                        INR {UserSelectedEvent?.price || "N/A"} / person
                       </p>
                     </DirectionAwareHover>
 
@@ -92,7 +92,7 @@ const selectedEvent = () => {
                         <span className="text-lg flex flex-row  sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           Entry Fee
                         </span>
-                         <p className="flex flex-row  items-center"> : 100 
+                         <p className="flex flex-row  items-center"> : 100 / person
                         <IoClose /> Team Member </p>
                       </h1>
                       <p className="font-Poppins sm:text-xs">
