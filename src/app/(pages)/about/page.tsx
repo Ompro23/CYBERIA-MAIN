@@ -51,7 +51,7 @@ const About = () => {
 
 Dive into a world of opportunities with thrilling coding marathons, competitive hackathons, and captivating tech challenges designed to push the boundaries of innovation. Engage with industry experts through insightful tech talks and hands-on workshops that explore the latest trends and breakthroughs in the ever-evolving tech landscape.
 
-Cyberia is the perfect platform for students, tech enthusiasts, and innovators to showcase their talents, collaborate with peers, and experience the excitement of cutting-edge advancements. Whether you're a tech wizard, a budding entrepreneur, or simply curious about the digital frontier, Cyberia has something to offer for everyone.
+Cyberia is the perfect platform for students, tech enthusiasts, and innovators to showcase their talents, collaborate with peers, and experience the excitement of cutting-edge advancements. Whether you're a tech wizard, a budding entrepreneur, or simply curious about the digital frontier, Cyberia has something to offer for everyone.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -172,7 +172,7 @@ Beyond academics, the department encourages students to engage in interdisciplin
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-3xl font-Poppins">About Cyberia</AccordionTrigger>
                   <AccordionContent className="text-[#b7b8b8] text-sm">
-                  Know more about Cyberia 2024, the Department of Computer Applications, Faculty of Science, and The Maharaja Sayajirao University of Baroda. Cyberia provides an arena for the youth of today and serve as a platform to exhibit their technical acumen to the world and compete with like-minded peers.platform to exhibit their technical acumen to the world and compete with like-minded peers.
+                  Welcome to Cyberia 2024, the premier tech fest organized by the Department of Computer Applications (DCA), where technology meets creativity and innovation ignites possibilities. Cyberia is more than just an event; it's a celebration of ideas, knowledge, and the limitless potential of technology. Dive into a world of opportunities with thrilling coding marathons, competitive hackathons, and captivating tech challenges designed to push the boundaries of innovation. Engage with industry experts through insightful tech talks and hands-on workshops that explore the latest trends and breakthroughs in the ever-evolving tech landscape. Cyberia is the perfect platform for students, tech enthusiasts, and innovators to showcase their talents, collaborate with peers, and experience the excitement of cutting-edge advancements. Whether you're a tech wizard, a budding entrepreneur, or simply curious about the digital frontier, Cyberia has something to offer for everyone.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
