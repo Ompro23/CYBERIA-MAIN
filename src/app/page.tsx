@@ -92,10 +92,10 @@ export default function Home() {
               <BlurInDemo />
               <TextGenerateEffectDemo />
               {/* <p className="text-xl text-wrap w-1/2  text-gray-300 text-start font-Poppins">Unleash innovation and defy digital boundaries at Cyberia Tech Fest: where mavericks of technology shape the future.</p> */}
-              <GradualSpacing
+              {/* <GradualSpacing
                 className="font-display text-center font-Poppins text-xl font-semibold -tracking-widest  text-black dark:text-white md:text-2xl md:leading-[5rem]"
                 text={`On December 22 23 & 24 `}
-              />
+              /> */}
               <div className="z-10 flex min-h-10 items-center blur-in-text justify-center">
                 <div
                   className={cn(
@@ -221,10 +221,10 @@ export default function Home() {
           Unleash innovation and defy digital boundaries at Cyberia Tech Fest:
           where mavericks of technology shape the future.
         </p>
-        <GradualSpacing
+        {/* <GradualSpacing
           className="text-center font-Poppins text-xl font-bold -tracking-widest  text-black dark:text-white md:text-2xl md:leading-[5rem]"
           text="On December 22 23 & 24"
-        />
+        /> */}
         <div className="z-10 flex min-h-10 items-center justify-center">
           <div
             className={cn(
