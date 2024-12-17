@@ -255,6 +255,11 @@ export default function Home() {
               title="Artificial Inteligence / Machine Learning"
               description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
             />
+             <ThreeDCardDemo2
+                image="/cancer.png"
+                title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
+                description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
+              />
           </div>
         </div>
         <MacbookScrollDemo />
