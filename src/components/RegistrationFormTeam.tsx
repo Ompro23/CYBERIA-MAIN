@@ -132,7 +132,7 @@ export function SignupFormTeam() {
         price = UserSelectedEvent?.price
       }
       else{
-        price = Data.member.length * 100
+        price = Data.member.length * UserSelectedEvent?.price
       }
       console.log(price)
       const response = await axios.post(
@@ -173,9 +173,9 @@ export function SignupFormTeam() {
         message.success("Payment has been completed");
         // router.push("/events")
         message.info("Please wait for redirection");
-        setloading?.(true);
-        console.log(result);
-        console.log(result.paymentDetails.paymentMessage);
+        // setloading?.(true);
+        // console.log(result);
+        // console.log(result.paymentDetails.paymentMessage);
         const response = await axios.post(
           `https://cyberia-node-server.vercel.app/api/user/registerTeamUser`,
           { ...Data, events: UserSelectedEvent.title },
@@ -200,7 +200,7 @@ export function SignupFormTeam() {
   };
   return (
     <>
-    <div className="w-[55vw] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
+    <div className="w-[700px] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Register for a Team Event
       </h2>

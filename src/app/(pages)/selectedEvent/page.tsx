@@ -92,7 +92,7 @@ const selectedEvent = () => {
                         <span className="text-lg flex flex-row  sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           Entry Fee
                         </span>
-                         <p className="flex flex-row  items-center"> : 100 / person
+                         <p className="flex flex-row  items-center"> : {UserSelectedEvent?.price} / person
                         <IoClose /> Team Member </p>
                       </h1>
                       <p className="font-Poppins sm:text-xs">

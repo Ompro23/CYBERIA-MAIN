@@ -159,7 +159,7 @@ const router = useRouter();
   return (
     <>
     
-    <div className="w-[55vw] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
+    <div className="w-[700px] sm:w-full p-10 h-full px-20 mx-auto rounded-md md:rounded-2xl  md:p-8 shadow-input bg-white dark:bg-black/[0.5]">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Register for an Solo Event
       </h2>
@@ -167,7 +167,7 @@ const router = useRouter();
         Before registering to any Event please refer to the timetable first so events cannot be collapse on same time
       </p>
 
-      <form className="my-8 h-full z-0 overflow-auto" onSubmit={handleSubmit}>
+      <form className="my-8 h-full w-full justify-center items-center z-0 overflow-auto" onSubmit={handleSubmit}>
         <div className="flex flex-col sm:w-full md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">Full name</Label>
