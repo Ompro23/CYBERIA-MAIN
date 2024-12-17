@@ -72,7 +72,7 @@ const Hackathon = {
     "$date": "2024-10-15T18:42:24.300Z"
   },
   "__v": 0,
-  "price": 400,
+  "price": 100,
   "category": "team",
   "field": "Technical Event"
 }
