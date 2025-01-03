@@ -24,9 +24,66 @@ import HeroElement from "@/app/fiberComponents/HeroElement";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { ThreeDCardDemo } from "@/components/3Dcard";
 import { ThreeDCardDemo2 } from "@/components/3Dcard2";
+import { useInView } from "react-intersection-observer";
+import { useSpring, animated, useSprings } from "react-spring";
 
 export default function Home() {
   const router = useRouter();
+  
+
+  // Sprung animations for images
+  const images: string[] = [
+    "/cancer1.jpeg",
+    "/cancer2.jpg",
+    "/cancer3.jpg",
+    "/cancer4.jpg",
+  
+  ];
+
+  // Intersection observer for triggering animation
+  const { ref: section1Ref, inView: section1InView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const { ref: section2Ref, inView: section2InView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  // Sprung animations for images
+  const springs = useSprings(
+    images.length,
+    images.map((_, index) => {
+      const direction = index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
+      return {
+        from: { opacity: 0, transform: direction },
+        to: {
+          opacity: section1InView ? 1 : 0,
+          transform: section1InView ? "translateX(0)" : direction,
+        },
+        config: { duration: 800 }, // Animation duration for each image
+        delay: section1InView ? index * 800 : 0, // Delay for sequential animations
+        reset: !section1InView, // Reset animation when out of view
+      };
+    })
+  );
+  const springs2 = useSprings(
+    images.length,
+    images.map((_, index) => {
+      const direction = index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
+      return {
+        from: { opacity: 0, transform: direction },
+        to: {
+          opacity: section2InView ? 1 : 0,
+          transform: section2InView ? "translateX(0)" : direction,
+        },
+        config: { duration: 800 }, // Animation duration for each image
+        delay: section2InView ? index * 800 : 0, // Delay for sequential animations
+        reset: !section2InView, // Reset animation when out of view
+      };
+    })
+  );
+ 
 
   const handleRedirect = () => {
     router.push("about");
@@ -70,6 +127,7 @@ export default function Home() {
     };
   };
 
+
   const isMobile = useMediaQuery({ maxWidth: 440 });
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -92,10 +150,10 @@ export default function Home() {
               <BlurInDemo />
               <TextGenerateEffectDemo />
               {/* <p className="text-xl text-wrap w-1/2  text-gray-300 text-start font-Poppins">Unleash innovation and defy digital boundaries at Cyberia Tech Fest: where mavericks of technology shape the future.</p> */}
-              {/* <GradualSpacing
+              <GradualSpacing
                 className="font-display text-center font-Poppins text-xl font-semibold -tracking-widest  text-black dark:text-white md:text-2xl md:leading-[5rem]"
-                text={`On December 22 23 & 24 `}
-              /> */}
+                text={`On February 27 28 & 1 March `}
+              />
               <div className="z-10 flex min-h-10 items-center blur-in-text justify-center">
                 <div
                   className={cn(
@@ -148,12 +206,34 @@ export default function Home() {
                 title="Artificial Inteligence / Machine Learning"
                 description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
               />
-              <ThreeDCardDemo2
+              {/* <ThreeDCardDemo2
                 image="/cancer.png"
                 title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
                 description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
-              />
+              /> */}
             </div>
+          </div>
+
+          <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
+            <h1 className="text-4xl w-fit border-b-2 border-white text-white">
+              CERVICAL CANCER WORKSHOP
+            </h1>
+
+            <animated.div
+      ref={section1Ref}
+      className="my-10 w-2/3 grid gap-10 place-items-center 2xl:grid-cols-2"
+    >
+      {springs.map((style, index) => (
+        <animated.img
+          key={index}
+          src={images[index]}
+          loading={"lazy"}
+          className="h-[300px] object-cover w-[500px]"
+          alt={`Cancer image ${index + 1}`}
+          style={style}
+        />
+      ))}
+    </animated.div>
           </div>
           <div className="flex h-full w-full  justify-center items-center flex-col ">
             <MacbookScrollDemo />
@@ -255,13 +335,33 @@ export default function Home() {
               title="Artificial Inteligence / Machine Learning"
               description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
             />
-             <ThreeDCardDemo2
+            {/* <ThreeDCardDemo2
                 image="/cancer.png"
                 title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
                 description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
-              />
+              /> */}
           </div>
         </div>
+        <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
+            <h1 className="text-4xl text-center mx-2 w-fit border-b-2 border-white text-white">
+              CERVICAL CANCER WORKSHOP
+            </h1>
+
+            <animated.div
+      ref={section2Ref}
+      className="my-10 w-2/3 grid gap-10 grid-cols-1 place-items-center "
+    >
+      {springs2.map((style, index) => (
+        <animated.img
+          key={index}
+          src={images[index]}
+          className="h-[300px] object-cover w-[500px]"
+          alt={`Cancer image ${index + 1}`}
+          style={style}
+        />
+      ))}
+    </animated.div>
+          </div>
         <MacbookScrollDemo />
 
         <CardDemo />

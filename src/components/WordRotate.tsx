@@ -4,7 +4,7 @@ export function WordRotateDemo() {
   return (
     <WordRotate
       className="text-lg flex justify-center items-center px-2 font-Poppins text-black dark:text-white"
-      words={["22","23","24"]}
+      words={["27","28","1"]}
     />
   );
 }

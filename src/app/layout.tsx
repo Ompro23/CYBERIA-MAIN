@@ -21,7 +21,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Cyberia",
   description: "Unleash the geek within you",
-  
 };
 
 export default function RootLayout({
@@ -30,7 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className="dark h-full w-full">      
+    <html lang="en"  className="dark h-full w-full">     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBHBT1850H"></script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}
       >       

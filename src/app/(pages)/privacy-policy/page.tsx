@@ -33,9 +33,9 @@ const About = () => {
                 <h2 className="font-normal  text-3xl text-center border-b-2 border-white w-fit md:text-xl sm:text-sm mb-5 ">
                   Privacy Policy for Cyberia Tech Fest
                 </h2>
-                {/* <div className="mb-4 flex flex-row justify-center items-center font-extralight">
-                  <span className="font-semibold">Effective Date:</span> <WordRotateDemo/>  December 2024
-                </div> */}
+                <div className="mb-4 flex flex-row justify-center items-center font-extralight">
+                  <span className="font-semibold">Effective Date:</span> <WordRotateDemo/> Feb & March 2025
+                </div>
                 <div className="flex mt-10 flex-col gap-3">
                   <Accordion type="single" defaultValue="item-1">
                     <AccordionItem value="item-1">
