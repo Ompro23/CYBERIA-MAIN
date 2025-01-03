@@ -55,7 +55,7 @@ export default function RootLayout({
           <Footer />
           {showAlert && (
             <CustomAlert
-              message="Cyberia's dates have been extended and new dates will be released very soon"
+              message="Cyberia's dates have been extended and new dates are live"
               onClose={() => setShowAlert(false)}
             />
           )}

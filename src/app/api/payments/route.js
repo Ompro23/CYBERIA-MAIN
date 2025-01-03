@@ -45,7 +45,7 @@ export async function POST(request) {
   try {
     const body = await request.json()    
     const requestData = {
-      "order_amount": 1,
+      "order_amount": body.price,
       "order_currency": "INR",
       "order_id": createOrderId(),
       "customer_details": {
