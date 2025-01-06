@@ -20,9 +20,9 @@ const setCorsHeaders = (response) => {
   return response;
 };
 
-Cashfree.XClientId = process.env.CLIENT_ID;
-Cashfree.XClientSecret = process.env.CLIENT_SECRET;
-Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
+Cashfree.XClientId = process.env.CLIENT_ID_TEST;
+Cashfree.XClientSecret = process.env.CLIENT_SECRET_TEST;
+Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
 // Function to create order ID
 function createOrderId() {
@@ -45,19 +45,19 @@ export async function POST(request) {
     // Fetch the event data from the database based on the event ID
     const eventId = body.events;
     console.log(eventId)
-     // Assuming the event ID is passed in the request
-     const event = await Events.find({ title: { $in: body.events } });
+    // Assuming the event ID is passed in the request
+    const event = await Events.find({ title: { $in: body.events } });
 
-    
+
     if (!event) {
       return NextResponse.json({ error: "Event not found" }, { status: 404 });
     }
 
     // Calculate the price based on event data
     const totalPrice = event.reduce((sum, event) => sum + (event.price || 0), 0);
-    
 
-   
+
+
     console.log(totalPrice);
 
     // Use the event price in the order request

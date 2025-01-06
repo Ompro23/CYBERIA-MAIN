@@ -21,9 +21,9 @@ interface FormData {
   gender: string;
   stream: string;
   events: string[];
-  members: number,
-  member: string[],
-  teamLeader: string,
+  members: number;
+  member: string[];
+  teamLeader: string;
   teamName: string;
 }
 
@@ -31,8 +31,8 @@ export default function page() {
   const [Data, setData] = useState<FormData>({
     fullName: "",
     email: "",
-    teamName : "",
-    teamLeader:"",
+    teamName: "",
+    teamLeader: "",
     contactNo: "",
     contactNo2: "",
     institute: "",
@@ -48,11 +48,11 @@ export default function page() {
 
   const eventContextValue = useContext(eventContext);
   const ticketData = eventContextValue?.ticketData;
-      const setTicketData = eventContextValue?.setTicketData;
+  const setTicketData = eventContextValue?.setTicketData;
   useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
-      
+
       const data: FormData = {
         fullName: searchParams.get("fullName") || "",
         email: searchParams.get("email") || "",
@@ -64,9 +64,9 @@ export default function page() {
         age: searchParams.get("age") || "",
         gender: searchParams.get("gender") || "",
         stream: searchParams.get("stream") || "",
-        members: Number(searchParams.get("members")) || 0,  
-        teamLeader: searchParams.get("teamLeader") || "",  
-        teamName: searchParams.get("teamName") || "",  
+        members: Number(searchParams.get("members")) || 0,
+        teamLeader: searchParams.get("teamLeader") || "",
+        teamName: searchParams.get("teamName") || "",
         events: searchParams.get("events")?.split(",") || [], // Ensure array fallback
         member: searchParams.get("member")?.split(",") || [], // Ensure array fallback
       };
@@ -85,12 +85,11 @@ export default function page() {
     message.info("Please wait...");
     try {
       const cashfree = await Cashfree.load({
-        mode: "production", // Change to 'test' for testing
+        mode: "sandbox", // Change to 'test' for testing
       });
 
       console.log(Data);
 
-      
       const response = await axios.post(
         `${HOST}/api/botPayments`,
         { ...Data },
@@ -101,7 +100,7 @@ export default function page() {
         }
       );
 
-      console.log(response)
+      console.log(response);
       if (!response.data) {
         message.info("Please try again");
         return;
@@ -118,7 +117,7 @@ export default function page() {
 
       const result = await cashfree.checkout(checkoutOptions);
 
-      console.log(result)
+      console.log(result);
       if (result.redirect) {
         message.success("Payment Completed");
       } else if (result.error) {
@@ -128,9 +127,9 @@ export default function page() {
         message.success("Payment has been completed");
         message.info("Please wait for redirection");
 
-        const apiEndpoint = Data.teamName 
-        ? `https://cyberia-node-server.vercel.app/api/user/registerTeamUser` 
-        : `https://cyberia-node-server.vercel.app/api/user/registerSoloUser`;
+        const apiEndpoint = Data.teamName
+          ? `https://cyberia-node-server.vercel.app/api/user/registerTeamUser`
+          : `https://cyberia-node-server.vercel.app/api/user/registerSoloUser`;
 
         const registerResponse = await axios.post(
           apiEndpoint,
@@ -142,12 +141,12 @@ export default function page() {
           }
         );
 
-        console.log(registerResponse.data)
+        console.log(registerResponse.data);
 
         if (registerResponse.status === 201 && registerResponse.data.SoloData) {
           message.success("Registration successful");
           setpaymentDone(true);
-          setTicketData?.(registerResponse.data.SoloData)
+          setTicketData?.(registerResponse.data.SoloData);
         } else {
           message.error("An error occurred. Contact customer support.");
         }
@@ -158,13 +157,14 @@ export default function page() {
     }
   };
 
-  const handleWhatsapp = async (e: React.MouseEvent<HTMLButtonElement>) =>{
+  const handleWhatsapp = async (e: React.MouseEvent<HTMLButtonElement>) => {
     const phoneNumber = "+1 (415) 523-8886";
     const cleanPhoneNumber = phoneNumber.replace(/[^0-9]/g, ""); // Remove non-numeric characters
-    
-    window.location.href = `https://wa.me/${cleanPhoneNumber}?text=${encodeURIComponent(ticketData?.ticket)}`;
-    
-  }
+
+    window.location.href = `https://wa.me/${cleanPhoneNumber}?text=${encodeURIComponent(
+      ticketData?.ticket
+    )}`;
+  };
 
   return (
     <div className="flex w-full justify-center flex-col gap-5 items-center h-screen text-center">
@@ -176,9 +176,7 @@ export default function page() {
       >
         Pay Now
       </button>
-      {paymentDone &&
-      <Button onClick={handleWhatsapp} />}
-
+      {paymentDone && <Button onClick={handleWhatsapp} />}
     </div>
   );
 }
