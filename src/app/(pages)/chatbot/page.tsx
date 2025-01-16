@@ -161,7 +161,7 @@ export default function page() {
     const phoneNumber = "+1 (415) 523-8886";
     const cleanPhoneNumber = phoneNumber.replace(/[^0-9]/g, ""); // Remove non-numeric characters
 
-    window.location.href = `https://wa.me/${cleanPhoneNumber}?text=${encodeURIComponent(
+    window.location.href = `https://wa.me/${cleanPhoneNumber}?text=ticket&file=${encodeURIComponent(
       ticketData?.ticket
     )}`;
   };

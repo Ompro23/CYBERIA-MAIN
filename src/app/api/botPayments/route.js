@@ -41,10 +41,10 @@ export async function POST(request) {
   try {
     const body = await request.json();
 
-    console.log(body)
+    // console.log(body)
     // Fetch the event data from the database based on the event ID
     const eventId = body.events;
-    console.log(eventId)
+    // console.log(eventId)
     // Assuming the event ID is passed in the request
     const event = await Events.find({ title: { $in: body.events } });
 
