@@ -128,8 +128,8 @@ export default function page() {
         message.info("Please wait for redirection");
 
         const apiEndpoint = Data.teamName
-          ? `https://cyberia-node-server.vercel.app/api/user/registerTeamUser`
-          : `https://cyberia-node-server.vercel.app/api/user/registerSoloUser`;
+          ? `http://localhost:8001/api/user/registerTeamUser`
+          : `http://localhost:8001/api/user/registerSoloUser`;
 
         const registerResponse = await axios.post(
           apiEndpoint,
