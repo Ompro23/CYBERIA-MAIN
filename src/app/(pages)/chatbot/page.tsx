@@ -147,7 +147,6 @@ export default function page() {
           message.success("Registration successful");
           setpaymentDone(true);
           setTicketData?.(registerResponse.data.SoloData);
-          setPhoneNumber(registerResponse.data.SoloData.contactNo);
         } else {
           message.error("An error occurred. Contact customer support.");
         }
@@ -172,12 +171,9 @@ export default function page() {
 
   const handleSendMessage = async () => {
     try {
-      const response = await axios.post(
-        "https://cyberia-node-server.vercel.app/send-message",
-        {
-          to: `+${phoneNumber}`,
-        }
-      );
+      const response = await axios.post("http://localhost:3001/send-message", {
+        to: phoneNumber,
+      });
       if (response.data.success) {
         setStatus("Message sent successfully!");
       } else {
@@ -199,7 +195,7 @@ export default function page() {
       >
         Pay Now
       </button>
-      {paymentDone && <Button onClick={handleSendMessage} />}
+      {paymentDone && <Button onClick={handleWhatsapp} />}
     </div>
   );
 }
