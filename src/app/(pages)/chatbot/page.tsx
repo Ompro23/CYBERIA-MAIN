@@ -147,6 +147,7 @@ export default function page() {
           message.success("Registration successful");
           setpaymentDone(true);
           setTicketData?.(registerResponse.data.SoloData);
+          setPhoneNumber(registerResponse.data.SoloData.contactNo);
         } else {
           message.error("An error occurred. Contact customer support.");
         }
@@ -166,6 +167,28 @@ export default function page() {
     )}`;
   };
 
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSendMessage = async () => {
+    try {
+      const response = await axios.post(
+        "https://cyberia-node-server.vercel.app/send-message",
+        {
+          to: phoneNumber,
+        }
+      );
+      if (response.data.success) {
+        setStatus("Message sent successfully!");
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus("An error occurred while sending the message.");
+    }
+  };
+
   return (
     <div className="flex w-full justify-center flex-col gap-5 items-center h-screen text-center">
       <h1 className="text-3xl font-bold">Welcome! to Cyberia Payment Page</h1>
@@ -176,7 +199,7 @@ export default function page() {
       >
         Pay Now
       </button>
-      {paymentDone && <Button onClick={handleWhatsapp} />}
+      {paymentDone && <Button onClick={handleSendMessage} />}
     </div>
   );
 }
