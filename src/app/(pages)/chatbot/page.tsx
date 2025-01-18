@@ -171,7 +171,7 @@ export default function page() {
 
   const handleSendMessage = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/send-message", {
+      const response = await axios.post("http://localhost:8001/send-message", {
         to: phoneNumber,
       });
       if (response.data.success) {
@@ -195,7 +195,7 @@ export default function page() {
       >
         Pay Now
       </button>
-      {paymentDone && <Button onClick={handleWhatsapp} />}
+      {paymentDone && <Button onClick={handleSendMessage} />}
     </div>
   );
 }
