@@ -175,7 +175,7 @@ export default function page() {
       const response = await axios.post(
         "https://cyberia-node-server.vercel.app/send-message",
         {
-          to: phoneNumber,
+          to: `+${phoneNumber}`,
         }
       );
       if (response.data.success) {
