@@ -195,7 +195,7 @@ export default function page() {
       >
         Pay Now
       </button>
-      {paymentDone && <Button onClick={handleSendMessage} />}
+      {paymentDone && <Button onClick={handleWhatsapp} />}
     </div>
   );
 }
