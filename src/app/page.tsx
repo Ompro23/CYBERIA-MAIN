@@ -29,7 +29,6 @@ import { useSpring, animated, useSprings } from "react-spring";
 
 export default function Home() {
   const router = useRouter();
-  
 
   // Sprung animations for images
   const images: string[] = [
@@ -37,7 +36,6 @@ export default function Home() {
     "/cancer2.jpg",
     "/cancer3.jpg",
     "/cancer4.jpg",
-  
   ];
 
   // Intersection observer for triggering animation
@@ -54,7 +52,8 @@ export default function Home() {
   const springs = useSprings(
     images.length,
     images.map((_, index) => {
-      const direction = index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
+      const direction =
+        index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
       return {
         from: { opacity: 0, transform: direction },
         to: {
@@ -70,7 +69,8 @@ export default function Home() {
   const springs2 = useSprings(
     images.length,
     images.map((_, index) => {
-      const direction = index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
+      const direction =
+        index % 2 === 0 ? "translateX(-50px)" : "translateX(50px)"; // Alternate direction
       return {
         from: { opacity: 0, transform: direction },
         to: {
@@ -83,7 +83,6 @@ export default function Home() {
       };
     })
   );
- 
 
   const handleRedirect = () => {
     router.push("about");
@@ -126,7 +125,6 @@ export default function Home() {
         : [-22, -10, 0],
     };
   };
-
 
   const isMobile = useMediaQuery({ maxWidth: 440 });
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -192,48 +190,24 @@ export default function Home() {
 
           <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
             <h1 className="text-4xl w-fit border-b-2 border-white text-white">
-              Our Highlights
-            </h1>
-
-            <div className="flex h-full flex-wrap w-full justify-center items-center sm:flex-col gap-20 2xl:flex-row">
-              <ThreeDCardDemo
-                title="Flutter"
-                description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
-                image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
-              />
-              <ThreeDCardDemo
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
-                title="Artificial Inteligence / Machine Learning"
-                description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
-              />
-              {/* <ThreeDCardDemo2
-                image="/cancer.png"
-                title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
-                description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
-              /> */}
-            </div>
-          </div>
-
-          <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
-            <h1 className="text-4xl w-fit border-b-2 border-white text-white">
               CERVICAL CANCER WORKSHOP
             </h1>
 
             <animated.div
-      ref={section1Ref}
-      className="my-10 w-2/3 grid gap-10 place-items-center 2xl:grid-cols-2"
-    >
-      {springs.map((style, index) => (
-        <animated.img
-          key={index}
-          src={images[index]}
-          loading={"lazy"}
-          className="h-[300px] object-cover w-[500px]"
-          alt={`Cancer image ${index + 1}`}
-          style={style}
-        />
-      ))}
-    </animated.div>
+              ref={section1Ref}
+              className="my-10 w-2/3 grid gap-10 place-items-center 2xl:grid-cols-2"
+            >
+              {springs.map((style, index) => (
+                <animated.img
+                  key={index}
+                  src={images[index]}
+                  loading={"lazy"}
+                  className="h-[300px] object-cover w-[500px]"
+                  alt={`Cancer image ${index + 1}`}
+                  style={style}
+                />
+              ))}
+            </animated.div>
           </div>
           <div className="flex h-full w-full  justify-center items-center flex-col ">
             <MacbookScrollDemo />
@@ -320,48 +294,25 @@ export default function Home() {
         <MarqueeDemo />
 
         <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
-          <h1 className="text-4xl w-fit border-b-2 border-white text-white">
-            Our Highlights
+          <h1 className="text-4xl text-center mx-2 w-fit border-b-2 border-white text-white">
+            CERVICAL CANCER WORKSHOP
           </h1>
 
-          <div className="flex h-full w-full justify-center items-center sm:flex-col  2xl:flex-row">
-            <ThreeDCardDemo
-              title="Flutter"
-              description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
-              image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
-            />
-            <ThreeDCardDemo
-              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
-              title="Artificial Inteligence / Machine Learning"
-              description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
-            />
-            {/* <ThreeDCardDemo2
-                image="/cancer.png"
-                title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
-                description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
-              /> */}
-          </div>
+          <animated.div
+            ref={section2Ref}
+            className="my-10 w-2/3 grid gap-10 grid-cols-1 place-items-center "
+          >
+            {springs2.map((style, index) => (
+              <animated.img
+                key={index}
+                src={images[index]}
+                className="h-[300px] object-cover w-[500px]"
+                alt={`Cancer image ${index + 1}`}
+                style={style}
+              />
+            ))}
+          </animated.div>
         </div>
-        <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
-            <h1 className="text-4xl text-center mx-2 w-fit border-b-2 border-white text-white">
-              CERVICAL CANCER WORKSHOP
-            </h1>
-
-            <animated.div
-      ref={section2Ref}
-      className="my-10 w-2/3 grid gap-10 grid-cols-1 place-items-center "
-    >
-      {springs2.map((style, index) => (
-        <animated.img
-          key={index}
-          src={images[index]}
-          className="h-[300px] object-cover w-[500px]"
-          alt={`Cancer image ${index + 1}`}
-          style={style}
-        />
-      ))}
-    </animated.div>
-          </div>
         <MacbookScrollDemo />
 
         <CardDemo />
@@ -375,3 +326,51 @@ export default function Home() {
     </>
   );
 }
+
+// <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
+//             <h1 className="text-4xl w-fit border-b-2 border-white text-white">
+//               Our Highlights
+//             </h1>
+
+//             <div className="flex h-full flex-wrap w-full justify-center items-center sm:flex-col gap-20 2xl:flex-row">
+//               <ThreeDCardDemo
+//                 title="Flutter"
+//                 description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
+//                 image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
+//               />
+//               <ThreeDCardDemo
+//                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
+//                 title="Artificial Inteligence / Machine Learning"
+//                 description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
+//               />
+//               {/* <ThreeDCardDemo2
+//                 image="/cancer.png"
+//                 title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
+//                 description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
+//               /> */}
+//             </div>
+//           </div>
+
+// <div className="flex  h-full w-full justify-center items-center flex-col mt-20">
+// <h1 className="text-4xl w-fit border-b-2 border-white text-white">
+//   Our Highlights
+// </h1>
+
+// <div className="flex h-full w-full justify-center items-center sm:flex-col  2xl:flex-row">
+//   <ThreeDCardDemo
+//     title="Flutter"
+//     description="Join our Flutter Workshop to learn the essentials of building stunning cross-platform apps! Perfect for beginners, this hands-on session will cover Flutter basics, UI design, and more."
+//     image="https://miro.medium.com/v2/resize:fit:1400/1*0BVmYD7v7bnIAUkzCZjRNA.jpeg"
+//   />
+//   <ThreeDCardDemo
+//     image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQvg3lGfPkyAgVHP1WP0MzQ8Y9hqUqw9u5Q&s"
+//     title="Artificial Inteligence / Machine Learning"
+//     description="Dive into the world of AI and Machine Learning with our hands-on workshop! This session will cover key concepts, tools, and techniques to get you started with AI/ML and building smart solutions."
+//   />
+//   {/* <ThreeDCardDemo2
+//       image="/cancer.png"
+//       title="CERVICAL CANCER BREAST CANCER & MENSTRUAL HYGIENE AWARENESS PROGRAM"
+//       description="Only for Women Participants Time : 11:00 am to 12:00 Noon | Monday, 23rd December, 2024 Department of Computer Applications, Faculty of Science, The MSU Baroda"
+//     /> */}
+// </div>
+// </div>
