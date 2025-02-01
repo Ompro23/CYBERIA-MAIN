@@ -18,8 +18,7 @@ import { IoClose } from "react-icons/io5";
 // ... other imports
 
 const selectedEvent = () => {
-
-  const router = useRouter()
+  const router = useRouter();
   const eventContextValue = useContext(eventContext);
   const UserSelectedEvent = eventContextValue?.UserSelectedEvent;
   const loading = eventContextValue?.loading;
@@ -50,14 +49,19 @@ const selectedEvent = () => {
               defaultValue="info"
               className="w-[800px] h-full overflow-hidden sm:mt-5 z-0 justify-start  bg-black p-5 flex-col text-white flex items-start"
             >
-              <button onClick={()=>router.push("/events")} className=" px-3 py-3 mb-3">&larr; Back</button>
+              <button
+                onClick={() => router.push("/events")}
+                className=" px-3 py-3 mb-3"
+              >
+                &larr; Back
+              </button>
               <TabsList className="w-full  ">
                 <TabsTrigger className="w-full" value="info">
                   Info
                 </TabsTrigger>
-                <TabsTrigger className="w-full" value="register">
+                {/* <TabsTrigger className="w-full" value="register">
                   Register
-                </TabsTrigger>
+                </TabsTrigger> */}
               </TabsList>
               <TabsContent value="info">
                 {!loading ? (
@@ -92,14 +96,17 @@ const selectedEvent = () => {
                         <span className="text-lg flex flex-row  sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           Entry Fee
                         </span>
-                         <p className="flex flex-row  items-center"> : {UserSelectedEvent?.price} / person
-                        <IoClose /> Team Member </p>
+                        <p className="flex flex-row  items-center">
+                          {" "}
+                          : {UserSelectedEvent?.price} / person
+                          <IoClose /> Team Member{" "}
+                        </p>
                       </h1>
                       <p className="font-Poppins sm:text-xs">
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           Size
                         </span>{" "}
-                        : {UserSelectedEvent?.tag} 
+                        : {UserSelectedEvent?.tag}
                       </p>
                       <p className="font-Poppins sm:text-xs">
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
@@ -113,17 +120,24 @@ const selectedEvent = () => {
                         <span className="text-lg sm:text-start font-normal border-b-2 border-white w-fit my-1 font-Poppins">
                           RuleBook
                         </span>{" "}
-                        : { UserSelectedEvent?.ruleBook ?  <a target="_blank" href={UserSelectedEvent?.ruleBook}>Click to See</a> : "Updating Soon" }
+                        :{" "}
+                        {UserSelectedEvent?.ruleBook ? (
+                          <a target="_blank" href={UserSelectedEvent?.ruleBook}>
+                            Click to See
+                          </a>
+                        ) : (
+                          "Updating Soon"
+                        )}
                       </p>
                     </div>
 
                     <div className="flex my-5  justify-center items-center w-full ">
                       <TabsList className="bg-transparent ">
-                      <TabsTrigger value="register">
-                      <AnimatedGradientTextDemo/>
-                      </TabsTrigger>
+                        <TabsTrigger value="register">
+                          <AnimatedGradientTextDemo />
+                        </TabsTrigger>
                       </TabsList>
-                    {/* <TabsList className="bg-transparent hover:bg-white rounded-lg">
+                      {/* <TabsList className="bg-transparent hover:bg-white rounded-lg">
                       <TabsTrigger value="register"  className="flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 px-4 py-2 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2">
                         <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12  opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
                         <div className="flex items-center">
